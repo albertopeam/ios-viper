@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Presenter.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    Presenter *presenter = [[Presenter alloc] init];
+    ViewController * viewController = [[ViewController alloc] initWith:presenter];
+    self.window.rootViewController = viewController;
     return YES;
 }
 
@@ -44,7 +48,7 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEn					terBackground:.
 }
 
 

@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Presenter.h"
 @interface ViewController : UIViewController
-
-
+    - (instancetype)initWith:(Presenter*)apresenter;
 @end
 

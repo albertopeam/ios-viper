@@ -15,6 +15,7 @@
 		5B9F84BB1F75C8BF00C9BEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B91F75C8BF00C9BEE7 /* LaunchScreen.storyboard */; };
 		5B9F84C61F75C8C000C9BEE7 /* viperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84C51F75C8C000C9BEE7 /* viperTests.m */; };
 		5B9F84D11F75C8C000C9BEE7 /* viperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84D01F75C8C000C9BEE7 /* viperUITests.m */; };
+		5B9F84E11F75CAA800C9BEE7 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84E01F75CAA800C9BEE7 /* Presenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5B9F84CC1F75C8C000C9BEE7 /* viperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F84D01F75C8C000C9BEE7 /* viperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viperUITests.m; sourceTree = "<group>"; };
 		5B9F84D21F75C8C000C9BEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9F84DF1F75CAA800C9BEE7 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
+		5B9F84E01F75CAA800C9BEE7 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				5B9F84AF1F75C8BF00C9BEE7 /* AppDelegate.m */,
 				5B9F84B11F75C8BF00C9BEE7 /* ViewController.h */,
 				5B9F84B21F75C8BF00C9BEE7 /* ViewController.m */,
+				5B9F84DF1F75CAA800C9BEE7 /* Presenter.h */,
+				5B9F84E01F75CAA800C9BEE7 /* Presenter.m */,
 				5B9F84B41F75C8BF00C9BEE7 /* Main.storyboard */,
 				5B9F84B71F75C8BF00C9BEE7 /* Assets.xcassets */,
 				5B9F84B91F75C8BF00C9BEE7 /* LaunchScreen.storyboard */,
@@ -275,6 +280,7 @@
 			files = (
 				5B9F84B31F75C8BF00C9BEE7 /* ViewController.m in Sources */,
 				5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */,
+				5B9F84E11F75CAA800C9BEE7 /* Presenter.m in Sources */,
 				5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
