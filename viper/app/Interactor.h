@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface Interactor : NSObject
--(void)run;
+-(void)run:(void(^)(NSNumber* success))onResult onError:(void(^)(NSException *exception))onError;
 @end

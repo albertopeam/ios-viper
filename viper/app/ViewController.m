@@ -16,14 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_presenter action];
 }
 
+- (IBAction)action:(id)sender {
+    [_presenter action];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+-(void)onSuccess:(NSNumber*) success{
+    NSLog(@"ViewController onsuccess");
+}
+
+-(void)onError:(NSException*)exception{
+    NSLog(@"ViewController onError %@", [exception reason]);
+}
 
 @end

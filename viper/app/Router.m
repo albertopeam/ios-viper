@@ -14,8 +14,8 @@
 
 +(ViewController*)provide{
     Interactor* interactor = [Interactor new];
-    Presenter *presenter = [[Presenter alloc] initWith:interactor];
     ViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"view_controller"];
+    Presenter *presenter = [[Presenter alloc] initWithView:viewController interactor:interactor];
     [viewController setPresenter:presenter];
     return viewController;
 }

@@ -38,6 +38,9 @@
                                     <constraint firstAttribute="width" constant="55" id="7y3-fJ-21Z"/>
                                 </constraints>
                                 <state key="normal" title="Action"/>
+                                <connections>
+                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0y-RH-2x9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsB-ri-LXD">
                                 <rect key="frame" x="16" y="109" width="288" height="439"/>

@@ -10,6 +10,8 @@
 #import "Presenter.h"
 
 @interface ViewController : UIViewController
-    @property Presenter *presenter;
+@property Presenter *presenter;
+-(void)onSuccess:(NSNumber*) success;
+-(void)onError:(NSException*)exception;
 @end
 

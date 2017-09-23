@@ -7,21 +7,39 @@
 //
 
 #import "Presenter.h"
+#import "ViewController.h"
 
 @implementation Presenter{
     Interactor* interactor;
+    ViewController*view;
 }
 
-- (instancetype)initWith:(Interactor *)ainteractor{
+-(instancetype)initWithView:(ViewController*)aviewController interactor:(Interactor*)ainteractor {
     self = [super init];
     if (self) {
+        view = aviewController;
         interactor = ainteractor;
     }
     return self;
 }
 
 -(void)action{
-    [interactor run];
+    //2. como cancelar...
+    __weak ViewController* target = view;
+    [interactor run:^(NSNumber* success) {
+        NSLog(@"Presenter: interactor onResult");
+        if (target) {
+            ViewController*aview = target;
+            [aview onSuccess:success];
+        }
+    } onError:^(NSException *exception) {
+        NSLog(@"Presenter: interactor onError %@", [exception reason]);
+        if (target) {
+            ViewController*aview = target;
+            [aview onError:exception];
+
+        }
+    }];
 }
 
 @end

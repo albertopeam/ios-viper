@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Interactor.h"
+@class ViewController;
+
 @interface Presenter : NSObject
--(instancetype)initWith:(Interactor*)interactor;
+-(instancetype)initWithView:(ViewController*)viewController interactor:(Interactor*)interactor;
 -(void)action;
 @end
