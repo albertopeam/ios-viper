@@ -9,25 +9,14 @@
 #import "ViewController.h"
 
 #import "Presenter.h"
-@interface ViewController ()
+@interface ViewController ()@end
 
-@end
+@implementation ViewController
 
-@implementation ViewController{
-Presenter *presenter;
-}
-
-- (instancetype)initWith:(Presenter*)apresenter{
-    self = [super init];
-    if (self) {
-        presenter = apresenter;
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [_presenter action];
 }
 
 

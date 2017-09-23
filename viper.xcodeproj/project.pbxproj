@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B6FFC6C1F7666A500FBA825 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC671F7666A500FBA825 /* Router.m */; };
+		5B6FFC6D1F7666A500FBA825 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC691F7666A500FBA825 /* Presenter.m */; };
+		5B6FFC6E1F7666A500FBA825 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC6B1F7666A500FBA825 /* ViewController.m */; };
+		5B6FFC731F7675A500FBA825 /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC721F7675A500FBA825 /* Interactor.m */; };
 		5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AC1F75C8BF00C9BEE7 /* main.m */; };
 		5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AF1F75C8BF00C9BEE7 /* AppDelegate.m */; };
-		5B9F84B31F75C8BF00C9BEE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84B21F75C8BF00C9BEE7 /* ViewController.m */; };
 		5B9F84B61F75C8BF00C9BEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B41F75C8BF00C9BEE7 /* Main.storyboard */; };
 		5B9F84B81F75C8BF00C9BEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B71F75C8BF00C9BEE7 /* Assets.xcassets */; };
 		5B9F84BB1F75C8BF00C9BEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B91F75C8BF00C9BEE7 /* LaunchScreen.storyboard */; };
 		5B9F84C61F75C8C000C9BEE7 /* viperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84C51F75C8C000C9BEE7 /* viperTests.m */; };
 		5B9F84D11F75C8C000C9BEE7 /* viperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84D01F75C8C000C9BEE7 /* viperUITests.m */; };
-		5B9F84E11F75CAA800C9BEE7 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84E01F75CAA800C9BEE7 /* Presenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +38,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B6FFC661F7666A500FBA825 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Router.h; path = app/Router.h; sourceTree = "<group>"; };
+		5B6FFC671F7666A500FBA825 /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Router.m; path = app/Router.m; sourceTree = "<group>"; };
+		5B6FFC681F7666A500FBA825 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = app/Presenter.h; sourceTree = "<group>"; };
+		5B6FFC691F7666A500FBA825 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Presenter.m; path = app/Presenter.m; sourceTree = "<group>"; };
+		5B6FFC6A1F7666A500FBA825 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = app/ViewController.h; sourceTree = "<group>"; };
+		5B6FFC6B1F7666A500FBA825 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = app/ViewController.m; sourceTree = "<group>"; };
+		5B6FFC711F7675A500FBA825 /* Interactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Interactor.h; path = app/Interactor.h; sourceTree = "<group>"; };
+		5B6FFC721F7675A500FBA825 /* Interactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Interactor.m; path = app/Interactor.m; sourceTree = "<group>"; };
 		5B9F84A81F75C8BF00C9BEE7 /* viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F84AC1F75C8BF00C9BEE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9F84AE1F75C8BF00C9BEE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B9F84AF1F75C8BF00C9BEE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5B9F84B11F75C8BF00C9BEE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5B9F84B21F75C8BF00C9BEE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B9F84B51F75C8BF00C9BEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B9F84B71F75C8BF00C9BEE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9F84BA1F75C8BF00C9BEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,8 +60,6 @@
 		5B9F84CC1F75C8C000C9BEE7 /* viperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F84D01F75C8C000C9BEE7 /* viperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viperUITests.m; sourceTree = "<group>"; };
 		5B9F84D21F75C8C000C9BEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B9F84DF1F75CAA800C9BEE7 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
-		5B9F84E01F75CAA800C9BEE7 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B6FFC651F76667800FBA825 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				5B6FFC661F7666A500FBA825 /* Router.h */,
+				5B6FFC671F7666A500FBA825 /* Router.m */,
+				5B6FFC681F7666A500FBA825 /* Presenter.h */,
+				5B6FFC691F7666A500FBA825 /* Presenter.m */,
+				5B6FFC6A1F7666A500FBA825 /* ViewController.h */,
+				5B6FFC6B1F7666A500FBA825 /* ViewController.m */,
+				5B6FFC711F7675A500FBA825 /* Interactor.h */,
+				5B6FFC721F7675A500FBA825 /* Interactor.m */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		5B6FFC6F1F76672200FBA825 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = domain;
+			sourceTree = "<group>";
+		};
+		5B6FFC701F76672C00FBA825 /* gateway */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = gateway;
+			sourceTree = "<group>";
+		};
 		5B9F849F1F75C8BF00C9BEE7 = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +139,11 @@
 		5B9F84AA1F75C8BF00C9BEE7 /* viper */ = {
 			isa = PBXGroup;
 			children = (
+				5B6FFC701F76672C00FBA825 /* gateway */,
+				5B6FFC6F1F76672200FBA825 /* domain */,
+				5B6FFC651F76667800FBA825 /* app */,
 				5B9F84AE1F75C8BF00C9BEE7 /* AppDelegate.h */,
 				5B9F84AF1F75C8BF00C9BEE7 /* AppDelegate.m */,
-				5B9F84B11F75C8BF00C9BEE7 /* ViewController.h */,
-				5B9F84B21F75C8BF00C9BEE7 /* ViewController.m */,
-				5B9F84DF1F75CAA800C9BEE7 /* Presenter.h */,
-				5B9F84E01F75CAA800C9BEE7 /* Presenter.m */,
 				5B9F84B41F75C8BF00C9BEE7 /* Main.storyboard */,
 				5B9F84B71F75C8BF00C9BEE7 /* Assets.xcassets */,
 				5B9F84B91F75C8BF00C9BEE7 /* LaunchScreen.storyboard */,
@@ -278,10 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9F84B31F75C8BF00C9BEE7 /* ViewController.m in Sources */,
 				5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */,
-				5B9F84E11F75CAA800C9BEE7 /* Presenter.m in Sources */,
+				5B6FFC6C1F7666A500FBA825 /* Router.m in Sources */,
+				5B6FFC6D1F7666A500FBA825 /* Presenter.m in Sources */,
 				5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */,
+				5B6FFC731F7675A500FBA825 /* Interactor.m in Sources */,
+				5B6FFC6E1F7666A500FBA825 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +547,7 @@
 				5B9F84D71F75C8C000C9BEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B9F84D81F75C8C000C9BEE7 /* Build configuration list for PBXNativeTarget "viperTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +556,7 @@
 				5B9F84DA1F75C8C000C9BEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B9F84DB1F75C8C000C9BEE7 /* Build configuration list for PBXNativeTarget "viperUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +565,7 @@
 				5B9F84DD1F75C8C000C9BEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

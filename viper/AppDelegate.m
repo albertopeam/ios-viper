@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Presenter.h"
-#import "ViewController.h"
+#import "Router.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    Presenter *presenter = [[Presenter alloc] init];
-    ViewController * viewController = [[ViewController alloc] initWith:presenter];
-    self.window.rootViewController = viewController;
+    [self.window setRootViewController:[Router provide]];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

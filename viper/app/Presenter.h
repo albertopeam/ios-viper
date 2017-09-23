@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Interactor.h"
 @interface Presenter : NSObject
-
+-(instancetype)initWith:(Interactor*)interactor;
+-(void)action;
 @end
