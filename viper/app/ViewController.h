@@ -11,7 +11,7 @@
 
 @interface ViewController : UIViewController
 @property Presenter *presenter;
--(void)onSuccess:(NSNumber*) success;
+-(void)onSuccess:(Entity*) entity;
 -(void)onError:(NSException*)exception;
 @end
 

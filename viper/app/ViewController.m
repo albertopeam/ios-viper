@@ -27,7 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)onSuccess:(NSNumber*) success{
+-(void)onSuccess:(Entity*)entity{
     NSLog(@"ViewController onsuccess");
 }
 

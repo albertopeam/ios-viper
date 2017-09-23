@@ -9,10 +9,10 @@
 #import "Interactor.h"
 
 @implementation Interactor
--(void)run:(void(^)(NSNumber* success))onResult onError:(void(^)(NSException *exception))onError {
+-(void)run:(void(^)(Entity* entity))onResult onError:(void(^)(NSException *exception))onError {
     NSLog(@"Interactor run");
     if (onResult) {
-        onResult([NSNumber numberWithBool:true]);
+        onResult([Entity new]);
     }
 }
 @end

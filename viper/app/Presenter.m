@@ -24,13 +24,12 @@
 }
 
 -(void)action{
-    //2. como cancelar...
     __weak ViewController* target = view;
-    [interactor run:^(NSNumber* success) {
+    [interactor run:^(Entity* entity) {
         NSLog(@"Presenter: interactor onResult");
         if (target) {
             ViewController*aview = target;
-            [aview onSuccess:success];
+            [aview onSuccess:entity];
         }
     } onError:^(NSException *exception) {
         NSLog(@"Presenter: interactor onError %@", [exception reason]);

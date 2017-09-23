@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entity.h"
 
 @interface Interactor : NSObject
--(void)run:(void(^)(NSNumber* success))onResult onError:(void(^)(NSException *exception))onError;
+-(void)run:(void(^)(Entity* entity))onResult onError:(void(^)(NSException *exception))onError;
 @end
