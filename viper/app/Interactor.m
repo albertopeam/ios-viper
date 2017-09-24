@@ -8,11 +8,41 @@
 
 #import "Interactor.h"
 
-@implementation Interactor
+@implementation Interactor{
+    @private
+    NSOperationQueue*backgroundQueue;
+    @private
+    NSOperationQueue*mainQueue;
+    @private
+    id<GatewayProtocol>gateway;
+}
+
+- (instancetype)initWithBackground:(NSOperationQueue*)bgQueue
+                          withMain:(NSOperationQueue*)mQueue
+                       withGateway:(id<GatewayProtocol>)agateway{
+    self = [super init];
+    if (self) {
+        backgroundQueue = bgQueue;
+        mainQueue = mQueue;
+        gateway = agateway;
+    }
+    return self;
+}
+
 -(void)run:(void(^)(Entity* entity))onResult onError:(void(^)(NSException *exception))onError {
     NSLog(@"Interactor run");
-    if (onResult) {
-        onResult([Entity new]);
-    }
+    [backgroundQueue addOperationWithBlock:^{
+        @try {
+            Entity* entity = [gateway perform];
+            [mainQueue addOperationWithBlock:^{
+                onResult(entity);
+            }];
+        } @catch (NSException *exception) {
+            [mainQueue addOperationWithBlock:^{
+                onError(exception);
+            }];
+        }
+        
+    }];
 }
 @end

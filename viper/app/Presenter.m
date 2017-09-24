@@ -10,8 +10,8 @@
 #import "ViewController.h"
 
 @implementation Presenter{
-    Interactor* interactor;
-    ViewController*view;
+    @private Interactor* interactor;
+    @private ViewController*view;
 }
 
 -(instancetype)initWithView:(ViewController*)aviewController interactor:(Interactor*)ainteractor {

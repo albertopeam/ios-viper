@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
+#import "GatewayProtocol.h"
 
 @interface Interactor : NSObject
+- (instancetype)initWithBackground:(NSOperationQueue*)bgQueue
+                          withMain:(NSOperationQueue*)mQueue
+                       withGateway:(id<GatewayProtocol>)agateway;
 -(void)run:(void(^)(Entity* entity))onResult onError:(void(^)(NSException *exception))onError;
 @end
