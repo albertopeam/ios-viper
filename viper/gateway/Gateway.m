@@ -7,9 +7,10 @@
 //
 
 #import "Gateway.h"
+#import "CityWeatherCloud.h"
 
 @implementation Gateway{
-@private AFHTTPSessionManager* manager;
+    @private AFHTTPSessionManager* manager;
 }
 
 - (instancetype)initWithManager:(AFHTTPSessionManager*)amanager
@@ -22,17 +23,28 @@
 }
 
 -(Entity*)perform{
-    //TODO: parse exception...change url to https or something that 
     NSError *error = nil;
-    NSData *result = [manager syncGET:@"https://google.es"
+    NSString* apiKey = @"9186b8e5715f961fed5d4482516bc296";
+    NSString* query = @"ACoruna";
+    NSString* url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=%@", query, apiKey];
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager setRequestSerializer:requestSerializer];
+    NSDictionary *result = [manager syncGET:url
                            parameters:@{}
                                  task:NULL
                                 error:&error];
-    NSLog(@"result: %@", result);
-    if (!error) {
-        return [Entity new];
-    }
-    @throw([NSException exceptionWithName:@"Network exception" reason:error.description userInfo:nil]);
+     if (!error) {
+        CityWeatherCloud* city = [[CityWeatherCloud alloc] initWithDictionary:result error:&error];
+         if ([city.cod intValue] == 200) {
+             Entity* entity = [[Entity alloc]initWithCity:city.name withTemp:city.main.temp withPressure:city.main.pressure withHumidity:city.main.humidity withMaxTemp:city.main.temp_max withMinTemp:city.main.temp_min];
+             return entity;
+         }else{
+             @throw([NSException exceptionWithName:@"Network exception" reason:city.message userInfo:nil]);
+         }
+     }
+    @throw([NSException exceptionWithName:@"Network exception" reason:@"Network error" userInfo:nil]);
 }
 
 @end

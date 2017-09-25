@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "GatewayProtocol.h"
-#import "AFNetworking.h"
 #import "AFHTTPSessionManager+Synchronous.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface Gateway : NSObject <GatewayProtocol>
 - (instancetype)initWithManager:(AFHTTPSessionManager*)amanager;

@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface Entity : NSObject
-
+- (instancetype)initWithCity:(NSString*)acity withTemp:(NSNumber*)atemp withPressure:(NSNumber*)apressure withHumidity:(NSNumber*)ahumidity withMaxTemp:(NSNumber*)amaxTemp withMinTemp:(NSNumber*)aminTemp;
+-(NSString*)name;
+-(NSString*)temperature;
+-(NSString*)pressure;
+-(NSString*)humidity;
+-(NSString*)minTemp;
+-(NSString*)maxTemp;
 @end

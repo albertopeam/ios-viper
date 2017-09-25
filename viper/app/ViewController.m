@@ -14,28 +14,29 @@
 
 @implementation ViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_presenter action];
 }
 
 - (IBAction)action:(id)sender {
     [_presenter action];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 -(void)onSuccess:(Entity*)entity{
-    NSLog(@"ViewController onsuccess");
+    [_reloadButton setUserInteractionEnabled:YES];
+    [_cityLabel setText:[entity name]];
+    [_tempLabel setText:[entity temperature]];
+    [_pressureLabel setText:[entity pressure]];
+    [_humidityLabel setText:[entity humidity]];
+    [_minTempLabel setText:[entity minTemp]];
+    [_maxTempLabel setText:[entity maxTemp]];
 }
 
 -(void)onError:(NSException*)exception{
-    NSLog(@"ViewController onError %@", [exception reason]);
+    [_reloadButton setUserInteractionEnabled:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:@"There was a problem fetching resources, try again later"
+                                                                   message:[exception reason]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     [self presentViewController:alert animated:YES completion:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{

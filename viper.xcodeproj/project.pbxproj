@@ -12,10 +12,12 @@
 		5B3681EC1F77A77F00456992 /* PresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3681EB1F77A77F00456992 /* PresenterTestCase.m */; };
 		5B3681F31F77D8FE00456992 /* Gateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3681F21F77D8FE00456992 /* Gateway.m */; };
 		5B3681F81F78340E00456992 /* Queues.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3681F71F78340E00456992 /* Queues.m */; };
+		5B56A4921F79608D003856C0 /* WeatherCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B56A4911F79608D003856C0 /* WeatherCloud.m */; };
 		5B6FFC6C1F7666A500FBA825 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC671F7666A500FBA825 /* Router.m */; };
 		5B6FFC6D1F7666A500FBA825 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC691F7666A500FBA825 /* Presenter.m */; };
 		5B6FFC6E1F7666A500FBA825 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC6B1F7666A500FBA825 /* ViewController.m */; };
 		5B6FFC731F7675A500FBA825 /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC721F7675A500FBA825 /* Interactor.m */; };
+		5B8B0EFE1F795216003BEA0C /* CityWeatherCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B0EFD1F795216003BEA0C /* CityWeatherCloud.m */; };
 		5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AC1F75C8BF00C9BEE7 /* main.m */; };
 		5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AF1F75C8BF00C9BEE7 /* AppDelegate.m */; };
 		5B9F84B61F75C8BF00C9BEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B41F75C8BF00C9BEE7 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		5B3681F41F77D96500456992 /* GatewayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GatewayProtocol.h; path = domain/GatewayProtocol.h; sourceTree = "<group>"; };
 		5B3681F61F78340E00456992 /* Queues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queues.h; path = app/infrastructure/Queues.h; sourceTree = "<group>"; };
 		5B3681F71F78340E00456992 /* Queues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queues.m; path = app/infrastructure/Queues.m; sourceTree = "<group>"; };
+		5B56A4901F79608D003856C0 /* WeatherCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherCloud.h; path = gateway/WeatherCloud.h; sourceTree = "<group>"; };
+		5B56A4911F79608D003856C0 /* WeatherCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherCloud.m; path = gateway/WeatherCloud.m; sourceTree = "<group>"; };
 		5B6FFC661F7666A500FBA825 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Router.h; path = app/Router.h; sourceTree = "<group>"; };
 		5B6FFC671F7666A500FBA825 /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Router.m; path = app/Router.m; sourceTree = "<group>"; };
 		5B6FFC681F7666A500FBA825 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = app/Presenter.h; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		5B6FFC6B1F7666A500FBA825 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = app/ViewController.m; sourceTree = "<group>"; };
 		5B6FFC711F7675A500FBA825 /* Interactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Interactor.h; path = app/Interactor.h; sourceTree = "<group>"; };
 		5B6FFC721F7675A500FBA825 /* Interactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Interactor.m; path = app/Interactor.m; sourceTree = "<group>"; };
+		5B8B0EFC1F795216003BEA0C /* CityWeatherCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityWeatherCloud.h; path = gateway/CityWeatherCloud.h; sourceTree = "<group>"; };
+		5B8B0EFD1F795216003BEA0C /* CityWeatherCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityWeatherCloud.m; path = gateway/CityWeatherCloud.m; sourceTree = "<group>"; };
 		5B9F84A81F75C8BF00C9BEE7 /* viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F84AC1F75C8BF00C9BEE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9F84AE1F75C8BF00C9BEE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +181,10 @@
 			children = (
 				5B3681F11F77D8FE00456992 /* Gateway.h */,
 				5B3681F21F77D8FE00456992 /* Gateway.m */,
+				5B8B0EFC1F795216003BEA0C /* CityWeatherCloud.h */,
+				5B8B0EFD1F795216003BEA0C /* CityWeatherCloud.m */,
+				5B56A4901F79608D003856C0 /* WeatherCloud.h */,
+				5B56A4911F79608D003856C0 /* WeatherCloud.m */,
 			);
 			name = gateway;
 			sourceTree = "<group>";
@@ -503,12 +513,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-viper/Pods-viper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking-Synchronous/AFNetworking_Synchronous.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking_Synchronous.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,8 +569,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BCBCB691F76F440006EBCC9 /* Entity.m in Sources */,
+				5B56A4921F79608D003856C0 /* WeatherCloud.m in Sources */,
 				5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */,
 				5B6FFC6C1F7666A500FBA825 /* Router.m in Sources */,
+				5B8B0EFE1F795216003BEA0C /* CityWeatherCloud.m in Sources */,
 				5B6FFC6D1F7666A500FBA825 /* Presenter.m in Sources */,
 				5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */,
 				5B6FFC731F7675A500FBA825 /* Interactor.m in Sources */,

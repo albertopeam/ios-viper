@@ -11,6 +11,7 @@ target 'viper' do
   pod 'AFNetworking', '~> 3.0'
   pod 'AFNetworking-Synchronous/3.x'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'JSONModel'
   
   target 'viperTests' do
     inherit! :search_paths

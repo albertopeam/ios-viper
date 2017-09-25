@@ -10,6 +10,13 @@
 #import "Presenter.h"
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *maxTempLabel;
+@property (weak, nonatomic) IBOutlet UILabel *minTempLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tempLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UIButton *reloadButton;
 @property Presenter *presenter;
 -(void)onSuccess:(Entity*) entity;
 -(void)onError:(NSException*)exception;
