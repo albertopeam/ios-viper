@@ -52,6 +52,8 @@
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
-
+- (void)dealloc{
+    _presenter = nil;
+}
 
 @end

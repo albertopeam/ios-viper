@@ -37,12 +37,8 @@
                                 error:&error];
      if (!error) {
         CityWeatherCloud* city = [[CityWeatherCloud alloc] initWithDictionary:result error:&error];
-         if ([city.cod intValue] == 200) {
-             Entity* entity = [[Entity alloc]initWithCity:city.name withTemp:city.main.temp withPressure:city.main.pressure withHumidity:city.main.humidity withMaxTemp:city.main.temp_max withMinTemp:city.main.temp_min];
-             return entity;
-         }else{
-             @throw([NSException exceptionWithName:@"Network exception" reason:city.message userInfo:nil]);
-         }
+        Entity* entity = [[Entity alloc]initWithCity:city.name withTemp:city.main.temp withPressure:city.main.pressure withHumidity:city.main.humidity withMaxTemp:city.main.temp_max withMinTemp:city.main.temp_min];
+        return entity;
      }
     @throw([NSException exceptionWithName:@"Network exception" reason:@"Network error" userInfo:nil]);
 }
