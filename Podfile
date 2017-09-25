@@ -10,6 +10,7 @@ target 'viper' do
   #pod 'RxCocoa',    '~> 3.0'
   pod 'AFNetworking', '~> 3.0'
   pod 'AFNetworking-Synchronous/3.x'
+  pod 'MBProgressHUD', '~> 1.0.0'
   
   target 'viperTests' do
     inherit! :search_paths

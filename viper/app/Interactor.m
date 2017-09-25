@@ -30,7 +30,6 @@
 }
 
 -(void)run:(void(^)(Entity* entity))onResult onError:(void(^)(NSException *exception))onError {
-    NSLog(@"Interactor run");
     [backgroundQueue addOperationWithBlock:^{
         @try {
             Entity* entity = [gateway perform];

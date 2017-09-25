@@ -13,5 +13,7 @@
 @property Presenter *presenter;
 -(void)onSuccess:(Entity*) entity;
 -(void)onError:(NSException*)exception;
+-(void)showLoading;
+-(void)hideLoading;
 @end
 

@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
 #import "Presenter.h"
+#import "MBProgressHUD.h"
+
 @interface ViewController ()@end
 
 @implementation ViewController
@@ -33,6 +34,23 @@
 
 -(void)onError:(NSException*)exception{
     NSLog(@"ViewController onError %@", [exception reason]);
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:@"There was a problem fetching resources, try again later"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alert animated:YES completion:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    });
 }
+
+-(void)showLoading{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+}
+
+-(void)hideLoading{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+
 
 @end

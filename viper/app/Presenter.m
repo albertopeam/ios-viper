@@ -25,16 +25,17 @@
 
 -(void)action{
     __weak ViewController* target = view;
+    [target showLoading];
     [interactor run:^(Entity* entity) {
-        NSLog(@"Presenter: interactor onResult");
         if (target) {
             ViewController*aview = target;
+            [aview hideLoading];
             [aview onSuccess:entity];
         }
     } onError:^(NSException *exception) {
-        NSLog(@"Presenter: interactor onError %@", [exception reason]);
         if (target) {
             ViewController*aview = target;
+            [aview hideLoading];
             [aview onError:exception];
 
         }
