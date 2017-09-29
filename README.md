@@ -1,4 +1,4 @@
-# viper
+# VIPER
 Example viper arch for ios. The example must show a list of locations, each one can be accesed to see what weather is doing now. 
 
 ##### TODOS:
