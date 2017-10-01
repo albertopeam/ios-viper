@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "Presenter.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
+#import "WeatherMO+CoreDataProperties.h"
+#import "WeatherMO+CoreDataClass.h"
 
 @interface ViewController ()@end
 
@@ -16,7 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_presenter action];
+    //TODO: mover este codigo y el del app delegate a otro lado... inicializar el persistent container...
+    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext* moc = [[delegate persistentContainer] viewContext];
+    WeatherMO *weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
+    weatherMO.city = @"A Coruña";
+    weatherMO.pressure = 1024;
+    weatherMO.humidity = 80;
+    weatherMO.temperature = 10;
+    weatherMO.min_temp = 8;
+    weatherMO.max_temp = 15;
+    NSError *error = nil;
+    if ([moc save:&error] == NO) {
+        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
+    error = nil;
+    NSArray *results = [moc executeFetchRequest:request error:&error];
+    if (!results) {
+        NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+    }
+    NSLog(@"VIPER");
+    //[_presenter action];
 }
 
 - (IBAction)action:(id)sender {
