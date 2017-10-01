@@ -1,5 +1,5 @@
 //
-//  Database.h
+//  Preferences.h
 //  viper
 //
 //  Created by vagrant on 10/1/17.
@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
-@interface Database : NSObject
--(NSManagedObjectContext*)moc;
+@interface Preferences : NSObject
+-(Boolean)isExpiredWeather:(NSString*)city;
+-(void)updatedWeather:(NSString*)city;
 @end

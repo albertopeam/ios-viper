@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Entity.h"
+#import "Weather.h"
 #import "GatewayProtocol.h"
 
 @interface Interactor : NSObject
 - (instancetype)initWithBackground:(NSOperationQueue*)bgQueue
                           withMain:(NSOperationQueue*)mQueue
                        withGateway:(id<GatewayProtocol>)agateway;
--(void)run:(void(^)(Entity* entity))onResult onError:(void(^)(NSException *exception))onError;
+-(void)run:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError;
 @end

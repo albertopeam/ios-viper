@@ -2,7 +2,7 @@
 //  WeatherMO+CoreDataProperties.m
 //  
 //
-//  Created by vagrant on 9/30/17.
+//  Created by vagrant on 10/1/17.
 //
 //
 
@@ -16,10 +16,10 @@
 
 @dynamic city;
 @dynamic humidity;
+@dynamic remote_id;
 @dynamic max_temp;
 @dynamic min_temp;
 @dynamic pressure;
 @dynamic temperature;
-@dynamic id;
 
 @end

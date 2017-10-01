@@ -29,12 +29,12 @@
     return self;
 }
 
--(void)run:(void(^)(Entity* entity))onResult onError:(void(^)(NSException *exception))onError {
+-(void)run:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError {
     [backgroundQueue addOperationWithBlock:^{
         @try {
-            Entity* entity = [gateway perform];
+            Weather* weather = [gateway perform];
             [mainQueue addOperationWithBlock:^{
-                onResult(entity);
+                onResult(weather);
             }];
         } @catch (NSException *exception) {
             [mainQueue addOperationWithBlock:^{

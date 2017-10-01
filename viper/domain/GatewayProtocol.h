@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Entity.h"
+#import "Weather.h"
 
 @protocol GatewayProtocol <NSObject>
--(Entity*)perform;
+-(Weather*)perform;
 @end

@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 #import "WeatherMO+CoreDataProperties.h"
 #import "WeatherMO+CoreDataClass.h"
-#import "Database.h"
+#import "Provider.h"
 
 @interface ViewController ()@end
 
@@ -22,7 +22,7 @@
     [super viewDidLoad];
     //TODO: mover este codigo y el del app delegate a otro lado... inicializar el persistent container...
     
-    Database* db = [Database manager];
+    Database* db = [[Provider manager] database];
     NSManagedObjectContext* moc = [db moc];
     WeatherMO *weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
     weatherMO.city = @"A Coruña";
@@ -50,14 +50,14 @@
     [_presenter action];
 }
 
--(void)onSuccess:(Entity*)entity{
+-(void)onSuccess:(Weather*)weather{
     [_reloadButton setUserInteractionEnabled:YES];
-    [_cityLabel setText:[entity name]];
-    [_tempLabel setText:[entity temperature]];
-    [_pressureLabel setText:[entity pressure]];
-    [_humidityLabel setText:[entity humidity]];
-    [_minTempLabel setText:[entity minTemp]];
-    [_maxTempLabel setText:[entity maxTemp]];
+    [_cityLabel setText:[weather city]];
+    [_tempLabel setText:[weather temperature]];
+    [_pressureLabel setText:[weather pressure]];
+    [_humidityLabel setText:[weather humidity]];
+    [_minTempLabel setText:[weather minTemp]];
+    [_maxTempLabel setText:[weather maxTemp]];
 }
 
 -(void)onError:(NSException*)exception{

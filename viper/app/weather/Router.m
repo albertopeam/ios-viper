@@ -9,15 +9,16 @@
 #import "Router.h"
 #import "Presenter.h"
 #import "Interactor.h"
-#import "Queues.h"
 #import "GatewayProtocol.h"
 #import "Gateway.h"
+#import "Provider.h"
 
 @implementation Router
 
 +(ViewController*)provide{
-    NSOperationQueue* background = [[Queues manager] background];
-    NSOperationQueue* main = [[Queues manager] main];
+    Provider* provider = [Provider manager];
+    NSOperationQueue* background = [provider backgroundQueue];
+    NSOperationQueue* main = [provider mainQueue];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     id<GatewayProtocol>gateway = [[Gateway alloc]
                                   initWithManager:manager];

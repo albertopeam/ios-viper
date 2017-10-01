@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Database.h"
+#import "Provider.h"
 #import "Router.h"
 
 @interface AppDelegate ()
@@ -18,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[Database manager] create];
+    [Provider manager];
     [self.window setRootViewController:[Router provide]];
     [self.window makeKeyAndVisible];
     return YES;

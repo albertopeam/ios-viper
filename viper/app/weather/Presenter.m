@@ -26,11 +26,11 @@
 -(void)action{
     __weak ViewController* target = view;
     [target showLoading];
-    [interactor run:^(Entity* entity) {
+    [interactor run:^(Weather* weather) {
         if (target) {
             ViewController*aview = target;
             [aview hideLoading];
-            [aview onSuccess:entity];
+            [aview onSuccess:weather];
         }
     } onError:^(NSException *exception) {
         if (target) {
