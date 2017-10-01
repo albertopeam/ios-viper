@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		3C9654D26D6CB325AB11A92F /* Pods_viperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E793FFEE3D46EB5D9E5FB3 /* Pods_viperTests.framework */; };
 		5A0D9E04D794E72B6A3C1AE2 /* Pods_viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC5DF58A57A47B1CB5C0F7 /* Pods_viper.framework */; };
-		5B1734701F806762009B86B1 /* WeatherMO+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B17346D1F806762009B86B1 /* WeatherMO+CoreDataClass.m */; };
-		5B1734711F806762009B86B1 /* WeatherMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B17346F1F806762009B86B1 /* WeatherMO+CoreDataProperties.m */; };
+		5B03094B1F811669009A6D1A /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309441F811669009A6D1A /* Interactor.m */; };
+		5B03094C1F811669009A6D1A /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309461F811669009A6D1A /* Presenter.m */; };
+		5B03094D1F811669009A6D1A /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309481F811669009A6D1A /* Router.m */; };
+		5B03094E1F811669009A6D1A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B03094A1F811669009A6D1A /* ViewController.m */; };
+		5B0309541F81171C009A6D1A /* WeatherMO+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309511F81171C009A6D1A /* WeatherMO+CoreDataClass.m */; };
+		5B0309551F81171C009A6D1A /* WeatherMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309531F81171C009A6D1A /* WeatherMO+CoreDataProperties.m */; };
+		5B0309581F811756009A6D1A /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309571F811756009A6D1A /* Database.m */; };
 		5B1734791F80681E009B86B1 /* CityWeatherCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1734741F80681E009B86B1 /* CityWeatherCloud.m */; };
 		5B17347A1F80681E009B86B1 /* Gateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1734761F80681E009B86B1 /* Gateway.m */; };
 		5B17347B1F80681E009B86B1 /* WeatherCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1734781F80681E009B86B1 /* WeatherCloud.m */; };
 		5B3681EC1F77A77F00456992 /* PresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3681EB1F77A77F00456992 /* PresenterTestCase.m */; };
 		5B3681F81F78340E00456992 /* Queues.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3681F71F78340E00456992 /* Queues.m */; };
 		5B4FA6D51F802752009C9FAB /* weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FA6D31F802752009C9FAB /* weather.xcdatamodeld */; };
-		5B6FFC6C1F7666A500FBA825 /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC671F7666A500FBA825 /* Router.m */; };
-		5B6FFC6D1F7666A500FBA825 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC691F7666A500FBA825 /* Presenter.m */; };
-		5B6FFC6E1F7666A500FBA825 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC6B1F7666A500FBA825 /* ViewController.m */; };
-		5B6FFC731F7675A500FBA825 /* Interactor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FFC721F7675A500FBA825 /* Interactor.m */; };
 		5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AC1F75C8BF00C9BEE7 /* main.m */; };
 		5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AF1F75C8BF00C9BEE7 /* AppDelegate.m */; };
 		5B9F84B61F75C8BF00C9BEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B41F75C8BF00C9BEE7 /* Main.storyboard */; };
@@ -54,10 +55,20 @@
 		26A307CFBAED3746EDCB2752 /* Pods-viperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viperUITests/Pods-viperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D0E40A2D3BD675847AD7F8F /* Pods-viperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-viperUITests/Pods-viperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57E793FFEE3D46EB5D9E5FB3 /* Pods_viperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B17346C1F806762009B86B1 /* WeatherMO+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeatherMO+CoreDataClass.h"; path = "gateway/database/WeatherMO+CoreDataClass.h"; sourceTree = "<group>"; };
-		5B17346D1F806762009B86B1 /* WeatherMO+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherMO+CoreDataClass.m"; path = "gateway/database/WeatherMO+CoreDataClass.m"; sourceTree = "<group>"; };
-		5B17346E1F806762009B86B1 /* WeatherMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeatherMO+CoreDataProperties.h"; path = "gateway/database/WeatherMO+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5B17346F1F806762009B86B1 /* WeatherMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherMO+CoreDataProperties.m"; path = "gateway/database/WeatherMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5B0309431F811669009A6D1A /* Interactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Interactor.h; path = app/weather/Interactor.h; sourceTree = "<group>"; };
+		5B0309441F811669009A6D1A /* Interactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Interactor.m; path = app/weather/Interactor.m; sourceTree = "<group>"; };
+		5B0309451F811669009A6D1A /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = app/weather/Presenter.h; sourceTree = "<group>"; };
+		5B0309461F811669009A6D1A /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Presenter.m; path = app/weather/Presenter.m; sourceTree = "<group>"; };
+		5B0309471F811669009A6D1A /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Router.h; path = app/weather/Router.h; sourceTree = "<group>"; };
+		5B0309481F811669009A6D1A /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Router.m; path = app/weather/Router.m; sourceTree = "<group>"; };
+		5B0309491F811669009A6D1A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = app/weather/ViewController.h; sourceTree = "<group>"; };
+		5B03094A1F811669009A6D1A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = app/weather/ViewController.m; sourceTree = "<group>"; };
+		5B0309501F81171C009A6D1A /* WeatherMO+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeatherMO+CoreDataClass.h"; path = "gateway/database/managedobject/WeatherMO+CoreDataClass.h"; sourceTree = "<group>"; };
+		5B0309511F81171C009A6D1A /* WeatherMO+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherMO+CoreDataClass.m"; path = "gateway/database/managedobject/WeatherMO+CoreDataClass.m"; sourceTree = "<group>"; };
+		5B0309521F81171C009A6D1A /* WeatherMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeatherMO+CoreDataProperties.h"; path = "gateway/database/managedobject/WeatherMO+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5B0309531F81171C009A6D1A /* WeatherMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherMO+CoreDataProperties.m"; path = "gateway/database/managedobject/WeatherMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5B0309561F811756009A6D1A /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Database.h; path = gateway/database/Database.h; sourceTree = "<group>"; };
+		5B0309571F811756009A6D1A /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Database.m; path = gateway/database/Database.m; sourceTree = "<group>"; };
 		5B1734731F80681E009B86B1 /* CityWeatherCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityWeatherCloud.h; path = gateway/cloud/CityWeatherCloud.h; sourceTree = "<group>"; };
 		5B1734741F80681E009B86B1 /* CityWeatherCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityWeatherCloud.m; path = gateway/cloud/CityWeatherCloud.m; sourceTree = "<group>"; };
 		5B1734751F80681E009B86B1 /* Gateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gateway.h; path = gateway/cloud/Gateway.h; sourceTree = "<group>"; };
@@ -69,14 +80,6 @@
 		5B3681F61F78340E00456992 /* Queues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queues.h; path = app/infrastructure/Queues.h; sourceTree = "<group>"; };
 		5B3681F71F78340E00456992 /* Queues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queues.m; path = app/infrastructure/Queues.m; sourceTree = "<group>"; };
 		5B4FA6D41F802752009C9FAB /* weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = weather.xcdatamodel; sourceTree = "<group>"; };
-		5B6FFC661F7666A500FBA825 /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Router.h; path = app/Router.h; sourceTree = "<group>"; };
-		5B6FFC671F7666A500FBA825 /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Router.m; path = app/Router.m; sourceTree = "<group>"; };
-		5B6FFC681F7666A500FBA825 /* Presenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = app/Presenter.h; sourceTree = "<group>"; };
-		5B6FFC691F7666A500FBA825 /* Presenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Presenter.m; path = app/Presenter.m; sourceTree = "<group>"; };
-		5B6FFC6A1F7666A500FBA825 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = app/ViewController.h; sourceTree = "<group>"; };
-		5B6FFC6B1F7666A500FBA825 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = app/ViewController.m; sourceTree = "<group>"; };
-		5B6FFC711F7675A500FBA825 /* Interactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Interactor.h; path = app/Interactor.h; sourceTree = "<group>"; };
-		5B6FFC721F7675A500FBA825 /* Interactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Interactor.m; path = app/Interactor.m; sourceTree = "<group>"; };
 		5B9F84A81F75C8BF00C9BEE7 /* viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F84AC1F75C8BF00C9BEE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9F84AE1F75C8BF00C9BEE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +144,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B0309411F8115EC009A6D1A /* cities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = cities;
+			sourceTree = "<group>";
+		};
+		5B0309421F8115F7009A6D1A /* weather */ = {
+			isa = PBXGroup;
+			children = (
+				5B0309431F811669009A6D1A /* Interactor.h */,
+				5B0309441F811669009A6D1A /* Interactor.m */,
+				5B0309451F811669009A6D1A /* Presenter.h */,
+				5B0309461F811669009A6D1A /* Presenter.m */,
+				5B0309471F811669009A6D1A /* Router.h */,
+				5B0309481F811669009A6D1A /* Router.m */,
+				5B0309491F811669009A6D1A /* ViewController.h */,
+				5B03094A1F811669009A6D1A /* ViewController.m */,
+			);
+			name = weather;
+			sourceTree = "<group>";
+		};
+		5B03094F1F8116E0009A6D1A /* managedobject */ = {
+			isa = PBXGroup;
+			children = (
+				5B0309501F81171C009A6D1A /* WeatherMO+CoreDataClass.h */,
+				5B0309511F81171C009A6D1A /* WeatherMO+CoreDataClass.m */,
+				5B0309521F81171C009A6D1A /* WeatherMO+CoreDataProperties.h */,
+				5B0309531F81171C009A6D1A /* WeatherMO+CoreDataProperties.m */,
+			);
+			name = managedobject;
+			sourceTree = "<group>";
+		};
 		5B1734721F8067A8009B86B1 /* cloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,11 +210,10 @@
 		5B4FA6D21F802739009C9FAB /* database */ = {
 			isa = PBXGroup;
 			children = (
-				5B17346C1F806762009B86B1 /* WeatherMO+CoreDataClass.h */,
-				5B17346D1F806762009B86B1 /* WeatherMO+CoreDataClass.m */,
-				5B17346E1F806762009B86B1 /* WeatherMO+CoreDataProperties.h */,
-				5B17346F1F806762009B86B1 /* WeatherMO+CoreDataProperties.m */,
+				5B03094F1F8116E0009A6D1A /* managedobject */,
 				5B4FA6D31F802752009C9FAB /* weather.xcdatamodeld */,
+				5B0309561F811756009A6D1A /* Database.h */,
+				5B0309571F811756009A6D1A /* Database.m */,
 			);
 			name = database;
 			sourceTree = "<group>";
@@ -186,15 +221,9 @@
 		5B6FFC651F76667800FBA825 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				5B0309421F8115F7009A6D1A /* weather */,
+				5B0309411F8115EC009A6D1A /* cities */,
 				5B3681F51F7833D000456992 /* infrastructure */,
-				5B6FFC661F7666A500FBA825 /* Router.h */,
-				5B6FFC671F7666A500FBA825 /* Router.m */,
-				5B6FFC681F7666A500FBA825 /* Presenter.h */,
-				5B6FFC691F7666A500FBA825 /* Presenter.m */,
-				5B6FFC6A1F7666A500FBA825 /* ViewController.h */,
-				5B6FFC6B1F7666A500FBA825 /* ViewController.m */,
-				5B6FFC711F7675A500FBA825 /* Interactor.h */,
-				5B6FFC721F7675A500FBA825 /* Interactor.m */,
 			);
 			name = app;
 			sourceTree = "<group>";
@@ -597,20 +626,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B0309551F81171C009A6D1A /* WeatherMO+CoreDataProperties.m in Sources */,
+				5B0309581F811756009A6D1A /* Database.m in Sources */,
+				5B03094E1F811669009A6D1A /* ViewController.m in Sources */,
 				5B17347A1F80681E009B86B1 /* Gateway.m in Sources */,
-				5B1734701F806762009B86B1 /* WeatherMO+CoreDataClass.m in Sources */,
+				5B03094B1F811669009A6D1A /* Interactor.m in Sources */,
 				5B4FA6D51F802752009C9FAB /* weather.xcdatamodeld in Sources */,
 				5BCBCB691F76F440006EBCC9 /* Entity.m in Sources */,
 				5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */,
-				5B6FFC6C1F7666A500FBA825 /* Router.m in Sources */,
+				5B0309541F81171C009A6D1A /* WeatherMO+CoreDataClass.m in Sources */,
 				5B17347B1F80681E009B86B1 /* WeatherCloud.m in Sources */,
 				5B1734791F80681E009B86B1 /* CityWeatherCloud.m in Sources */,
-				5B6FFC6D1F7666A500FBA825 /* Presenter.m in Sources */,
 				5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */,
-				5B6FFC731F7675A500FBA825 /* Interactor.m in Sources */,
-				5B1734711F806762009B86B1 /* WeatherMO+CoreDataProperties.m in Sources */,
 				5B3681F81F78340E00456992 /* Queues.m in Sources */,
-				5B6FFC6E1F7666A500FBA825 /* ViewController.m in Sources */,
+				5B03094C1F811669009A6D1A /* Presenter.m in Sources */,
+				5B03094D1F811669009A6D1A /* Router.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

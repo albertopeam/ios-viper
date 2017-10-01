@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "WeatherMO+CoreDataProperties.h"
 #import "WeatherMO+CoreDataClass.h"
+#import "Database.h"
 
 @interface ViewController ()@end
 
@@ -20,8 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //TODO: mover este codigo y el del app delegate a otro lado... inicializar el persistent container...
-    AppDelegate* delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext* moc = [[delegate persistentContainer] viewContext];
+    
+    Database* db = [Database manager];
+    NSManagedObjectContext* moc = [db moc];
     WeatherMO *weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
     weatherMO.city = @"A Coruña";
     weatherMO.pressure = 1024;
