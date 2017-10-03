@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Weather.h"
 #import "Database.h"
+#import "FetchWeatherDataSource.h"
 
-@interface FetchWeather : NSObject
+@interface FetchWeather : NSObject<FetchWeatherDataSource>
 - (instancetype)initWithDatabase:(Database *)adatabase;
-- (Weather*)fetch:(NSString*)city;
 @end

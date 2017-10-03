@@ -9,8 +9,7 @@
 #import "Router.h"
 #import "Presenter.h"
 #import "Interactor.h"
-#import "GatewayProtocol.h"
-#import "Gateway.h"
+#import "WeatherRepository.h"
 #import "Provider.h"
 
 @implementation Router
@@ -20,12 +19,17 @@
     NSOperationQueue* background = [provider backgroundQueue];
     NSOperationQueue* main = [provider mainQueue];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    /*
     id<GatewayProtocol>gateway = [[Gateway alloc]
                                   initWithManager:manager];
+     */
+    
+//todo: build repo
     Interactor* interactor = [[Interactor alloc]
                               initWithBackground:background
                               withMain:main
-                              withGateway:gateway];
+                              withRepository:nil];
+    
     ViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"view_controller"];
     Presenter *presenter = [[Presenter alloc]
                             initWithView:viewController

@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Weather.h"
 #import "Database.h"
+#import "StoreWeatherDataSource.h"
 
-@interface StoreWeather : NSObject
+@interface StoreWeather : NSObject<StoreWeatherDataSource>
 - (instancetype)initWithDatabase:(Database*)database;
-- (void)store:(Weather*)weather;
 @end

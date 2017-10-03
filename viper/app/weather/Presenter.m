@@ -23,10 +23,10 @@
     return self;
 }
 
--(void)action{
+-(void)weatherForCity:(NSString*)query {
     __weak ViewController* target = view;
     [target showLoading];
-    [interactor run:^(Weather* weather) {
+    [interactor run:query witCallback:^(Weather *weather) {
         if (target) {
             ViewController*aview = target;
             [aview hideLoading];
@@ -37,7 +37,7 @@
             ViewController*aview = target;
             [aview hideLoading];
             [aview onError:exception];
-
+            
         }
     }];
 }

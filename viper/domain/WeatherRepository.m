@@ -8,6 +8,30 @@
 
 #import "WeatherRepository.h"
 
-@implementation WeatherRepository
+@implementation WeatherRepository{
+    id<WeatherExpirationPolicy>policy;
+    id<FetchWeatherDataSource>fetchWeatherApiDS;
+    id<FetchWeatherDataSource>fetchWeatherStorageDS;
+    id<StoreWeatherDataSource>storeWeatherDS;
+}
 
+- (instancetype)initWithExpirationPolicy:(id<WeatherExpirationPolicy>)apolicy
+               withFetchWeatherApiClient:(id<FetchWeatherDataSource>)aFetchWeatherApiClient
+                 withFetchWeatherStorage:(id<FetchWeatherDataSource>)aFetchWeatherStorage
+                        withStoreWeather:(id<StoreWeatherDataSource>)aStoreWeather{
+    self = [super init];
+    if (self) {
+        policy = apolicy;
+        fetchWeatherApiDS = aFetchWeatherApiClient;
+        fetchWeatherStorageDS = aFetchWeatherStorage;
+        storeWeatherDS = aStoreWeather;
+    }
+    return self;
+}
+
+//todo:impl
+//todo:refactor gateway and naming...
+-(Weather *)weatherFor:(NSString *)city{
+    return nil;
+}
 @end

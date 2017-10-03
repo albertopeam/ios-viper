@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WeatherExpirationPolicy.h"
 
-@interface Preferences : NSObject
--(Boolean)isExpiredWeather:(NSString*)city;
--(void)updatedWeather:(NSString*)city;
+@interface Preferences : NSObject<WeatherExpirationPolicy>
+
 @end

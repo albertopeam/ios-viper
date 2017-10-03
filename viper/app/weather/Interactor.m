@@ -14,25 +14,26 @@
     @private
     NSOperationQueue*mainQueue;
     @private
-    id<GatewayProtocol>gateway;
+    WeatherRepository*weatherRepository;
 }
 
 - (instancetype)initWithBackground:(NSOperationQueue*)bgQueue
                           withMain:(NSOperationQueue*)mQueue
-                       withGateway:(id<GatewayProtocol>)agateway{
+                       withRepository:(WeatherRepository*)aWeatherRepository{
     self = [super init];
     if (self) {
         backgroundQueue = bgQueue;
         mainQueue = mQueue;
-        gateway = agateway;
+        weatherRepository = aWeatherRepository;
     }
     return self;
 }
 
--(void)run:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError {
+-(void)run:(NSString*)query
+witCallback:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError {
     [backgroundQueue addOperationWithBlock:^{
         @try {
-            Weather* weather = [gateway perform];
+            Weather* weather = [weatherRepository weatherFor:query];
             [mainQueue addOperationWithBlock:^{
                 onResult(weather);
             }];

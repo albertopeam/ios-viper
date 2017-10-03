@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GatewayProtocol.h"
+#import "FetchWeatherDataSource.h"
 #import "AFHTTPSessionManager+Synchronous.h"
 #import <AFNetworking/AFNetworking.h>
 
-@interface Gateway : NSObject <GatewayProtocol>
+@interface GetWeatherApiClient : NSObject <FetchWeatherDataSource>
 - (instancetype)initWithManager:(AFHTTPSessionManager*)amanager;
 @end

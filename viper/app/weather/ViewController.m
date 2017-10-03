@@ -43,11 +43,12 @@
         abort();
     }
     NSLog(@"VIPER");
-    //[_presenter action];
+    [_presenter weatherForCity:@"A Coruna"];
 }
 
 - (IBAction)action:(id)sender {
-    [_presenter action];
+    
+    [_presenter weatherForCity:@"A Coruna"];
 }
 
 -(void)onSuccess:(Weather*)weather{

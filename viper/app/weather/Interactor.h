@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Weather.h"
-#import "GatewayProtocol.h"
+#import "WeatherRepository.h"
 
 @interface Interactor : NSObject
 - (instancetype)initWithBackground:(NSOperationQueue*)bgQueue
                           withMain:(NSOperationQueue*)mQueue
-                       withGateway:(id<GatewayProtocol>)agateway;
--(void)run:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError;
+                       withRepository:(WeatherRepository*)aWeatherRepository;
+-(void)run:(NSString*)query witCallback:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError;
 @end

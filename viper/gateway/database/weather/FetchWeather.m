@@ -22,7 +22,7 @@
     return self;
 }
 
-- (Weather*)fetch:(NSString*)city{
+- (Weather*)weatherFor:(NSString *)city{
     NSManagedObjectContext* moc = [database moc];
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
     NSError* error = nil;

@@ -6,10 +6,10 @@
 //  Copyright © 2017 vagrant. All rights reserved.
 //
 
-#import "Gateway.h"
+#import "GetWeatherApiClient.h"
 #import "CityWeatherCloud.h"
 
-@implementation Gateway{
+@implementation GetWeatherApiClient{
     @private AFHTTPSessionManager* manager;
 }
 
@@ -22,7 +22,7 @@
     return self;
 }
 
--(Weather*)perform{
+- (Weather*)weatherFor:(NSString *)city{
     //TODO: modify query using city
     NSError *error = nil;
     NSString* apiKey = @"9186b8e5715f961fed5d4482516bc296";
