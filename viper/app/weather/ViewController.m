@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //TODO: mover este codigo y el del app delegate a otro lado... inicializar el persistent container...
-    
+    /*
     Database* db = [[Provider manager] database];
     NSManagedObjectContext* moc = [db moc];
     WeatherMO *weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
@@ -42,23 +42,24 @@
         NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
         abort();
     }
-    NSLog(@"VIPER");
+    NSLog(@"VIPER");*/
     [_presenter weatherForCity:@"A Coruna"];
 }
 
 - (IBAction)action:(id)sender {
-    
     [_presenter weatherForCity:@"A Coruna"];
 }
 
 -(void)onSuccess:(Weather*)weather{
     [_reloadButton setUserInteractionEnabled:YES];
     [_cityLabel setText:[weather city]];
+    /*
     [_tempLabel setText:[weather temperature]];
     [_pressureLabel setText:[weather pressure]];
     [_humidityLabel setText:[weather humidity]];
     [_minTempLabel setText:[weather minTemp]];
     [_maxTempLabel setText:[weather maxTemp]];
+*/
 }
 
 -(void)onError:(NSException*)exception{

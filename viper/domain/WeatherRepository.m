@@ -29,9 +29,7 @@
     return self;
 }
 
-//todo:impl
-//todo:refactor gateway and naming...
 -(Weather *)weatherFor:(NSString *)city{
-    return nil;
+    return [fetchWeatherApiDS weatherFor:city];
 }
 @end
