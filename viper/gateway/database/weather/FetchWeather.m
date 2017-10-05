@@ -25,10 +25,10 @@
 - (Weather*)weatherFor:(NSString *)city{
     NSManagedObjectContext* moc = [database moc];
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"city == %@", city]];
     NSError* error = nil;
-    //TODO: modify query using city
     NSArray *results = [moc executeFetchRequest:request error:&error];
-    if (!results) {
+    if (error) {
         @throw([NSException exceptionWithName:@"CoreDataException"
                                        reason:[error localizedDescription]
                                      userInfo:[error userInfo]]);

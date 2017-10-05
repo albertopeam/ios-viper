@@ -24,6 +24,14 @@
 
 -(void)store:(Weather *)weather{
     NSManagedObjectContext* moc = [database moc];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"city == %@", [weather city]]];
+    NSArray *results = [moc executeFetchRequest:request error:nil];
+    if (results.count > 0) {
+        WeatherMO *toRemoveWeatherMO = [results objectAtIndex:0];
+        [moc deleteObject:toRemoveWeatherMO];
+    }
+    
     WeatherMO *weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
     weatherMO.remote_id = [[weather remoteId] intValue];
     weatherMO.city = [weather city];

@@ -20,34 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //TODO: mover este codigo y el del app delegate a otro lado... inicializar el persistent container...
-    /*
-    Database* db = [[Provider manager] database];
-    NSManagedObjectContext* moc = [db moc];
-    WeatherMO *weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
-    weatherMO.city = @"A Coruña";
-    weatherMO.pressure = 1024;
-    weatherMO.humidity = 80;
-    weatherMO.temperature = 10;
-    weatherMO.min_temp = 8;
-    weatherMO.max_temp = 15;
-    NSError *error = nil;
-    if ([moc save:&error] == NO) {
-        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
-    }
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
-    error = nil;
-    NSArray *results = [moc executeFetchRequest:request error:&error];
-    if (!results) {
-        NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
-        abort();
-    }
-    NSLog(@"VIPER");*/
-    [_presenter weatherForCity:@"A Coruna"];
+    [_presenter weatherForCity:@"A Coruña"];
 }
 
 - (IBAction)action:(id)sender {
-    [_presenter weatherForCity:@"A Coruna"];
+    [_presenter weatherForCity:@"A Coruña"];
 }
 
 -(void)onSuccess:(Weather*)weather{
