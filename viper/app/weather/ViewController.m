@@ -20,11 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_presenter weatherForCity:@"A Coruña"];
+    [_presenter weatherForCity:@"A Coruna"];
 }
 
 - (IBAction)action:(id)sender {
-    [_presenter weatherForCity:@"A Coruña"];
+    [_presenter weatherForCity:@"A Coruna"];
 }
 
 -(void)onSuccess:(Weather*)weather{
