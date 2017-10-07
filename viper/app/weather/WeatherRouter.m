@@ -6,9 +6,9 @@
 //  Copyright © 2017 vagrant. All rights reserved.
 //
 
-#import "Router.h"
-#import "Presenter.h"
-#import "Interactor.h"
+#import "WeatherRouter.h"
+#import "WeatherPresenter.h"
+#import "WeatherInteractor.h"
 #import "WeatherRepository.h"
 #import "Provider.h"
 #import "WeatherExpirationPolicy.h"
@@ -20,9 +20,9 @@
 #import "StoreWeather.h"
 #import "Database.h"
 
-@implementation Router
+@implementation WeatherRouter
 
-+(ViewController*)provide{
++(WeatherViewController*)provide{
     Provider* provider = [Provider manager];
     NSOperationQueue* background = [provider backgroundQueue];
     NSOperationQueue* main = [provider mainQueue];
@@ -41,12 +41,12 @@
                                             initWithExpirationPolicy:policy
                                             withFetchWeatherApiClient:fetchWeatherApiClientDS
                                             withFetchWeatherStorage:fetchWeatherDatabaseDS withStoreWeather:storeWeatherDS];
-    Interactor* interactor = [[Interactor alloc]
+    WeatherInteractor* interactor = [[WeatherInteractor alloc]
                               initWithBackground:background
                               withMain:main
                               withRepository:weatherRepository];
-    ViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"view_controller"];
-    Presenter *presenter = [[Presenter alloc]
+    WeatherViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"view_controller"];
+    WeatherPresenter *presenter = [[WeatherPresenter alloc]
                             initWithView:viewController
                             interactor:interactor];
     [viewController setPresenter:presenter];

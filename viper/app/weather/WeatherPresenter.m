@@ -6,15 +6,15 @@
 //  Copyright © 2017 vagrant. All rights reserved.
 //
 
-#import "Presenter.h"
-#import "ViewController.h"
+#import "WeatherPresenter.h"
+#import "WeatherViewController.h"
 
-@implementation Presenter{
-    @private Interactor* interactor;
-    @private ViewController*view;
+@implementation WeatherPresenter{
+    @private WeatherInteractor* interactor;
+    @private WeatherViewController* view;
 }
 
--(instancetype)initWithView:(ViewController*)aviewController interactor:(Interactor*)ainteractor {
+-(instancetype)initWithView:(WeatherViewController*)aviewController interactor:(WeatherInteractor*)ainteractor {
     self = [super init];
     if (self) {
         view = aviewController;
@@ -24,17 +24,17 @@
 }
 
 -(void)weatherForCity:(NSString*)query {
-    __weak ViewController* target = view;
+    __weak WeatherViewController* target = view;
     [target showLoading];
     [interactor run:query witCallback:^(Weather *weather) {
         if (target) {
-            ViewController*aview = target;
+            WeatherViewController*aview = target;
             [aview hideLoading];
             [aview onSuccess:weather];
         }
     } onError:^(NSException *exception) {
         if (target) {
-            ViewController*aview = target;
+            WeatherViewController*aview = target;
             [aview hideLoading];
             [aview onError:exception];
             
