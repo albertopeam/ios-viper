@@ -6,17 +6,17 @@
 //  Copyright © 2017 vagrant. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "Presenter.h"
+#import "WeatherViewController.h"
+#import "WeatherPresenter.h"
 #import "MBProgressHUD.h"
 #import "AppDelegate.h"
 #import "WeatherMO+CoreDataProperties.h"
 #import "WeatherMO+CoreDataClass.h"
 #import "Provider.h"
 
-@interface ViewController ()@end
+@interface WeatherViewController ()@end
 
-@implementation ViewController
+@implementation WeatherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

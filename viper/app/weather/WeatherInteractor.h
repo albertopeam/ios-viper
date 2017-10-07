@@ -10,7 +10,7 @@
 #import "Weather.h"
 #import "WeatherRepository.h"
 
-@interface Interactor : NSObject
+@interface WeatherInteractor : NSObject
 - (instancetype)initWithBackground:(NSOperationQueue*)bgQueue
                           withMain:(NSOperationQueue*)mQueue
                        withRepository:(WeatherRepository*)aWeatherRepository;

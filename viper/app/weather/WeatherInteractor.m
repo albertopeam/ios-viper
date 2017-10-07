@@ -6,9 +6,9 @@
 //  Copyright © 2017 vagrant. All rights reserved.
 //
 
-#import "Interactor.h"
+#import "WeatherInteractor.h"
 
-@implementation Interactor{
+@implementation WeatherInteractor{
     @private
     NSOperationQueue*backgroundQueue;
     @private

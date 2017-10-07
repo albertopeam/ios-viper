@@ -15,7 +15,6 @@ To run this project you need to create an [OpenWeather](https://openweathermap.o
 ##### TODOS:
 
 iterartion 1:
-* add packaging
 * weather list
 * make view more beautifull
 * add icons

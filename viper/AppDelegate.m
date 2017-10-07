@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Provider.h"
-#import "Router.h"
+#import "WeatherRouter.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Provider manager];
-    [self.window setRootViewController:[Router provide]];
+    [self.window setRootViewController:[WeatherRouter provide]];
     [self.window makeKeyAndVisible];
     return YES;
 }
