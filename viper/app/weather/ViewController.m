@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import "Presenter.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
+#import "WeatherMO+CoreDataProperties.h"
+#import "WeatherMO+CoreDataClass.h"
+#import "Provider.h"
 
 @interface ViewController ()@end
 
@@ -16,21 +20,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_presenter action];
+    [_presenter weatherForCity:@"A Coruna"];
 }
 
 - (IBAction)action:(id)sender {
-    [_presenter action];
+    [_presenter weatherForCity:@"A Coruna"];
 }
 
--(void)onSuccess:(Entity*)entity{
+-(void)onSuccess:(Weather*)weather{
     [_reloadButton setUserInteractionEnabled:YES];
-    [_cityLabel setText:[entity name]];
-    [_tempLabel setText:[entity temperature]];
-    [_pressureLabel setText:[entity pressure]];
-    [_humidityLabel setText:[entity humidity]];
-    [_minTempLabel setText:[entity minTemp]];
-    [_maxTempLabel setText:[entity maxTemp]];
+    [_cityLabel setText:[weather city]];
+    /*
+    [_tempLabel setText:[weather temperature]];
+    [_pressureLabel setText:[weather pressure]];
+    [_humidityLabel setText:[weather humidity]];
+    [_minTempLabel setText:[weather minTemp]];
+    [_maxTempLabel setText:[weather maxTemp]];
+*/
 }
 
 -(void)onError:(NSException*)exception{

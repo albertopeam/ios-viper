@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UIButton *reloadButton;
 @property Presenter *presenter;
--(void)onSuccess:(Entity*) entity;
+-(void)onSuccess:(Weather*)weather;
 -(void)onError:(NSException*)exception;
 -(void)showLoading;
 -(void)hideLoading;

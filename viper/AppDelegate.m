@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Provider.h"
 #import "Router.h"
 
 @interface AppDelegate ()
@@ -17,6 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Provider manager];
     [self.window setRootViewController:[Router provide]];
     [self.window makeKeyAndVisible];
     return YES;
@@ -48,6 +50,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEn					terBackground:.
 }
-
 
 @end

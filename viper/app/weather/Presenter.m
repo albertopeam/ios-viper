@@ -23,21 +23,21 @@
     return self;
 }
 
--(void)action{
+-(void)weatherForCity:(NSString*)query {
     __weak ViewController* target = view;
     [target showLoading];
-    [interactor run:^(Entity* entity) {
+    [interactor run:query witCallback:^(Weather *weather) {
         if (target) {
             ViewController*aview = target;
             [aview hideLoading];
-            [aview onSuccess:entity];
+            [aview onSuccess:weather];
         }
     } onError:^(NSException *exception) {
         if (target) {
             ViewController*aview = target;
             [aview hideLoading];
             [aview onError:exception];
-
+            
         }
     }];
 }

@@ -11,6 +11,7 @@
 #import "WeatherCloud.h"
 
 @interface CityWeatherCloud :JSONModel
+    @property (nonatomic) NSNumber *id;
     @property (nonatomic) NSString *name;
     @property (nonatomic) WeatherCloud* main;
     @property (nonatomic) NSString<Optional> *message;

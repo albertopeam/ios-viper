@@ -11,6 +11,6 @@
 @class ViewController;
 
 @interface Presenter : NSObject
--(instancetype)initWithView:(ViewController*)viewController interactor:(Interactor*)interactor;
--(void)action;
+- (instancetype)initWithView:(ViewController*)viewController interactor:(Interactor*)interactor;
+- (void)weatherForCity:(NSString*)query;
 @end
