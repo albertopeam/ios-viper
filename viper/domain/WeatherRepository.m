@@ -30,16 +30,13 @@
 }
 
 -(Weather *)weatherFor:(NSString *)city{
-    /*
     if([policy isExpiredWeather:city]){
-     */
         Weather* weather = [fetchWeatherApiDS weatherFor:city];
         [storeWeatherDS store:weather];
         [policy updatedWeather:city];
-        return [fetchWeatherStorageDS weatherFor:city];;
-    /*}else{
+        return weather;
+    }else{
         return [fetchWeatherStorageDS weatherFor:city];
     }
-     */
 }
 @end

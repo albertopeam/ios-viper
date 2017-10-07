@@ -10,39 +10,34 @@
 #import "CityWeatherCloud.h"
 
 @implementation GetWeatherApiClient{
-    @private AFHTTPSessionManager* manager;
+    AFHTTPSessionManager* manager;
+    NSString* url;
+    NSString* apiKey;
 }
 
 - (instancetype)initWithManager:(AFHTTPSessionManager*)amanager
-{
+                  withServerUrl:(NSString*)aUrl
+                     withApiKey:(NSString*)anApiKey{
     self = [super init];
     if (self) {
         manager = amanager;
+        url = aUrl;
+        apiKey = anApiKey;
     }
     return self;
 }
 
 - (Weather*)weatherFor:(NSString *)city{
-    //TODO: modify query using city
     NSError *error = nil;
-    NSString* apiKey = @"9186b8e5715f961fed5d4482516bc296";
-    NSString* query = @"ACoruna";
-    NSString* url = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=%@", query, apiKey];
-    /*
-    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
-    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [manager setRequestSerializer:requestSerializer];
-    */
-     NSDictionary *result = [manager syncGET:url
-                           parameters:@{}
+    NSDictionary *result = [manager syncGET:url
+                           parameters:@{@"appid":apiKey,@"q":city}
                                  task:NULL
                                 error:&error];
-     if (!error) {
+    if (!error) {
         CityWeatherCloud* city = [[CityWeatherCloud alloc] initWithDictionary:result error:&error];
         Weather* weather = [[Weather alloc]initWithCity:city.name withId:city.id withTemp:city.main.temp withPressure:city.main.pressure withHumidity:city.main.humidity withMaxTemp:city.main.temp_max withMinTemp:city.main.temp_min];
         return weather;
-     }
+    }
     @throw([NSException exceptionWithName:@"Network exception" reason:@"Network error" userInfo:nil]);
 }
 

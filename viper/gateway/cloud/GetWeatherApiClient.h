@@ -12,5 +12,7 @@
 #import <AFNetworking/AFNetworking.h>
 
 @interface GetWeatherApiClient : NSObject <FetchWeatherDataSource>
-- (instancetype)initWithManager:(AFHTTPSessionManager*)amanager;
+- (instancetype)initWithManager:(AFHTTPSessionManager*)amanager
+                  withServerUrl:(NSString*)url
+                     withApiKey:(NSString*)apiKey;
 @end

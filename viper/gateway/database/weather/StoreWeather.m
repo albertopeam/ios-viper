@@ -27,12 +27,12 @@
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Weather"];
     [request setPredicate:[NSPredicate predicateWithFormat:@"city == %@", [weather city]]];
     NSArray *results = [moc executeFetchRequest:request error:nil];
+    WeatherMO *weatherMO = nil;
     if (results.count > 0) {
-        WeatherMO *toRemoveWeatherMO = [results objectAtIndex:0];
-        [moc deleteObject:toRemoveWeatherMO];
+        weatherMO = [results objectAtIndex:0];
+    }else{
+        weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
     }
-    
-    WeatherMO *weatherMO = [NSEntityDescription insertNewObjectForEntityForName:@"Weather" inManagedObjectContext:moc];
     weatherMO.remote_id = [[weather remoteId] intValue];
     weatherMO.city = [weather city];
     weatherMO.pressure = [[weather pressure] intValue];
@@ -46,6 +46,5 @@
                                        reason:[error localizedDescription]
                                      userInfo:[error userInfo]]);
     }
-
 }
 @end

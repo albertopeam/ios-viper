@@ -8,7 +8,25 @@
 
 #import "Preferences.h"
 
-@implementation Preferences
+@implementation Preferences{
+    int ttl;
+}
+
+-(instancetype)initWithTTL:(int)attl{
+    self = [super init];
+    if (self) {
+        ttl = attl;
+    }
+    return self;
+}
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        ttl = 30*60;//30min
+    }
+    return self;
+}
 
 -(Boolean)isExpiredWeather:(NSString*)city{
     NSTimeInterval nowSeconds = [[NSDate date] timeIntervalSince1970];
@@ -17,7 +35,6 @@
     if (!lastUpdated) {
         return YES;
     }
-    double ttl = 30*60;//30 min
     return nowSeconds - lastUpdated > ttl;
 }
 

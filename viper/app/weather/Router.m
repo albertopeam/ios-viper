@@ -29,7 +29,9 @@
     id<WeatherExpirationPolicy>policy = [Preferences new];
     AFHTTPSessionManager *manager = [provider networkClient];
     id<FetchWeatherDataSource>fetchWeatherApiClientDS = [[GetWeatherApiClient alloc]
-                                                         initWithManager:manager];
+                                                         initWithManager:manager
+                                                         withServerUrl:[provider serverUrl]
+                                                         withApiKey:[provider serverApiKey]];
     Database*database = [provider database];
     id<FetchWeatherDataSource>fetchWeatherDatabaseDS = [[FetchWeather alloc]
                                                          initWithDatabase:database];

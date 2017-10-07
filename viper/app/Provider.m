@@ -7,6 +7,7 @@
 //
 
 #import "Provider.h"
+#import "Constants.h"
 
 @implementation Provider{
     Preferences* preferences;
@@ -54,6 +55,14 @@
 
 - (AFHTTPSessionManager*)networkClient{
     return netManager;
+}
+
+- (NSString*)serverUrl{
+    return @"http://api.openweathermap.org/data/2.5/weather";
+}
+
+- (NSString*)serverApiKey{
+    return API_KEY;
 }
 
 @end

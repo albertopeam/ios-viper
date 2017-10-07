@@ -19,4 +19,6 @@
 - (NSOperationQueue*)mainQueue;
 - (NSOperationQueue*)backgroundQueue;
 - (AFHTTPSessionManager*)networkClient;
+- (NSString*)serverUrl;
+- (NSString*)serverApiKey;
 @end

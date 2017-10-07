@@ -10,5 +10,5 @@
 #import "WeatherExpirationPolicy.h"
 
 @interface Preferences : NSObject<WeatherExpirationPolicy>
-
+-(instancetype)initWithTTL:(int)attl;
 @end
