@@ -36,6 +36,7 @@
     [_humidityLabel setText:[weather humidity]];
     [_minTempLabel setText:[weather minTemp]];
     [_maxTempLabel setText:[weather maxTemp]];
+    
 */
 }
 

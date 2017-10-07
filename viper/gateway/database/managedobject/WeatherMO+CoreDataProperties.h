@@ -2,7 +2,7 @@
 //  WeatherMO+CoreDataProperties.h
 //  
 //
-//  Created by vagrant on 10/1/17.
+//  Created by vagrant on 10/7/17.
 //
 //
 
@@ -17,11 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *city;
 @property (nonatomic) int16_t humidity;
-@property (nonatomic) int32_t remote_id;
 @property (nonatomic) float max_temp;
 @property (nonatomic) float min_temp;
 @property (nonatomic) int16_t pressure;
+@property (nonatomic) int32_t remote_id;
 @property (nonatomic) float temperature;
+@property (nullable, nonatomic, copy) NSString *icon;
+@property (nullable, nonatomic, copy) NSString *title;
+@property (nullable, nonatomic, copy) NSString *extended;
 
 @end
 

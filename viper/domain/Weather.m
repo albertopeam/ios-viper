@@ -16,9 +16,12 @@
     @private NSNumber* humidity;
     @private NSNumber* minTemp;
     @private NSNumber* maxTemp;
+    @private NSString* title;
+    @private NSString* description;
+    @private NSString* icon;
 }
 
-- (instancetype)initWithCity:(NSString*)acity withId:(NSNumber*)aremotedId withTemp:(NSNumber*)atemp withPressure:(NSNumber*)apressure withHumidity:(NSNumber*)ahumidity withMaxTemp:(NSNumber*)amaxTemp withMinTemp:(NSNumber*)aminTemp{
+- (instancetype)initWithCity:(NSString*)acity withId:(NSNumber*)aremotedId withTemp:(NSNumber*)atemp withPressure:(NSNumber*)apressure withHumidity:(NSNumber*)ahumidity withMaxTemp:(NSNumber*)amaxTemp withMinTemp:(NSNumber*)aminTemp withTitle:(NSString*)aTitle withExtendedDescription:(NSString*)aExtendedDescription withIcon:(NSString*)anIcon{
     self = [super init];
     if (self) {
         city = acity;
@@ -28,6 +31,9 @@
         humidity = ahumidity;
         minTemp = aminTemp;
         maxTemp = amaxTemp;
+        title = aTitle;
+        description = aExtendedDescription;
+        icon = anIcon;
     }
     return self;
 }
