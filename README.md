@@ -1,7 +1,7 @@
 # VIPER
 Example viper arch for ios. The example must show a list of locations, each one can be accesed to see what weather is doing now. 
 
-To run this project you need to create an (OpenWeather)[https://openweathermap.org/] api key, after that create a file called constants like that:
+To run this project you need to create an [OpenWeather](https://openweathermap.org/) api key, after that create a file called constants like that:
 ```objective-c
 #ifndef Constants_h
 #define Constants_h
