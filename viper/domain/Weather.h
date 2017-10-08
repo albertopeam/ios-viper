@@ -17,4 +17,8 @@
 -(NSNumber*)humidity;
 -(NSNumber*)minTemp;
 -(NSNumber*)maxTemp;
+-(NSString*)icon;
+-(NSString*)title;
+-(NSString*)description;
+-(NSDate*)datetime;
 @end

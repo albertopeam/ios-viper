@@ -68,6 +68,22 @@
     return maxTemp;
 }
 
+-(NSString*)title{
+    return title;
+}
+
+-(NSString*)description{
+    return description;
+}
+
+-(NSString*)icon{
+    return icon;
+}
+
+-(NSDate*)datetime{
+    return [NSDate dateWithTimeIntervalSince1970:[datetime doubleValue]];
+}
+
 -(NSNumber*)kelvinToCelsius:(NSNumber*)temp{
     NSNumber* celsius = [NSNumber numberWithFloat:temp.floatValue - 273.15f];
     return celsius;

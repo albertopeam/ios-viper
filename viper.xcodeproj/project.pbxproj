@@ -11,6 +11,7 @@
 		5A0D9E04D794E72B6A3C1AE2 /* Pods_viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC5DF58A57A47B1CB5C0F7 /* Pods_viper.framework */; };
 		5B001BCD1F8A4BE300217FDD /* WeatherMO+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B001BCA1F8A4BE300217FDD /* WeatherMO+CoreDataClass.m */; };
 		5B001BCE1F8A4BE300217FDD /* WeatherMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B001BCC1F8A4BE300217FDD /* WeatherMO+CoreDataProperties.m */; };
+		5B001BD11F8A4D5C00217FDD /* WeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B001BD01F8A4D5C00217FDD /* WeatherViewModel.m */; };
 		5B03094B1F811669009A6D1A /* WeatherInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309441F811669009A6D1A /* WeatherInteractor.m */; };
 		5B03094C1F811669009A6D1A /* WeatherPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309461F811669009A6D1A /* WeatherPresenter.m */; };
 		5B03094D1F811669009A6D1A /* WeatherRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0309481F811669009A6D1A /* WeatherRouter.m */; };
@@ -64,6 +65,8 @@
 		5B001BCA1F8A4BE300217FDD /* WeatherMO+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherMO+CoreDataClass.m"; path = "gateway/database/managedobject/WeatherMO+CoreDataClass.m"; sourceTree = "<group>"; };
 		5B001BCB1F8A4BE300217FDD /* WeatherMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeatherMO+CoreDataProperties.h"; path = "gateway/database/managedobject/WeatherMO+CoreDataProperties.h"; sourceTree = "<group>"; };
 		5B001BCC1F8A4BE300217FDD /* WeatherMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherMO+CoreDataProperties.m"; path = "gateway/database/managedobject/WeatherMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5B001BCF1F8A4D5C00217FDD /* WeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherViewModel.h; path = app/WeatherViewModel.h; sourceTree = "<group>"; };
+		5B001BD01F8A4D5C00217FDD /* WeatherViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherViewModel.m; path = app/WeatherViewModel.m; sourceTree = "<group>"; };
 		5B0309431F811669009A6D1A /* WeatherInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherInteractor.h; path = app/weather/WeatherInteractor.h; sourceTree = "<group>"; };
 		5B0309441F811669009A6D1A /* WeatherInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherInteractor.m; path = app/weather/WeatherInteractor.m; sourceTree = "<group>"; };
 		5B0309451F811669009A6D1A /* WeatherPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherPresenter.h; path = app/weather/WeatherPresenter.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				5B0309481F811669009A6D1A /* WeatherRouter.m */,
 				5B0309491F811669009A6D1A /* WeatherViewController.h */,
 				5B03094A1F811669009A6D1A /* WeatherViewController.m */,
+				5B001BCF1F8A4D5C00217FDD /* WeatherViewModel.h */,
+				5B001BD01F8A4D5C00217FDD /* WeatherViewModel.m */,
 			);
 			name = weather;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 				5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */,
 				5B03094C1F811669009A6D1A /* WeatherPresenter.m in Sources */,
 				5B03094D1F811669009A6D1A /* WeatherRouter.m in Sources */,
+				5B001BD11F8A4D5C00217FDD /* WeatherViewModel.m in Sources */,
 				5B001BCD1F8A4BE300217FDD /* WeatherMO+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

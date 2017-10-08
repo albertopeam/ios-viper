@@ -10,15 +10,11 @@
 #import "WeatherPresenter.h"
 
 @interface WeatherViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *maxTempLabel;
-@property (weak, nonatomic) IBOutlet UILabel *minTempLabel;
-@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tempLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
-@property (weak, nonatomic) IBOutlet UIButton *reloadButton;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property WeatherPresenter *presenter;
--(void)onSuccess:(Weather*)weather;
+-(void)onSuccess:(WeatherViewModel*)weatherViewModel;
 -(void)onError:(NSException*)exception;
 -(void)showLoading;
 -(void)hideLoading;
