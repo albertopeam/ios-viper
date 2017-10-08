@@ -43,7 +43,11 @@
                                         withPressure:[NSNumber numberWithInteger:weatherMO.pressure]
                                         withHumidity:[NSNumber numberWithInteger:weatherMO.humidity]
                                          withMaxTemp:[NSNumber numberWithFloat:weatherMO.max_temp]
-                                         withMinTemp:[NSNumber numberWithFloat:weatherMO.min_temp]];
+                                         withMinTemp:[NSNumber numberWithFloat:weatherMO.min_temp]
+                                           withTitle:weatherMO.title
+                             withExtendedDescription:weatherMO.extended
+                                            withIcon:weatherMO.icon
+                                        withDateTime:[NSNumber numberWithLong:weatherMO.datetime]];
     return weather;
 }
 @end

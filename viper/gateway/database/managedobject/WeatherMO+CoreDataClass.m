@@ -2,7 +2,7 @@
 //  WeatherMO+CoreDataClass.m
 //  
 //
-//  Created by vagrant on 10/1/17.
+//  Created by vagrant on 10/8/17.
 //
 //
 

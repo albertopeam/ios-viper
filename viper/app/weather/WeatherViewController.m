@@ -27,20 +27,23 @@
     [_presenter weatherForCity:@"A Coruna"];
 }
 
--(void)onSuccess:(Weather*)weather{
-    [_reloadButton setUserInteractionEnabled:YES];
-    [_cityLabel setText:[weather city]];
+-(void)onSuccess:(WeatherViewModel*)weatherViewModel{
+    //[_reloadButton setUserInteractionEnabled:YES];
+    [_cityLabel setText:[weatherViewModel city]];
+    [_descriptionLabel setText:[weatherViewModel description]];
+    [_iconImage setImage:[weatherViewModel icon]];
     /*
     [_tempLabel setText:[weather temperature]];
     [_pressureLabel setText:[weather pressure]];
     [_humidityLabel setText:[weather humidity]];
     [_minTempLabel setText:[weather minTemp]];
     [_maxTempLabel setText:[weather maxTemp]];
+    
 */
 }
 
 -(void)onError:(NSException*)exception{
-    [_reloadButton setUserInteractionEnabled:YES];
+    //[_reloadButton setUserInteractionEnabled:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:[exception reason]
                                                             preferredStyle:UIAlertControllerStyleAlert];

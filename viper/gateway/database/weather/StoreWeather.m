@@ -40,6 +40,10 @@
     weatherMO.temperature = [[weather temperature] floatValue];
     weatherMO.min_temp = [[weather minTemp] floatValue];
     weatherMO.max_temp = [[weather maxTemp] floatValue];
+    weatherMO.extended = [weather description];
+    weatherMO.icon = [weather icon];
+    weatherMO.title = [weather title];
+    weatherMO.datetime = [[weather datetime] intValue];
     NSError *error = nil;
     if ([moc save:&error] == NO) {
         @throw([NSException exceptionWithName:@"CoreDataException"

@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Weather.h"
+#import "WeatherViewModel.h"
 #import "WeatherRepository.h"
 
 @interface WeatherInteractor : NSObject
 - (instancetype)initWithBackground:(NSOperationQueue*)bgQueue
                           withMain:(NSOperationQueue*)mQueue
                        withRepository:(WeatherRepository*)aWeatherRepository;
--(void)run:(NSString*)query witCallback:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError;
+-(void)run:(NSString*)query witCallback:(void(^)(WeatherViewModel* weather))onResult onError:(void(^)(NSException *exception))onError;
 @end

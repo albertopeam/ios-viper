@@ -35,7 +35,19 @@
                                 error:&error];
     if (!error) {
         CityWeatherCloud* city = [[CityWeatherCloud alloc] initWithDictionary:result error:&error];
-        Weather* weather = [[Weather alloc]initWithCity:city.name withId:city.id withTemp:city.main.temp withPressure:city.main.pressure withHumidity:city.main.humidity withMaxTemp:city.main.temp_max withMinTemp:city.main.temp_min];
+        WeatherDescriptionCloud* description = [[city weather] objectAtIndex:0];
+        NSArray* weatherArray = [result objectForKey:@"weather"];
+        NSDictionary* weatherDictionary = [weatherArray objectAtIndex:0];
+        Weather* weather = [[Weather alloc]initWithCity:city.name
+                                                 withId:city.id
+                                               withTemp:city.main.temp
+                                           withPressure:city.main.pressure
+                                           withHumidity:city.main.humidity
+                                            withMaxTemp:city.main.temp_max
+                                            withMinTemp:city.main.temp_min
+                                              withTitle:description.main
+                                withExtendedDescription:[weatherDictionary objectForKey:@"description"]
+                                               withIcon:description.icon withDateTime:city.dt];
         return weather;
     }
     @throw([NSException exceptionWithName:@"Network exception" reason:@"Network error" userInfo:nil]);

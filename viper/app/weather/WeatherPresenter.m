@@ -26,11 +26,11 @@
 -(void)weatherForCity:(NSString*)query {
     __weak WeatherViewController* target = view;
     [target showLoading];
-    [interactor run:query witCallback:^(Weather *weather) {
+    [interactor run:query witCallback:^(WeatherViewModel *weatherViewModel) {
         if (target) {
             WeatherViewController*aview = target;
             [aview hideLoading];
-            [aview onSuccess:weather];
+            [aview onSuccess:weatherViewModel];
         }
     } onError:^(NSException *exception) {
         if (target) {

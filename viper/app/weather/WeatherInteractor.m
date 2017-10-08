@@ -7,6 +7,7 @@
 //
 
 #import "WeatherInteractor.h"
+#import "Weather.h"
 
 @implementation WeatherInteractor{
     @private
@@ -30,12 +31,13 @@
 }
 
 -(void)run:(NSString*)query
-witCallback:(void(^)(Weather* weather))onResult onError:(void(^)(NSException *exception))onError {
+witCallback:(void(^)(WeatherViewModel* weather))onResult onError:(void(^)(NSException *exception))onError {
     [backgroundQueue addOperationWithBlock:^{
         @try {
             Weather* weather = [weatherRepository weatherFor:query];
+            WeatherViewModel* weatherViewModel = [[WeatherViewModel alloc] initWithWeather:weather];
             [mainQueue addOperationWithBlock:^{
-                onResult(weather);
+                onResult(weatherViewModel);
             }];
         } @catch (NSException *exception) {
             [mainQueue addOperationWithBlock:^{
