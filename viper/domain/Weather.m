@@ -80,9 +80,14 @@
     return icon;
 }
 
+-(NSNumber*)datetime{
+    return datetime;
+}
+
+/*
 -(NSDate*)datetime{
     return [NSDate dateWithTimeIntervalSince1970:[datetime doubleValue]];
-}
+}*/
 
 -(NSNumber*)kelvinToCelsius:(NSNumber*)temp{
     NSNumber* celsius = [NSNumber numberWithFloat:temp.floatValue - 273.15f];

@@ -13,6 +13,6 @@
 @interface WeatherViewModel : NSObject
 - (instancetype)initWithWeather:(Weather*)aWeather;
 - (NSString*)city;
-- (NSString*)adescription;
+- (NSString*)description;
 - (UIImage*)icon;
 @end

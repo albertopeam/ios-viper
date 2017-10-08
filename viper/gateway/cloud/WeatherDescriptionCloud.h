@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 @protocol WeatherDescriptionCloud;
 
-@interface WeatherDescriptionCloud : NSObject
+@interface WeatherDescriptionCloud : JSONModel
     @property (nonatomic) NSString *main;
     @property (nonatomic) NSString *description;
     @property (nonatomic) NSString *icon;
