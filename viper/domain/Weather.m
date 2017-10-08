@@ -19,9 +19,10 @@
     @private NSString* title;
     @private NSString* description;
     @private NSString* icon;
+    @private NSNumber* datetime;
 }
 
-- (instancetype)initWithCity:(NSString*)acity withId:(NSNumber*)aremotedId withTemp:(NSNumber*)atemp withPressure:(NSNumber*)apressure withHumidity:(NSNumber*)ahumidity withMaxTemp:(NSNumber*)amaxTemp withMinTemp:(NSNumber*)aminTemp withTitle:(NSString*)aTitle withExtendedDescription:(NSString*)aExtendedDescription withIcon:(NSString*)anIcon{
+- (instancetype)initWithCity:(NSString*)acity withId:(NSNumber*)aremotedId withTemp:(NSNumber*)atemp withPressure:(NSNumber*)apressure withHumidity:(NSNumber*)ahumidity withMaxTemp:(NSNumber*)amaxTemp withMinTemp:(NSNumber*)aminTemp withTitle:(NSString*)aTitle withExtendedDescription:(NSString*)aExtendedDescription withIcon:(NSString*)anIcon withDateTime:(NSNumber*)aDateTime{
     self = [super init];
     if (self) {
         city = acity;
@@ -34,6 +35,7 @@
         title = aTitle;
         description = aExtendedDescription;
         icon = anIcon;
+        datetime = aDateTime;
     }
     return self;
 }

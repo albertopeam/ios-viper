@@ -16,8 +16,7 @@
     @property (nonatomic) NSString *name;
     @property (nonatomic) WeatherCloud* main;
     @property (nonatomic) NSArray<WeatherDescriptionCloud>*weather;
+    @property (nonatomic) NSNumber *dt;
     @property (nonatomic) NSString<Optional> *message;
     @property (nonatomic) NSNumber *cod;
-//dt
-//UI -> diseño en widgets the open weather
 @end
