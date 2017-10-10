@@ -84,8 +84,4 @@
     return datetime;
 }
 
--(NSNumber*)kelvinToCelsius:(NSNumber*)temp{
-    NSNumber* celsius = [NSNumber numberWithFloat:temp.floatValue - 273.15f];
-    return celsius;
-}
 @end

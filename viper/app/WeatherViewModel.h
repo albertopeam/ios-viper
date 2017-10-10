@@ -16,4 +16,5 @@
 - (NSString*)description;
 - (UIImage*)icon;
 - (NSString*)datetime;
+- (NSString*)temperature;
 @end

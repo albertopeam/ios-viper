@@ -42,6 +42,7 @@
     [_descriptionLabel setText:[weatherViewModel description]];
     [_iconImage setImage:[weatherViewModel icon]];
     [_datetimeLabel setText:[weatherViewModel datetime]];
+    [_temperatureLabel setText:[weatherViewModel temperature]];
     /*
     [_tempLabel setText:[weather temperature]];
     [_pressureLabel setText:[weather pressure]];

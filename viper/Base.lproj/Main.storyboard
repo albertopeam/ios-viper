@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,11 +77,37 @@
                                     <constraint firstAttribute="height" constant="140" id="zNw-0W-saA"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr0-Ny-aTF">
+                                <rect key="frame" x="0.0" y="158" width="320" height="356"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="47" translatesAutoresizingMaskIntoConstraints="NO" id="nCK-1d-nCU">
+                                        <rect key="frame" x="0.0" y="142" width="160" height="72"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9D-ME-gov">
+                                        <rect key="frame" x="160" y="114" width="160" height="128"/>
+                                        <color key="backgroundColor" red="1" green="0.88352052690000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="F9D-ME-gov" firstAttribute="centerY" secondItem="nCK-1d-nCU" secondAttribute="centerY" id="NVZ-LG-6ry"/>
+                                    <constraint firstItem="F9D-ME-gov" firstAttribute="width" secondItem="vr0-Ny-aTF" secondAttribute="width" multiplier="1:2" id="XzJ-0K-qyJ"/>
+                                    <constraint firstItem="nCK-1d-nCU" firstAttribute="leading" secondItem="vr0-Ny-aTF" secondAttribute="leading" id="YaN-ZZ-O8g"/>
+                                    <constraint firstAttribute="trailing" secondItem="F9D-ME-gov" secondAttribute="trailing" id="d0r-Ys-AAG"/>
+                                    <constraint firstItem="nCK-1d-nCU" firstAttribute="width" secondItem="vr0-Ny-aTF" secondAttribute="width" multiplier="1:2" id="fLb-HW-K6u"/>
+                                    <constraint firstItem="nCK-1d-nCU" firstAttribute="centerY" secondItem="vr0-Ny-aTF" secondAttribute="centerY" id="hAE-RR-iUo"/>
+                                    <constraint firstItem="F9D-ME-gov" firstAttribute="leading" secondItem="nCK-1d-nCU" secondAttribute="trailing" id="kek-Ei-l0i"/>
+                                    <constraint firstItem="F9D-ME-gov" firstAttribute="centerY" secondItem="vr0-Ny-aTF" secondAttribute="centerY" id="vut-6f-i9Y"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdy-ug-k9W">
                                 <rect key="frame" x="0.0" y="514" width="320" height="54"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mza-2g-duT">
-                                        <rect key="frame" x="8" y="9.5" width="198" height="35"/>
+                                        <rect key="frame" x="8" y="10" width="198" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="198" id="UwE-8e-skM"/>
                                         </constraints>
@@ -116,10 +144,14 @@
                         <constraints>
                             <constraint firstItem="0FC-b9-9ub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2le-Xq-q9j"/>
                             <constraint firstItem="gdy-ug-k9W" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="5Kg-JR-TDc"/>
+                            <constraint firstItem="vr0-Ny-aTF" firstAttribute="top" secondItem="0FC-b9-9ub" secondAttribute="bottom" constant="-2" id="Jxd-98-0lJ"/>
                             <constraint firstItem="0FC-b9-9ub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KJ1-9p-Y10"/>
                             <constraint firstItem="gdy-ug-k9W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TfL-4Y-uuM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gdy-ug-k9W" secondAttribute="bottom" id="XQC-OM-ODd"/>
                             <constraint firstAttribute="trailing" secondItem="0FC-b9-9ub" secondAttribute="trailing" id="jW8-mO-VLS"/>
+                            <constraint firstItem="gdy-ug-k9W" firstAttribute="top" secondItem="vr0-Ny-aTF" secondAttribute="bottom" id="lXO-v5-Qbx"/>
+                            <constraint firstItem="vr0-Ny-aTF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="mOo-d7-4tY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vr0-Ny-aTF" secondAttribute="trailing" constant="-16" id="zkk-Ng-9W0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -127,11 +159,12 @@
                         <outlet property="datetimeLabel" destination="Jwr-AJ-d44" id="Umz-QE-PF5"/>
                         <outlet property="descriptionLabel" destination="Zrx-W4-t7C" id="bHl-15-Ega"/>
                         <outlet property="iconImage" destination="xgt-Tm-jXM" id="V3c-Xh-CcS"/>
+                        <outlet property="temperatureLabel" destination="nCK-1d-nCU" id="5Aq-si-Z8w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="122.78860569715144"/>
+            <point key="canvasLocation" x="112.5" y="122.53521126760563"/>
         </scene>
     </scenes>
     <resources>

@@ -39,4 +39,14 @@
     return formattedDatetime;
 }
 
+- (NSString*)temperature{
+    NSNumber* celsius = [self kelvinToCelsius:[weather temperature]];
+    return [NSString stringWithFormat:@"%.1fºC", [celsius floatValue]];
+}
+
+-(NSNumber*)kelvinToCelsius:(NSNumber*)temp{
+    NSNumber* celsius = [NSNumber numberWithFloat:temp.floatValue - 273.15f];
+    return celsius;
+}
+
 @end
