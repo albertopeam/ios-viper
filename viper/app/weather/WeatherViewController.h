@@ -15,6 +15,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *datetimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
+@property (weak, nonatomic) IBOutlet UILabel *feelsLikeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *precipitationsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
 @property WeatherPresenter *presenter;
 -(void)onSuccess:(WeatherViewModel*)weatherViewModel;
 -(void)onError:(NSException*)exception;
