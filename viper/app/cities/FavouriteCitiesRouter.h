@@ -1,5 +1,5 @@
 //
-//  FavouriteCitiesDataSource.h
+//  CitiesRouter.h
 //  viper
 //
 //  Created by vagrant on 10/10/17.
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface FavouriteCitiesDataSource : NSObject<UICollectionViewDataSource>
-    @property(strong, nonatomic) NSArray*cities;
+@interface FavouriteCitiesRouter : NSObject
++ (UIViewController*)provide;
 @end

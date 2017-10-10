@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WeatherViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface WeatherRouter : NSObject
-+(WeatherViewController*)provide;
++ (UIViewController*)provide;
 @end

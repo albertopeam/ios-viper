@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Provider.h"
-#import "WeatherRouter.h"
+#import "FavouriteCitiesRouter.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Provider manager];
-    //[self.window setRootViewController:[WeatherRouter provide]];
-    //[self.window makeKeyAndVisible];
+    UINavigationController *navController = (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+    [navController pushViewController:[FavouriteCitiesRouter provide] animated:YES];
     return YES;
 }
 

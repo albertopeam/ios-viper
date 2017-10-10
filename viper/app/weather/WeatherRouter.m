@@ -19,10 +19,11 @@
 #import "FetchWeather.h"
 #import "StoreWeather.h"
 #import "Database.h"
+#import "WeatherViewController.h"
 
 @implementation WeatherRouter
 
-+(WeatherViewController*)provide{
++(UIViewController*)provide{
     Provider* provider = [Provider manager];
     NSOperationQueue* background = [provider backgroundQueue];
     NSOperationQueue* main = [provider mainQueue];
@@ -45,7 +46,7 @@
                               initWithBackground:background
                               withMain:main
                               withRepository:weatherRepository];
-    WeatherViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"view_controller"];
+    WeatherViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"weather_view_controller"];
     WeatherPresenter *presenter = [[WeatherPresenter alloc]
                             initWithView:viewController
                             interactor:interactor];

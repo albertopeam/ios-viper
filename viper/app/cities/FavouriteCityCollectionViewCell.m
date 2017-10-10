@@ -6,8 +6,8 @@
 //  Copyright © 2017 vagrant. All rights reserved.
 //
 
-#import "CityCollectionViewCell.h"
+#import "FavouriteCityCollectionViewCell.h"
 
-@implementation CityCollectionViewCell
+@implementation FavouriteCityCollectionViewCell
 
 @end

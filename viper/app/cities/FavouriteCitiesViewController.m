@@ -8,12 +8,15 @@
 
 #import "FavouriteCitiesViewController.h"
 #import "FavouriteCitiesDataSource.h"
+#import "WeatherRouter.h"
 
 @interface FavouriteCitiesViewController ()
 
 @end
 
-@implementation FavouriteCitiesViewController
+@implementation FavouriteCitiesViewController{
+    FavouriteCitiesDataSource* datasource;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,27 +25,33 @@
 }
 
 - (void)setup {
+    self.navigationItem.title = @"Favourites";
     _refreshControl = [[UIRefreshControl alloc] init];
     [_refreshControl addTarget:self action:@selector(onRefresh)
              forControlEvents:UIControlEventValueChanged];
     [_collectionView addSubview:_refreshControl];
     _collectionView.alwaysBounceVertical = YES;
-    FavouriteCitiesDataSource* s
-    [_collectionView setDataSource:];
+    datasource = [FavouriteCitiesDataSource new];
+    //TODO: sampe code
+    NSArray* array = [NSArray arrayWithObject:@"A Coruna"];
+    [datasource setCities:array];
+    [_collectionView setDataSource:datasource];
 }
 
 - (void)onRefresh{
     NSLog(@"onRefresh");
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - CollectionView
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController* viewController = [WeatherRouter provide];
+    [self.navigationController pushViewController:viewController animated:YES];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+#pragma mark - Search
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    NSLog(@"searchBarSearchButtonClicked");
+}
 
 @end
