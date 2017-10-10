@@ -15,4 +15,8 @@
 - (NSString*)city;
 - (NSString*)description;
 - (UIImage*)icon;
+- (NSString*)datetime;
+- (NSString*)temperature;
+-(NSString*)humidity;
+-(NSString*)pressure;
 @end

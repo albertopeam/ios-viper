@@ -27,23 +27,27 @@
     [_presenter weatherForCity:@"A Coruna"];
 }
 
+- (IBAction)gotoOpenweathermap:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://openweathermap.org/"]
+                                       options:@{}
+                             completionHandler:^(BOOL success) {
+                                
+                             }];
+
+}
+
 -(void)onSuccess:(WeatherViewModel*)weatherViewModel{
-    //[_reloadButton setUserInteractionEnabled:YES];
     [_cityLabel setText:[weatherViewModel city]];
     [_descriptionLabel setText:[weatherViewModel description]];
     [_iconImage setImage:[weatherViewModel icon]];
-    /*
-    [_tempLabel setText:[weather temperature]];
-    [_pressureLabel setText:[weather pressure]];
-    [_humidityLabel setText:[weather humidity]];
-    [_minTempLabel setText:[weather minTemp]];
-    [_maxTempLabel setText:[weather maxTemp]];
-    
-*/
+    [_datetimeLabel setText:[weatherViewModel datetime]];
+    [_temperatureLabel setText:[weatherViewModel temperature]];
+    [_feelsLikeLabel setText:[weatherViewModel temperature]];
+    [_pressureLabel setText:[weatherViewModel pressure]];
+    [_humidityLabel setText:[weatherViewModel humidity]];
 }
 
 -(void)onError:(NSException*)exception{
-    //[_reloadButton setUserInteractionEnabled:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:[exception reason]
                                                             preferredStyle:UIAlertControllerStyleAlert];
