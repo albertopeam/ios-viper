@@ -27,11 +27,21 @@
     [_presenter weatherForCity:@"A Coruna"];
 }
 
+- (IBAction)gotoOpenweathermap:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://openweathermap.org/"]
+                                       options:@{}
+                             completionHandler:^(BOOL success) {
+                                
+                             }];
+
+}
+
 -(void)onSuccess:(WeatherViewModel*)weatherViewModel{
     //[_reloadButton setUserInteractionEnabled:YES];
     [_cityLabel setText:[weatherViewModel city]];
     [_descriptionLabel setText:[weatherViewModel description]];
     [_iconImage setImage:[weatherViewModel icon]];
+    [_datetimeLabel setText:[weatherViewModel datetime]];
     /*
     [_tempLabel setText:[weather temperature]];
     [_pressureLabel setText:[weather pressure]];

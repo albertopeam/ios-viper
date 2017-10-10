@@ -31,4 +31,12 @@
     return [UIImage imageNamed:[weather icon]];
 }
 
+- (NSString*)datetime{
+    NSDate* datetime = [NSDate dateWithTimeIntervalSince1970:[[weather datetime] doubleValue]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm MMM dd"];
+    NSString* formattedDatetime = [dateFormatter stringFromDate:datetime];
+    return formattedDatetime;
+}
+
 @end
