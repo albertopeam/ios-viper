@@ -32,6 +32,9 @@
 		5B9F84B81F75C8BF00C9BEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B71F75C8BF00C9BEE7 /* Assets.xcassets */; };
 		5B9F84BB1F75C8BF00C9BEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B91F75C8BF00C9BEE7 /* LaunchScreen.storyboard */; };
 		5B9F84D11F75C8C000C9BEE7 /* viperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84D01F75C8C000C9BEE7 /* viperUITests.m */; };
+		5BA3AC9B1F8D2645005E4464 /* FavouriteCitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3AC9A1F8D2645005E4464 /* FavouriteCitiesViewController.m */; };
+		5BA3AC9E1F8D2997005E4464 /* CityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3AC9D1F8D2997005E4464 /* CityCollectionViewCell.m */; };
+		5BA3ACA11F8D2B42005E4464 /* FavouriteCitiesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA3ACA01F8D2B42005E4464 /* FavouriteCitiesDataSource.m */; };
 		5BAD3D3B1F8984BE00273365 /* WeatherDescriptionCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD3D3A1F8984BE00273365 /* WeatherDescriptionCloud.m */; };
 		5BCBCB691F76F440006EBCC9 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBCB681F76F440006EBCC9 /* Weather.m */; };
 		5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */; };
@@ -110,6 +113,12 @@
 		5B9F84CC1F75C8C000C9BEE7 /* viperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F84D01F75C8C000C9BEE7 /* viperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viperUITests.m; sourceTree = "<group>"; };
 		5B9F84D21F75C8C000C9BEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BA3AC991F8D2645005E4464 /* FavouriteCitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteCitiesViewController.h; path = app/cities/FavouriteCitiesViewController.h; sourceTree = "<group>"; };
+		5BA3AC9A1F8D2645005E4464 /* FavouriteCitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteCitiesViewController.m; path = app/cities/FavouriteCitiesViewController.m; sourceTree = "<group>"; };
+		5BA3AC9C1F8D2997005E4464 /* CityCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityCollectionViewCell.h; path = app/cities/CityCollectionViewCell.h; sourceTree = "<group>"; };
+		5BA3AC9D1F8D2997005E4464 /* CityCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityCollectionViewCell.m; path = app/cities/CityCollectionViewCell.m; sourceTree = "<group>"; };
+		5BA3AC9F1F8D2B42005E4464 /* FavouriteCitiesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteCitiesDataSource.h; path = app/cities/FavouriteCitiesDataSource.h; sourceTree = "<group>"; };
+		5BA3ACA01F8D2B42005E4464 /* FavouriteCitiesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteCitiesDataSource.m; path = app/cities/FavouriteCitiesDataSource.m; sourceTree = "<group>"; };
 		5BAD3D391F8984BE00273365 /* WeatherDescriptionCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherDescriptionCloud.h; path = gateway/cloud/WeatherDescriptionCloud.h; sourceTree = "<group>"; };
 		5BAD3D3A1F8984BE00273365 /* WeatherDescriptionCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherDescriptionCloud.m; path = gateway/cloud/WeatherDescriptionCloud.m; sourceTree = "<group>"; };
 		5BCBCB671F76F440006EBCC9 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weather.h; path = domain/Weather.h; sourceTree = "<group>"; };
@@ -168,6 +177,12 @@
 		5B0309411F8115EC009A6D1A /* cities */ = {
 			isa = PBXGroup;
 			children = (
+				5BA3AC991F8D2645005E4464 /* FavouriteCitiesViewController.h */,
+				5BA3AC9A1F8D2645005E4464 /* FavouriteCitiesViewController.m */,
+				5BA3AC9C1F8D2997005E4464 /* CityCollectionViewCell.h */,
+				5BA3AC9D1F8D2997005E4464 /* CityCollectionViewCell.m */,
+				5BA3AC9F1F8D2B42005E4464 /* FavouriteCitiesDataSource.h */,
+				5BA3ACA01F8D2B42005E4464 /* FavouriteCitiesDataSource.m */,
 			);
 			name = cities;
 			sourceTree = "<group>";
@@ -703,6 +718,7 @@
 				5B03094B1F811669009A6D1A /* WeatherInteractor.m in Sources */,
 				5B4FA6D51F802752009C9FAB /* weather.xcdatamodeld in Sources */,
 				5BCBCB691F76F440006EBCC9 /* Weather.m in Sources */,
+				5BA3AC9E1F8D2997005E4464 /* CityCollectionViewCell.m in Sources */,
 				5B85D84E1F818378000B7A07 /* WeatherRepository.m in Sources */,
 				5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */,
 				5BAD3D3B1F8984BE00273365 /* WeatherDescriptionCloud.m in Sources */,
@@ -711,10 +727,12 @@
 				5B85D83F1F816C2B000B7A07 /* StoreWeather.m in Sources */,
 				5B1734791F80681E009B86B1 /* CityWeatherCloud.m in Sources */,
 				5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */,
+				5BA3AC9B1F8D2645005E4464 /* FavouriteCitiesViewController.m in Sources */,
 				5B03094C1F811669009A6D1A /* WeatherPresenter.m in Sources */,
 				5B03094D1F811669009A6D1A /* WeatherRouter.m in Sources */,
 				5B001BD11F8A4D5C00217FDD /* WeatherViewModel.m in Sources */,
 				5B001BCD1F8A4BE300217FDD /* WeatherMO+CoreDataClass.m in Sources */,
+				5BA3ACA11F8D2B42005E4464 /* FavouriteCitiesDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

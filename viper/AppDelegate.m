@@ -19,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Provider manager];
-    [self.window setRootViewController:[WeatherRouter provide]];
-    [self.window makeKeyAndVisible];
+    //[self.window setRootViewController:[WeatherRouter provide]];
+    //[self.window makeKeyAndVisible];
     return YES;
 }
 

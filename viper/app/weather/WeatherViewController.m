@@ -37,7 +37,6 @@
 }
 
 -(void)onSuccess:(WeatherViewModel*)weatherViewModel{
-    //[_reloadButton setUserInteractionEnabled:YES];
     [_cityLabel setText:[weatherViewModel city]];
     [_descriptionLabel setText:[weatherViewModel description]];
     [_iconImage setImage:[weatherViewModel icon]];
@@ -49,7 +48,6 @@
 }
 
 -(void)onError:(NSException*)exception{
-    //[_reloadButton setUserInteractionEnabled:YES];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:[exception reason]
                                                             preferredStyle:UIAlertControllerStyleAlert];
