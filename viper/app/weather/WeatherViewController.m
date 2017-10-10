@@ -43,14 +43,9 @@
     [_iconImage setImage:[weatherViewModel icon]];
     [_datetimeLabel setText:[weatherViewModel datetime]];
     [_temperatureLabel setText:[weatherViewModel temperature]];
-    /*
-    [_tempLabel setText:[weather temperature]];
-    [_pressureLabel setText:[weather pressure]];
-    [_humidityLabel setText:[weather humidity]];
-    [_minTempLabel setText:[weather minTemp]];
-    [_maxTempLabel setText:[weather maxTemp]];
-    
-*/
+    [_feelsLikeLabel setText:[weatherViewModel temperature]];
+    [_pressureLabel setText:[weatherViewModel pressure]];
+    [_humidityLabel setText:[weatherViewModel humidity]];
 }
 
 -(void)onError:(NSException*)exception{

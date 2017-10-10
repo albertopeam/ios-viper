@@ -49,4 +49,13 @@
     return celsius;
 }
 
+-(NSString*)humidity{
+    return [NSString stringWithFormat:@"%ld%%", [[weather humidity] integerValue]];
+}
+
+-(NSString*)pressure{
+    return [NSString stringWithFormat:@"%ldhPa", [[weather pressure] integerValue]];
+}
+
+
 @end

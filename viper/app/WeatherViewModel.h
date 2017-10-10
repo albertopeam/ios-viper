@@ -17,4 +17,6 @@
 - (UIImage*)icon;
 - (NSString*)datetime;
 - (NSString*)temperature;
+-(NSString*)humidity;
+-(NSString*)pressure;
 @end
