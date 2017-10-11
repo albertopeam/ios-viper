@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FavoriteCitiesInteractor.h"
+@class FavouriteCitiesViewController;
 
 @interface FavouriteCitiesPresenter : NSObject
-
+-(instancetype)initWithView:(FavouriteCitiesViewController*)aView
+    withFavCitiesInteractor:(FavoriteCitiesInteractor*)aFavoriteCitiesInteractor;
+-(void)getFavoriteCities;
 @end

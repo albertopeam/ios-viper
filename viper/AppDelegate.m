@@ -19,7 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Provider manager];
-    UINavigationController *navController = (UINavigationController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    UINavigationController *navController = (UINavigationController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"root_nav_controller"];
+    self.window.rootViewController = navController;
+    [self.window makeKeyAndVisible];
     [navController pushViewController:[FavouriteCitiesRouter provide] animated:YES];
     return YES;
 }

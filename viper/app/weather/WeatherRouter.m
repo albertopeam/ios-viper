@@ -20,10 +20,11 @@
 #import "StoreWeather.h"
 #import "Database.h"
 #import "WeatherViewController.h"
+#import "FavoriteCity.h"
 
 @implementation WeatherRouter
 
-+(UIViewController*)provide{
++(UIViewController*)provide:(FavoriteCity*)favoriteCity{
     Provider* provider = [Provider manager];
     NSOperationQueue* background = [provider backgroundQueue];
     NSOperationQueue* main = [provider mainQueue];
@@ -50,6 +51,7 @@
     WeatherPresenter *presenter = [[WeatherPresenter alloc]
                             initWithView:viewController
                             interactor:interactor];
+    [viewController setFavoriteCity:favoriteCity];
     [viewController setPresenter:presenter];
     return viewController;
 }

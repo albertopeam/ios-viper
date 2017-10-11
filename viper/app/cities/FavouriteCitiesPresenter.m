@@ -7,7 +7,39 @@
 //
 
 #import "FavouriteCitiesPresenter.h"
+#import "FavouriteCitiesViewController.h"
 
-@implementation FavouriteCitiesPresenter
+@implementation FavouriteCitiesPresenter{
+    FavouriteCitiesViewController* view;
+    FavoriteCitiesInteractor* favoriteCitiesInteractor;
+}
+
+-(instancetype)initWithView:(FavouriteCitiesViewController*)aView
+    withFavCitiesInteractor:(FavoriteCitiesInteractor*)aFavoriteCitiesInteractor{
+    self = [super init];
+    if (self) {
+        view = aView;
+        favoriteCitiesInteractor = aFavoriteCitiesInteractor;
+    }
+    return self;
+}
+
+-(void)getFavoriteCities{
+    __weak FavouriteCitiesViewController* weakView = view;
+    [view showLoading];
+    [favoriteCitiesInteractor getWithSuccess:^(NSArray<FavoriteCity *> * cities) {
+        if (weakView) {
+            FavouriteCitiesViewController* target = weakView;
+            [target hideLoading];
+            [target onGetFavoriteCities:cities];
+        }
+    } withError:^(NSException *exception){
+        if (weakView) {
+            FavouriteCitiesViewController* target = weakView;
+            [target hideLoading];
+        }
+
+    }];
+}
 
 @end

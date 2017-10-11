@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WeatherPresenter.h"
+#import "FavoriteCity.h"
 
 @interface WeatherViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
@@ -20,7 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *precipitationsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
-@property WeatherPresenter *presenter;
+@property (strong, nonatomic) WeatherPresenter *presenter;
+@property (strong, nonatomic) FavoriteCity* favoriteCity;
 -(void)onSuccess:(WeatherViewModel*)weatherViewModel;
 -(void)onError:(NSException*)exception;
 -(void)showLoading;

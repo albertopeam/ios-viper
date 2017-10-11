@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "FavoriteCity.h"
 
 @interface WeatherRouter : NSObject
-+ (UIViewController*)provide;
++(UIViewController*)provide:(FavoriteCity*)favoriteCity;
 @end

@@ -18,35 +18,69 @@
     FavouriteCitiesDataSource* datasource;
 }
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     [self setup];
-    [_refreshControl beginRefreshing];
+    [self getFavoriteCities];
 }
 
-- (void)setup {
+-(void)setup {
     self.navigationItem.title = @"Favourites";
     _refreshControl = [[UIRefreshControl alloc] init];
-    [_refreshControl addTarget:self action:@selector(onRefresh)
-             forControlEvents:UIControlEventValueChanged];
+    [_refreshControl addTarget:self
+                        action:@selector(getFavoriteCities)
+              forControlEvents:UIControlEventValueChanged];
     [_collectionView addSubview:_refreshControl];
     _collectionView.alwaysBounceVertical = YES;
     datasource = [FavouriteCitiesDataSource new];
-    //TODO: sampe code
-    NSArray* array = [NSArray arrayWithObject:@"A Coruna"];
-    [datasource setCities:array];
     [_collectionView setDataSource:datasource];
 }
 
-- (void)onRefresh{
-    NSLog(@"onRefresh");
+-(void)getFavoriteCities{
+    [_presenter getFavoriteCities];
+}
+
+-(void)onGetFavoriteCities:(NSArray<FavoriteCity*>*)cities{
+    [datasource setCities:cities];
+    [_collectionView reloadData];
+}
+
+-(void)showLoading{
+    [_refreshControl beginRefreshing];
+}
+
+-(void)hideLoading{
+    [_refreshControl endRefreshing];
 }
 
 #pragma mark - CollectionView
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController* viewController = [WeatherRouter provide];
+    FavoriteCity* favoriteCity = [[datasource cities] objectAtIndex:indexPath.row];
+    UIViewController* viewController = [WeatherRouter provide:favoriteCity];
     [self.navigationController pushViewController:viewController animated:YES];
 
+}
+
+- (void)collectionView:(UICollectionView *)colView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    [UIView animateWithDuration:0.1
+                          delay:0
+                        options:(UIViewAnimationOptionAllowUserInteraction)
+                     animations:^{
+                         [cell setBackgroundColor:[UIColor colorWithRed:232/255.0f green:232/255.0f blue:232/255.0f alpha:1]];
+                     }
+                     completion:nil];
+}
+
+- (void)collectionView:(UICollectionView *)colView  didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    [UIView animateWithDuration:0.1
+                          delay:0
+                        options:(UIViewAnimationOptionAllowUserInteraction)
+                     animations:^{
+                         [cell setBackgroundColor:[UIColor clearColor]];
+                     }
+                     completion:nil ];
 }
 
 #pragma mark - Search

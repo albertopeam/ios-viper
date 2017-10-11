@@ -14,7 +14,8 @@
     @private WeatherViewController* view;
 }
 
--(instancetype)initWithView:(WeatherViewController*)aviewController interactor:(WeatherInteractor*)ainteractor {
+-(instancetype)initWithView:(WeatherViewController*)aviewController
+                 interactor:(WeatherInteractor*)ainteractor {
     self = [super init];
     if (self) {
         view = aviewController;
