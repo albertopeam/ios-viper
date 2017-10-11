@@ -30,8 +30,8 @@
             AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
             [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
             [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            [requestSerializer setTimeoutInterval:2.5];
             [provider->netManager setRequestSerializer:requestSerializer];
-
         }
     }
     return provider;

@@ -20,14 +20,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_presenter weatherForCity:@"A Coruna"];
+    [self setup];
+    [self loadWeather];
 }
 
-- (IBAction)action:(id)sender {
-    [_presenter weatherForCity:@"A Coruna"];
+-(void)setup{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reload" style:UIBarButtonItemStyleDone target:self action:@selector(loadWeather)];
 }
 
-- (IBAction)gotoOpenweathermap:(id)sender {
+-(void)loadWeather{
+    [_presenter weatherForCity:_favoriteCity.name];
+}
+
+-(IBAction)gotoOpenweathermap:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://openweathermap.org/"]
                                        options:@{}
                              completionHandler:^(BOOL success) {
