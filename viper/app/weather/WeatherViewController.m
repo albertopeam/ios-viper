@@ -21,15 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setup];
-    [_presenter weatherForCity:_favoriteCity.name];
+    [self loadWeather];
 }
 
 -(void)setup{
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"xyz" style:UIBarButtonItemStyleDone target:self action:@selector(xyz)];
-
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reload" style:UIBarButtonItemStyleDone target:self action:@selector(loadWeather)];
 }
 
--(IBAction)action:(id)sender {
+-(void)loadWeather{
     [_presenter weatherForCity:_favoriteCity.name];
 }
 

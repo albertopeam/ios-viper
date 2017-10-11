@@ -57,10 +57,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     FavoriteCity* favoriteCity = [[datasource cities] objectAtIndex:indexPath.row];
     UIViewController* viewController = [WeatherRouter provide:favoriteCity];
+    //tronza a partir de aquí
     [self.navigationController pushViewController:viewController animated:YES];
+    /*logear view controller lcycle
+    eliminar animaciones*/
 
 }
-
+/*
 - (void)collectionView:(UICollectionView *)colView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
     [UIView animateWithDuration:0.1
@@ -81,7 +84,7 @@
                          [cell setBackgroundColor:[UIColor clearColor]];
                      }
                      completion:nil ];
-}
+}*/
 
 #pragma mark - Search
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
