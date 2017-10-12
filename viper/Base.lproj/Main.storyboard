@@ -40,14 +40,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="liy-Ls-rLj">
-                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="WM2-zx-iO5" id="mpt-ur-9f8"/>
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xhu-34-7E0">
-                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bD6-8R-pur">
                                     <size key="itemSize" width="320" height="64"/>
@@ -131,7 +131,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b90-br-2jg">
                                         <rect key="frame" x="18" y="40" width="178" height="61"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Coruña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bop-AH-zzO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bop-AH-zzO">
                                                 <rect key="frame" x="0.0" y="0.0" width="178" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="jo6-rq-NRT"/>
@@ -140,7 +140,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heavy shower rain and drizzle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Zrx-W4-t7C">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Zrx-W4-t7C">
                                                 <rect key="frame" x="0.0" y="40" width="178" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="enJ-mL-cHs"/>
@@ -161,7 +161,7 @@
                                             <constraint firstItem="Zrx-W4-t7C" firstAttribute="leading" secondItem="b90-br-2jg" secondAttribute="leading" id="sbc-tS-znt"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01d" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-Tm-jXM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-Tm-jXM">
                                         <rect key="frame" x="212" y="20" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Ohl-bd-a7c"/>
@@ -169,7 +169,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.88352052688093385" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="xgt-Tm-jXM" firstAttribute="centerY" secondItem="0FC-b9-9ub" secondAttribute="centerY" id="9Sg-QI-gP9"/>
                                     <constraint firstAttribute="trailing" secondItem="xgt-Tm-jXM" secondAttribute="trailing" constant="8" id="FQk-DJ-2Y6"/>
@@ -185,7 +185,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-J8-e26">
                                         <rect key="frame" x="0.0" y="89" width="320" height="133"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="47" translatesAutoresizingMaskIntoConstraints="NO" id="nCK-1d-nCU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="47" translatesAutoresizingMaskIntoConstraints="NO" id="nCK-1d-nCU">
                                                 <rect key="frame" x="0.0" y="30" width="160" height="72"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                                 <nil key="textColor"/>
@@ -409,7 +409,7 @@
                                             <action selector="gotoOpenweathermap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r3T-hJ-6JF"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:20 Oct 10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwr-AJ-d44">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwr-AJ-d44">
                                         <rect key="frame" x="222" y="17" width="90" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="F5M-Xs-G8B"/>
@@ -463,7 +463,4 @@
             <point key="canvasLocation" x="112.5" y="122.53521126760563"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="01d" width="50" height="50"/>
-    </resources>
 </document>

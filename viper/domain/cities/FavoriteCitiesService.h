@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "FavoriteCity.h"
+#import "FavoriteCities.h"
 
 @interface FavoriteCitiesService : NSObject
+- (instancetype)initWithFavoriteCities:(id<FavoriteCities>)aFavoriteCities;
 - (NSArray<FavoriteCity*>*)getFavorites;
 @end

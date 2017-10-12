@@ -8,6 +8,7 @@
 
 #import "GetWeatherApiClient.h"
 #import "CityWeatherCloud.h"
+#import "WeatherNotFoundException.h"
 
 @implementation GetWeatherApiClient{
     AFHTTPSessionManager* manager;
@@ -49,6 +50,14 @@
                                 withExtendedDescription:[weatherDictionary objectForKey:@"description"]
                                                withIcon:description.icon withDateTime:city.dt];
         return weather;
+    }else{
+        NSNumber* code = [result objectForKey:@"code"];
+        if (code.intValue == 404) {
+            NSString*reason = [NSString stringWithFormat:@"no city for: %@", city];
+            @throw([[WeatherNotFoundException alloc] initWithName:@"WheatherNotFound"
+                                                           reason:reason
+                                                         userInfo:result]);
+        }
     }
     @throw([NSException exceptionWithName:@"Network exception" reason:@"Network error" userInfo:nil]);
 }

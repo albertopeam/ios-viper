@@ -35,6 +35,7 @@
         }
     } withError:^(NSException *exception){
         if (weakView) {
+            handle exceptions....CityNofFoundException, CityAlreadyExistsException
             FavouriteCitiesViewController* target = weakView;
             [target hideLoading];
         }
