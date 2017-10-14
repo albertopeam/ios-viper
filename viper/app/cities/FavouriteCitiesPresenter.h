@@ -16,4 +16,5 @@
     withFavCitiesInteractor:(FavoriteCitiesInteractor*)aFavoriteCitiesInteractor
    withAddFavCityInteractor:(AddFavoriteCityInteractor*)anAddFavoriteCityInteractor;
 -(void)getFavoriteCities;
+-(void)addFavoriteCity:(NSString*)city;
 @end

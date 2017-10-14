@@ -9,6 +9,7 @@
 #import "FavouriteCitiesViewController.h"
 #import "FavouriteCitiesDataSource.h"
 #import "WeatherRouter.h"
+#import "MBProgressHUD.h"
 
 @interface FavouriteCitiesViewController ()
 
@@ -47,10 +48,12 @@
 
 -(void)showLoading{
     [_refreshControl beginRefreshing];
+     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 -(void)hideLoading{
     [_refreshControl endRefreshing];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 -(void)showError:(NSString*)message{
@@ -99,6 +102,7 @@
 #pragma mark - Search
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     NSLog(@"searchBarSearchButtonClicked");
+    [_presenter addFavoriteCity:searchBar.text];
 }
 
 @end
