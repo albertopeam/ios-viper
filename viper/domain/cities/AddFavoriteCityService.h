@@ -16,5 +16,5 @@
 - (instancetype)initWithWeatherRepository:(WeatherRepository*)aRepository
                       withAddFavoriteCity:(id<AddFavoriteCity>)anAddFavoriteCity
                        withFavoriteCities:(id<FavoriteCities>)anFavoriteCities;
--(NSArray<FavoriteCity*>*)addFavoriteCity:(NSString*)city;
+-(FavoriteCity*)addFavoriteCity:(NSString*)city;
 @end

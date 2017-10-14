@@ -26,13 +26,11 @@
     return self;
 }
 
-//TODO: ojo con insertar repetidos....
-//TODO: gestionar las exceptions en la UI... -> meter una de ddbb repetido...
--(NSArray<FavoriteCity*>*)addFavoriteCity:(NSString*)city{
-    Weather* weather = [weatherRepository weatherFor:city];//throws WeatherNotFoundException
+-(FavoriteCity*)addFavoriteCity:(NSString*)city{
+    Weather* weather = [weatherRepository weatherFor:city];
     FavoriteCity*favoriteCity = [[FavoriteCity alloc] initWithName:weather.city];
     [addFavoriteCity add:favoriteCity];
-    return [favoriteCities fetchFavoriteCities];
+    return favoriteCity;
 }
 
 @end

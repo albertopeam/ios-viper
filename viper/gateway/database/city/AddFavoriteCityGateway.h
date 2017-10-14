@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "AddFavoriteCity.h"
-@interface AddFavoriteCityGateway : NSObject<AddFavoriteCity>
+#import "Database.h"
 
+@interface AddFavoriteCityGateway : NSObject<AddFavoriteCity>
+-(instancetype)initWithDatabase:(Database *)adatabase;
 @end

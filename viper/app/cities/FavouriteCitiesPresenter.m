@@ -8,18 +8,23 @@
 
 #import "FavouriteCitiesPresenter.h"
 #import "FavouriteCitiesViewController.h"
+#import "FavoriteCityAlreadyExistsException.h"
+#import "WeatherNotFoundException.h"
 
 @implementation FavouriteCitiesPresenter{
     FavouriteCitiesViewController* view;
     FavoriteCitiesInteractor* favoriteCitiesInteractor;
+    AddFavoriteCityInteractor* addFavoriteCityInteractor;
 }
 
 -(instancetype)initWithView:(FavouriteCitiesViewController*)aView
-    withFavCitiesInteractor:(FavoriteCitiesInteractor*)aFavoriteCitiesInteractor{
+    withFavCitiesInteractor:(FavoriteCitiesInteractor*)aFavoriteCitiesInteractor
+   withAddFavCityInteractor:(AddFavoriteCityInteractor*)anAddFavoriteCityInteractor{
     self = [super init];
     if (self) {
         view = aView;
         favoriteCitiesInteractor = aFavoriteCitiesInteractor;
+        addFavoriteCityInteractor = anAddFavoriteCityInteractor;
     }
     return self;
 }
@@ -35,11 +40,27 @@
         }
     } withError:^(NSException *exception){
         if (weakView) {
-            handle exceptions....CityNofFoundException, CityAlreadyExistsException
             FavouriteCitiesViewController* target = weakView;
             [target hideLoading];
+            NSString* error = [exception reason];
+            /*if ([exception isKindOfClass:[FavoriteCityAlreadyExistsException class]]) {
+                error = NSLocalizedString(@"favorite_city_already_exists_exception", nil);
+            }else if([exception isKindOfClass:[WeatherNotFoundException class]]){
+                error = NSLocalizedString(@"favorite_city_already_exists_exception", nil);
+            }*/
+            [target showError:error];
         }
 
+    }];
+}
+
+-(void)addFavoriteCity:(NSString*)city{
+    __weak FavouriteCitiesViewController* weakView = view;
+    [view showLoading];
+    [addFavoriteCityInteractor addFavoriteCity:city withSuccess:^(NSArray<FavoriteCity *> *cities) {
+        
+    } withError:^(NSException *exception) {
+        
     }];
 }
 

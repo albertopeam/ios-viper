@@ -46,7 +46,7 @@
     weatherMO.datetime = [[weather datetime] intValue];
     NSError *error = nil;
     if ([moc save:&error] == NO) {
-        @throw([NSException exceptionWithName:@"CoreDataException"
+        @throw([NSException exceptionWithName:@"CoreDataStoreException"
                                        reason:[error localizedDescription]
                                      userInfo:[error userInfo]]);
     }
