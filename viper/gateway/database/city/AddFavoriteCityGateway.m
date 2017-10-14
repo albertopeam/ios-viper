@@ -25,7 +25,7 @@
     NSManagedObjectContext* moc = [database moc];
     NSError* error;
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"City"];
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"name == ", city.name];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"name == %@", city.name];
     [request setPredicate:predicate];
     NSArray* results = [moc executeFetchRequest:request error:&error];
     if (results.count > 0) {

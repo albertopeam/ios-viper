@@ -66,14 +66,15 @@
     });
 }
 
+//no funciona la búsqueda...
+//1. revisar sin red
+//2. revisar con ciudad que no exista.
+
 #pragma mark - CollectionView
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     FavoriteCity* favoriteCity = [[datasource cities] objectAtIndex:indexPath.row];
     UIViewController* viewController = [WeatherRouter provide:favoriteCity];
-    //tronza a partir de aquí
     [self.navigationController pushViewController:viewController animated:YES];
-    /*logear view controller lcycle
-    eliminar animaciones*/
 
 }
 /*

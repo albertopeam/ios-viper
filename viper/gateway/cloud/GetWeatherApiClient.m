@@ -58,8 +58,8 @@
                                                            reason:reason
                                                          userInfo:result]);
         }
+        @throw([NSException exceptionWithName:@"Network exception" reason:[error localizedDescription] userInfo:[error userInfo]]);
     }
-    @throw([NSException exceptionWithName:@"Network exception" reason:@"Network error" userInfo:nil]);
 }
 
 @end
