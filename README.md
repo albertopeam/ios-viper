@@ -12,11 +12,11 @@ To run this project you need to create an [OpenWeather](https://openweathermap.o
 
 ```
 
-##### Art
+### Art
 ![Cities](https://github.com/albertopeam/ios-viper/blob/develop/art/cities.png)
 ![Weather](https://github.com/albertopeam/ios-viper/blob/develop/art/weather.png)
 
-##### TODOS:
+### TODOS:
 
 iterartion 1:
 * exception delegate
