@@ -63,7 +63,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Coruna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxK-XP-9EW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxK-XP-9EW">
                                                     <rect key="frame" x="8" y="19" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                                     <nil key="textColor"/>
@@ -76,6 +76,9 @@
                                             <constraint firstAttribute="leadingMargin" secondItem="kxK-XP-9EW" secondAttribute="leading" id="g8j-Rz-x2f"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="kxK-XP-9EW" secondAttribute="trailing" id="pHd-im-hOi"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="kxK-XP-9EW" id="AL3-68-GUi"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

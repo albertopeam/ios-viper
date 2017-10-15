@@ -7,6 +7,7 @@
 //
 
 #import "FavouriteCitiesDataSource.h"
+#import "FavouriteCityCollectionViewCell.h"
 
 @implementation FavouriteCitiesDataSource
 
@@ -19,7 +20,9 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"city_cell" forIndexPath:indexPath];
+    FavoriteCity* favoriteCity = [_cities objectAtIndex:indexPath.row];
+    FavouriteCityCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"city_cell" forIndexPath:indexPath];
+    [cell.nameLabel setText:favoriteCity.name];
     return cell;
 }
 @end

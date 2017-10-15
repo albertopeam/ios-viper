@@ -35,7 +35,7 @@
             AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
             [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
             [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-            [requestSerializer setTimeoutInterval:2.5];
+            [requestSerializer setTimeoutInterval:5];
             [provider->netManager setRequestSerializer:requestSerializer];
             id<WeatherExpirationPolicy>policy = [Preferences new];
             AFHTTPSessionManager *manager = [provider networkClient];

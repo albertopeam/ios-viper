@@ -47,7 +47,6 @@
 }
 
 -(void)showLoading{
-    [_refreshControl beginRefreshing];
      [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
@@ -65,10 +64,6 @@
         [alert dismissViewControllerAnimated:YES completion:nil];
     });
 }
-
-//no funciona la búsqueda...
-//1. revisar sin red
-//2. revisar con ciudad que no exista.
 
 #pragma mark - CollectionView
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -102,7 +97,6 @@
 
 #pragma mark - Search
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    NSLog(@"searchBarSearchButtonClicked");
     [_presenter addFavoriteCity:searchBar.text];
 }
 

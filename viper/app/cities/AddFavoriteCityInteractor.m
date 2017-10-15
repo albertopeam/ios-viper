@@ -13,6 +13,7 @@
     FavoriteCitiesService* favoriteCitiesService;
     NSOperationQueue* backgroundQueue;
     NSOperationQueue* mainQueue;
+    BOOL running;
 }
 
 - (instancetype)initWithAddFavoriteCities:(AddFavoriteCityService*)anAddFavoriteCityService
@@ -32,15 +33,21 @@
 -(void)addFavoriteCity:(NSString*)city
            withSuccess:(void(^)(NSArray<FavoriteCity*>*cities))onSuccess
              withError:(void(^)(NSException*exception))onError{
+    if (running) {
+        return;
+    }
+    running = YES;
     [backgroundQueue addOperationWithBlock:^{
         @try {
             [addFavoriteCityService addFavoriteCity:city];
             NSArray<FavoriteCity*>* cities = [favoriteCitiesService getFavorites];
             [mainQueue addOperationWithBlock:^{
+                running = FALSE;
                 onSuccess(cities);
             }];
         } @catch (NSException *exception) {
             [mainQueue addOperationWithBlock:^{
+                running = FALSE;
                 onError(exception);
             }];
         }

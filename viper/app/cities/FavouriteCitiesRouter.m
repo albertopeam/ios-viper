@@ -24,7 +24,7 @@
     id<FavoriteCities>favoriteCities = [[FavoriteCitiesGateway alloc] initWithDatabase:[provider database]];
     WeatherRepository* weatherRepository = [provider weatherRepository];
     AddFavoriteCityService* addFavoriteCityService = [[AddFavoriteCityService alloc] initWithWeatherRepository:weatherRepository withAddFavoriteCity:addFavoriteCity withFavoriteCities:favoriteCities];
-    FavoriteCitiesService*favoriteCitiesService = [[FavoriteCitiesService alloc] init];
+    FavoriteCitiesService*favoriteCitiesService = [[FavoriteCitiesService alloc] initWithFavoriteCities:favoriteCities];
     FavoriteCitiesInteractor* favoriteCitiesInteractor = [[FavoriteCitiesInteractor alloc] initWithFavoriteCities:favoriteCitiesService withBackgroundQueue:[provider backgroundQueue] withMainQueue:[provider mainQueue]];
     AddFavoriteCityInteractor* addFavCityInteractor = [[AddFavoriteCityInteractor alloc] initWithAddFavoriteCities:addFavoriteCityService withFavoritesService:favoriteCitiesService withBackgroundQueue:[provider backgroundQueue] withMainQueue:[provider mainQueue]];
     FavouriteCitiesPresenter* presenter = [[FavouriteCitiesPresenter alloc] initWithView:viewController

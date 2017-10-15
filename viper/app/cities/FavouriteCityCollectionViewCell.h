@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FavouriteCityCollectionViewCell : UICollectionViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @end

@@ -8,6 +8,7 @@
 
 #import "AddFavoriteCityGateway.h"
 #import "FavoriteCityAlreadyExistsException.h"
+#import "FavoriteCityMO+CoreDataClass.h"
 
 @implementation AddFavoriteCityGateway{
     Database* database;
@@ -31,7 +32,10 @@
     if (results.count > 0) {
         @throw([FavoriteCityAlreadyExistsException new]);
     }
-    if (![moc save:&error]) {
+    FavoriteCityMO* favoriteCityMO =  [NSEntityDescription insertNewObjectForEntityForName:@"City" inManagedObjectContext:moc];
+    favoriteCityMO.name = city.name;
+    BOOL saved = [moc save:&error];
+    if (!saved) {
         @throw([[NSException alloc] initWithName:@"CoreDataStoreException" reason:error.description userInfo:error.userInfo]);
     }
 }
