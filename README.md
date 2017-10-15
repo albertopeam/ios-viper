@@ -12,17 +12,18 @@ To run this project you need to create an [OpenWeather](https://openweathermap.o
 
 ```
 
+##### Art
+[[https://github.com//albertopeam/ios-viper/master/art/cities.png|alt=cities]]
+[[https://github.com//albertopeam/ios-viper/master/art/weather.png|alt=weather]]
+
+
 ##### TODOS:
 
 iterartion 1:
-* add I18n
 * exception delegate
 
 iteration 2:
-* weather list
-* add a search box to browse cities
-* store searched cities in database
-* navigate to weather detail 
+* remove cities(swipe)
 
 iteration 3:
 * test all
