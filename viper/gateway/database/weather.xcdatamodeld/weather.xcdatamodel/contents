@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName="FavoriteCityMO" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Weather" representedClassName="WeatherMO" syncable="YES">
         <attribute name="city" attributeType="String" syncable="YES"/>
         <attribute name="datetime" attributeType="Integer 64" minValueString="0" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -14,6 +17,7 @@
         <attribute name="title" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="City" positionX="-63" positionY="63" width="128" height="60"/>
         <element name="Weather" positionX="-63" positionY="-18" width="128" height="210"/>
     </elements>
 </model>

@@ -1,0 +1,9 @@
+/* 
+   strings.strings
+  viper
+
+  Created by vagrant on 10/14/17.
+  Copyright © 2017 vagrant. All rights reserved.
+*/
+"favorite_city_already_exists_exception"="The searched city already exists in your favorite cities";
+"weather_not_found"="The city you are searching does not exists";

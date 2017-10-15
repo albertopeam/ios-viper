@@ -8,10 +8,15 @@
 
 #import "Provider.h"
 #import "Constants.h"
+#import "WeatherRepository.h"
+#import "GetWeatherApiClient.h"
+#import "StoreWeather.h"
+#import "FetchWeather.h"
 
 @implementation Provider{
     Preferences* preferences;
     Database* database;
+    WeatherRepository* weatherRepository;
     NSOperationQueue* mainQueue;
     NSOperationQueue* backgroundQueue;
     AFHTTPSessionManager* netManager;
@@ -30,8 +35,23 @@
             AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
             [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
             [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-            [requestSerializer setTimeoutInterval:2.5];
+            [requestSerializer setTimeoutInterval:5];
             [provider->netManager setRequestSerializer:requestSerializer];
+            id<WeatherExpirationPolicy>policy = [Preferences new];
+            AFHTTPSessionManager *manager = [provider networkClient];
+            id<FetchWeatherDataSource>fetchWeatherApiClientDS = [[GetWeatherApiClient alloc]
+                                                                 initWithManager:manager
+                                                                 withServerUrl:[provider serverUrl]
+                                                                 withApiKey:[provider serverApiKey]];
+            Database*database = [provider database];
+            id<FetchWeatherDataSource>fetchWeatherDatabaseDS = [[FetchWeather alloc]
+                                                                initWithDatabase:database];
+            id<StoreWeatherDataSource>storeWeatherDS = [[StoreWeather alloc]
+                                                        initWithDatabase:database];
+            provider->weatherRepository = [[WeatherRepository alloc]
+                                                    initWithExpirationPolicy:policy
+                                                    withFetchWeatherApiClient:fetchWeatherApiClientDS
+                                                    withFetchWeatherStorage:fetchWeatherDatabaseDS withStoreWeather:storeWeatherDS];
         }
     }
     return provider;
@@ -55,6 +75,10 @@
 
 - (AFHTTPSessionManager*)networkClient{
     return netManager;
+}
+
+- (WeatherRepository*)weatherRepository{
+    return weatherRepository;
 }
 
 - (NSString*)serverUrl{

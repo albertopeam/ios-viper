@@ -12,14 +12,24 @@
 #import "FavoriteCitiesInteractor.h"
 #import "FavoriteCitiesService.h"
 #import "Provider.h"
+#import "AddFavoriteCityInteractor.h"
+#import "AddFavoriteCityGateway.h"
+#import "FavoriteCitiesGateway.h"
 
 @implementation FavouriteCitiesRouter
 + (UIViewController*)provide{
     Provider* provider = [Provider manager];
     FavouriteCitiesViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"favourite_cities_view_controller"];
-    FavoriteCitiesService*favoriteCitiesService = [[FavoriteCitiesService alloc] init];
+    id<AddFavoriteCity>addFavoriteCity = [[AddFavoriteCityGateway alloc] initWithDatabase:[provider database]];
+    id<FavoriteCities>favoriteCities = [[FavoriteCitiesGateway alloc] initWithDatabase:[provider database]];
+    WeatherRepository* weatherRepository = [provider weatherRepository];
+    AddFavoriteCityService* addFavoriteCityService = [[AddFavoriteCityService alloc] initWithWeatherRepository:weatherRepository withAddFavoriteCity:addFavoriteCity withFavoriteCities:favoriteCities];
+    FavoriteCitiesService*favoriteCitiesService = [[FavoriteCitiesService alloc] initWithFavoriteCities:favoriteCities];
     FavoriteCitiesInteractor* favoriteCitiesInteractor = [[FavoriteCitiesInteractor alloc] initWithFavoriteCities:favoriteCitiesService withBackgroundQueue:[provider backgroundQueue] withMainQueue:[provider mainQueue]];
-    FavouriteCitiesPresenter* presenter = [[FavouriteCitiesPresenter alloc] initWithView:viewController withFavCitiesInteractor:favoriteCitiesInteractor];
+    AddFavoriteCityInteractor* addFavCityInteractor = [[AddFavoriteCityInteractor alloc] initWithAddFavoriteCities:addFavoriteCityService withFavoritesService:favoriteCitiesService withBackgroundQueue:[provider backgroundQueue] withMainQueue:[provider mainQueue]];
+    FavouriteCitiesPresenter* presenter = [[FavouriteCitiesPresenter alloc] initWithView:viewController
+                                           withFavCitiesInteractor:favoriteCitiesInteractor
+                                           withAddFavCityInteractor:addFavCityInteractor];
     [viewController setPresenter:presenter];
     return viewController;
 }

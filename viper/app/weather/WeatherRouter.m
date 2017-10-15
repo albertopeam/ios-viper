@@ -11,16 +11,7 @@
 #import "WeatherInteractor.h"
 #import "WeatherRepository.h"
 #import "Provider.h"
-#import "WeatherExpirationPolicy.h"
-#import "Preferences.h"
-#import "FetchWeatherDataSource.h"
-#import "StoreWeatherDataSource.h"
-#import "GetWeatherApiClient.h"
-#import "FetchWeather.h"
-#import "StoreWeather.h"
-#import "Database.h"
 #import "WeatherViewController.h"
-#import "FavoriteCity.h"
 
 @implementation WeatherRouter
 
@@ -28,21 +19,7 @@
     Provider* provider = [Provider manager];
     NSOperationQueue* background = [provider backgroundQueue];
     NSOperationQueue* main = [provider mainQueue];
-    id<WeatherExpirationPolicy>policy = [Preferences new];
-    AFHTTPSessionManager *manager = [provider networkClient];
-    id<FetchWeatherDataSource>fetchWeatherApiClientDS = [[GetWeatherApiClient alloc]
-                                                         initWithManager:manager
-                                                         withServerUrl:[provider serverUrl]
-                                                         withApiKey:[provider serverApiKey]];
-    Database*database = [provider database];
-    id<FetchWeatherDataSource>fetchWeatherDatabaseDS = [[FetchWeather alloc]
-                                                         initWithDatabase:database];
-    id<StoreWeatherDataSource>storeWeatherDS = [[StoreWeather alloc]
-                                                initWithDatabase:database];
-    WeatherRepository* weatherRepository = [[WeatherRepository alloc]
-                                            initWithExpirationPolicy:policy
-                                            withFetchWeatherApiClient:fetchWeatherApiClientDS
-                                            withFetchWeatherStorage:fetchWeatherDatabaseDS withStoreWeather:storeWeatherDS];
+    WeatherRepository* weatherRepository = [provider weatherRepository];
     WeatherInteractor* interactor = [[WeatherInteractor alloc]
                               initWithBackground:background
                               withMain:main

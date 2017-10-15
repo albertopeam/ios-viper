@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "FavoriteCity.h"
 
 @interface FavouriteCitiesDataSource : NSObject<UICollectionViewDataSource>
-    @property(strong, nonatomic) NSArray*cities;
+    @property(strong, nonatomic) NSArray<FavoriteCity*>* cities;
 @end

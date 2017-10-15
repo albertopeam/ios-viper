@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface FavoriteCity : NSObject
+-(instancetype)initWithName:(NSString*)aName;
 -(NSString*)name;
 @end

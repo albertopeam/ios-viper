@@ -19,12 +19,20 @@
 		5B1734791F80681E009B86B1 /* CityWeatherCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1734741F80681E009B86B1 /* CityWeatherCloud.m */; };
 		5B17347A1F80681E009B86B1 /* GetWeatherApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1734761F80681E009B86B1 /* GetWeatherApiClient.m */; };
 		5B17347B1F80681E009B86B1 /* WeatherCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1734781F80681E009B86B1 /* WeatherCloud.m */; };
+		5B18B2461F8F51F400D7D8C2 /* FavoriteCitiesGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B18B2451F8F51F400D7D8C2 /* FavoriteCitiesGateway.m */; };
+		5B3CBB1F1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CBB1E1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.m */; };
+		5B3CBB231F92244300BA7EAA /*  strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B3CBB221F92244300BA7EAA /*  strings.strings */; };
+		5B3CBB261F9227CC00BA7EAA /* AddFavoriteCityInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CBB251F9227CC00BA7EAA /* AddFavoriteCityInteractor.m */; };
 		5B4FA6D51F802752009C9FAB /* weather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B4FA6D31F802752009C9FAB /* weather.xcdatamodeld */; };
+		5B6D3B9C1F8F6CCF007BDBEA /* AddFavoriteCityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D3B9B1F8F6CCF007BDBEA /* AddFavoriteCityService.m */; };
+		5B6D3BA01F8F6D05007BDBEA /* AddFavoriteCityGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D3B9F1F8F6D05007BDBEA /* AddFavoriteCityGateway.m */; };
+		5B6D3BA41F8F705A007BDBEA /* WeatherNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D3BA31F8F705A007BDBEA /* WeatherNotFoundException.m */; };
+		5B6D3BAC1F8F7182007BDBEA /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D3BA81F8F7182007BDBEA /* Weather.m */; };
+		5B6D3BAD1F8F7182007BDBEA /* WeatherRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D3BAB1F8F7182007BDBEA /* WeatherRepository.m */; };
 		5B85D8351F815F06000B7A07 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85D8341F815F06000B7A07 /* Preferences.m */; };
 		5B85D83F1F816C2B000B7A07 /* StoreWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85D83E1F816C2B000B7A07 /* StoreWeather.m */; };
 		5B85D8421F816C41000B7A07 /* Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85D8411F816C41000B7A07 /* Provider.m */; };
 		5B85D84B1F817FC7000B7A07 /* FetchWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85D84A1F817FC7000B7A07 /* FetchWeather.m */; };
-		5B85D84E1F818378000B7A07 /* WeatherRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B85D84D1F818378000B7A07 /* WeatherRepository.m */; };
 		5B9F84AD1F75C8BF00C9BEE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AC1F75C8BF00C9BEE7 /* main.m */; };
 		5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F84AF1F75C8BF00C9BEE7 /* AppDelegate.m */; };
 		5B9F84B61F75C8BF00C9BEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F84B41F75C8BF00C9BEE7 /* Main.storyboard */; };
@@ -41,7 +49,6 @@
 		5BC8EBB01F8E0C4900873FE3 /* FavoriteCitiesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBAF1F8E0C4900873FE3 /* FavoriteCitiesService.m */; };
 		5BC8EBB61F8E0C8A00873FE3 /* FavoriteCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBB51F8E0C8A00873FE3 /* FavoriteCity.m */; };
 		5BC8EBB91F8E0ED700873FE3 /* FavoriteCitiesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */; };
-		5BCBCB691F76F440006EBCC9 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBCB681F76F440006EBCC9 /* Weather.m */; };
 		5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */; };
 		5BFB30721F88EFF800D882C6 /* PresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */; };
 		F5D25F300F02AA71952BC53F /* Pods_viperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A52D843B9CA32F0A669450 /* Pods_viperUITests.framework */; };
@@ -83,16 +90,35 @@
 		5B03094A1F811669009A6D1A /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherViewController.m; path = app/weather/WeatherViewController.m; sourceTree = "<group>"; };
 		5B0309561F811756009A6D1A /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Database.h; path = gateway/database/Database.h; sourceTree = "<group>"; };
 		5B0309571F811756009A6D1A /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Database.m; path = gateway/database/Database.m; sourceTree = "<group>"; };
-		5B141EBE1F83FCEB008B558E /* WeatherExpirationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherExpirationPolicy.h; path = domain/WeatherExpirationPolicy.h; sourceTree = "<group>"; };
-		5B141EBF1F83FEC1008B558E /* FetchWeatherDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchWeatherDataSource.h; path = domain/FetchWeatherDataSource.h; sourceTree = "<group>"; };
-		5B141EC01F8403D0008B558E /* StoreWeatherDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreWeatherDataSource.h; path = domain/StoreWeatherDataSource.h; sourceTree = "<group>"; };
 		5B1734731F80681E009B86B1 /* CityWeatherCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityWeatherCloud.h; path = gateway/cloud/CityWeatherCloud.h; sourceTree = "<group>"; };
 		5B1734741F80681E009B86B1 /* CityWeatherCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityWeatherCloud.m; path = gateway/cloud/CityWeatherCloud.m; sourceTree = "<group>"; };
 		5B1734751F80681E009B86B1 /* GetWeatherApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetWeatherApiClient.h; path = gateway/cloud/GetWeatherApiClient.h; sourceTree = "<group>"; };
 		5B1734761F80681E009B86B1 /* GetWeatherApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetWeatherApiClient.m; path = gateway/cloud/GetWeatherApiClient.m; sourceTree = "<group>"; };
 		5B1734771F80681E009B86B1 /* WeatherCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherCloud.h; path = gateway/cloud/WeatherCloud.h; sourceTree = "<group>"; };
 		5B1734781F80681E009B86B1 /* WeatherCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherCloud.m; path = gateway/cloud/WeatherCloud.m; sourceTree = "<group>"; };
+		5B18B2441F8F51F400D7D8C2 /* FavoriteCitiesGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteCitiesGateway.h; path = gateway/database/city/FavoriteCitiesGateway.h; sourceTree = "<group>"; };
+		5B18B2451F8F51F400D7D8C2 /* FavoriteCitiesGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteCitiesGateway.m; path = gateway/database/city/FavoriteCitiesGateway.m; sourceTree = "<group>"; };
+		5B18B24E1F8F68E500D7D8C2 /* FavoriteCities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteCities.h; path = domain/cities/FavoriteCities.h; sourceTree = "<group>"; };
+		5B3CBB1D1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteCityAlreadyExistsException.h; path = domain/cities/FavoriteCityAlreadyExistsException.h; sourceTree = "<group>"; };
+		5B3CBB1E1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteCityAlreadyExistsException.m; path = domain/cities/FavoriteCityAlreadyExistsException.m; sourceTree = "<group>"; };
+		5B3CBB221F92244300BA7EAA /*  strings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = " strings.strings"; sourceTree = "<group>"; };
+		5B3CBB241F9227CC00BA7EAA /* AddFavoriteCityInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFavoriteCityInteractor.h; path = app/cities/AddFavoriteCityInteractor.h; sourceTree = "<group>"; };
+		5B3CBB251F9227CC00BA7EAA /* AddFavoriteCityInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFavoriteCityInteractor.m; path = app/cities/AddFavoriteCityInteractor.m; sourceTree = "<group>"; };
 		5B4FA6D41F802752009C9FAB /* weather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = weather.xcdatamodel; sourceTree = "<group>"; };
+		5B6D3B9A1F8F6CCF007BDBEA /* AddFavoriteCityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFavoriteCityService.h; path = domain/cities/AddFavoriteCityService.h; sourceTree = "<group>"; };
+		5B6D3B9B1F8F6CCF007BDBEA /* AddFavoriteCityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFavoriteCityService.m; path = domain/cities/AddFavoriteCityService.m; sourceTree = "<group>"; };
+		5B6D3B9D1F8F6CE7007BDBEA /* AddFavoriteCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFavoriteCity.h; path = domain/cities/AddFavoriteCity.h; sourceTree = "<group>"; };
+		5B6D3B9E1F8F6D05007BDBEA /* AddFavoriteCityGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFavoriteCityGateway.h; path = gateway/database/city/AddFavoriteCityGateway.h; sourceTree = "<group>"; };
+		5B6D3B9F1F8F6D05007BDBEA /* AddFavoriteCityGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFavoriteCityGateway.m; path = gateway/database/city/AddFavoriteCityGateway.m; sourceTree = "<group>"; };
+		5B6D3BA21F8F705A007BDBEA /* WeatherNotFoundException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherNotFoundException.h; path = domain/weather/WeatherNotFoundException.h; sourceTree = "<group>"; };
+		5B6D3BA31F8F705A007BDBEA /* WeatherNotFoundException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherNotFoundException.m; path = domain/weather/WeatherNotFoundException.m; sourceTree = "<group>"; };
+		5B6D3BA51F8F7182007BDBEA /* FetchWeatherDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchWeatherDataSource.h; path = domain/weather/FetchWeatherDataSource.h; sourceTree = "<group>"; };
+		5B6D3BA61F8F7182007BDBEA /* StoreWeatherDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreWeatherDataSource.h; path = domain/weather/StoreWeatherDataSource.h; sourceTree = "<group>"; };
+		5B6D3BA71F8F7182007BDBEA /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weather.h; path = domain/weather/Weather.h; sourceTree = "<group>"; };
+		5B6D3BA81F8F7182007BDBEA /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weather.m; path = domain/weather/Weather.m; sourceTree = "<group>"; };
+		5B6D3BA91F8F7182007BDBEA /* WeatherExpirationPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherExpirationPolicy.h; path = domain/weather/WeatherExpirationPolicy.h; sourceTree = "<group>"; };
+		5B6D3BAA1F8F7182007BDBEA /* WeatherRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherRepository.h; path = domain/weather/WeatherRepository.h; sourceTree = "<group>"; };
+		5B6D3BAB1F8F7182007BDBEA /* WeatherRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherRepository.m; path = domain/weather/WeatherRepository.m; sourceTree = "<group>"; };
 		5B85D8331F815F05000B7A07 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = gateway/preferences/Preferences.h; sourceTree = "<group>"; };
 		5B85D8341F815F06000B7A07 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preferences.m; path = gateway/preferences/Preferences.m; sourceTree = "<group>"; };
 		5B85D83D1F816C2B000B7A07 /* StoreWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoreWeather.h; path = gateway/database/weather/StoreWeather.h; sourceTree = "<group>"; };
@@ -101,8 +127,6 @@
 		5B85D8411F816C41000B7A07 /* Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Provider.m; path = app/Provider.m; sourceTree = "<group>"; };
 		5B85D8491F817FC7000B7A07 /* FetchWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchWeather.h; path = gateway/database/weather/FetchWeather.h; sourceTree = "<group>"; };
 		5B85D84A1F817FC7000B7A07 /* FetchWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchWeather.m; path = gateway/database/weather/FetchWeather.m; sourceTree = "<group>"; };
-		5B85D84C1F818378000B7A07 /* WeatherRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherRepository.h; path = domain/WeatherRepository.h; sourceTree = "<group>"; };
-		5B85D84D1F818378000B7A07 /* WeatherRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherRepository.m; path = domain/WeatherRepository.m; sourceTree = "<group>"; };
 		5B9F84A81F75C8BF00C9BEE7 /* viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F84AC1F75C8BF00C9BEE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B9F84AE1F75C8BF00C9BEE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,8 +160,6 @@
 		5BC8EBB51F8E0C8A00873FE3 /* FavoriteCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteCity.m; path = domain/cities/FavoriteCity.m; sourceTree = "<group>"; };
 		5BC8EBB71F8E0ED700873FE3 /* FavoriteCitiesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteCitiesInteractor.h; path = app/cities/FavoriteCitiesInteractor.h; sourceTree = "<group>"; };
 		5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteCitiesInteractor.m; path = app/cities/FavoriteCitiesInteractor.m; sourceTree = "<group>"; };
-		5BCBCB671F76F440006EBCC9 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Weather.h; path = domain/Weather.h; sourceTree = "<group>"; };
-		5BCBCB681F76F440006EBCC9 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Weather.m; path = domain/Weather.m; sourceTree = "<group>"; };
 		5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesTest.m; path = gateway/preferences/PreferencesTest.m; sourceTree = "<group>"; };
 		5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresenterTestCase.m; path = app/weather/PresenterTestCase.m; sourceTree = "<group>"; };
 		5BFB30741F890B8200D882C6 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = app/Constants.h; sourceTree = "<group>"; };
@@ -204,6 +226,8 @@
 				5BAAE9A31F8D753F001117A5 /* FavouriteCitiesPresenter.m */,
 				5BC8EBB71F8E0ED700873FE3 /* FavoriteCitiesInteractor.h */,
 				5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */,
+				5B3CBB241F9227CC00BA7EAA /* AddFavoriteCityInteractor.h */,
+				5B3CBB251F9227CC00BA7EAA /* AddFavoriteCityInteractor.m */,
 			);
 			name = cities;
 			sourceTree = "<group>";
@@ -251,6 +275,17 @@
 			name = cloud;
 			sourceTree = "<group>";
 		};
+		5B18B2431F8F512D00D7D8C2 /* city */ = {
+			isa = PBXGroup;
+			children = (
+				5B18B2441F8F51F400D7D8C2 /* FavoriteCitiesGateway.h */,
+				5B18B2451F8F51F400D7D8C2 /* FavoriteCitiesGateway.m */,
+				5B6D3B9E1F8F6D05007BDBEA /* AddFavoriteCityGateway.h */,
+				5B6D3B9F1F8F6D05007BDBEA /* AddFavoriteCityGateway.m */,
+			);
+			name = city;
+			sourceTree = "<group>";
+		};
 		5B3681ED1F77A78800456992 /* app */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +297,7 @@
 		5B4FA6D21F802739009C9FAB /* database */ = {
 			isa = PBXGroup;
 			children = (
+				5B18B2431F8F512D00D7D8C2 /* city */,
 				5B85D8391F816A23000B7A07 /* weather */,
 				5B03094F1F8116E0009A6D1A /* managedobject */,
 				5B4FA6D31F802752009C9FAB /* weather.xcdatamodeld */,
@@ -269,6 +305,22 @@
 				5B0309571F811756009A6D1A /* Database.m */,
 			);
 			name = database;
+			sourceTree = "<group>";
+		};
+		5B6D3BA11F8F702E007BDBEA /* weather */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D3BA51F8F7182007BDBEA /* FetchWeatherDataSource.h */,
+				5B6D3BA61F8F7182007BDBEA /* StoreWeatherDataSource.h */,
+				5B6D3BA71F8F7182007BDBEA /* Weather.h */,
+				5B6D3BA81F8F7182007BDBEA /* Weather.m */,
+				5B6D3BA91F8F7182007BDBEA /* WeatherExpirationPolicy.h */,
+				5B6D3BAA1F8F7182007BDBEA /* WeatherRepository.h */,
+				5B6D3BAB1F8F7182007BDBEA /* WeatherRepository.m */,
+				5B6D3BA21F8F705A007BDBEA /* WeatherNotFoundException.h */,
+				5B6D3BA31F8F705A007BDBEA /* WeatherNotFoundException.m */,
+			);
+			name = weather;
 			sourceTree = "<group>";
 		};
 		5B6FFC651F76667800FBA825 /* app */ = {
@@ -286,14 +338,8 @@
 		5B6FFC6F1F76672200FBA825 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				5B6D3BA11F8F702E007BDBEA /* weather */,
 				5BC8EBAD1F8E0BE700873FE3 /* cities */,
-				5BCBCB671F76F440006EBCC9 /* Weather.h */,
-				5BCBCB681F76F440006EBCC9 /* Weather.m */,
-				5B85D84C1F818378000B7A07 /* WeatherRepository.h */,
-				5B85D84D1F818378000B7A07 /* WeatherRepository.m */,
-				5B141EBE1F83FCEB008B558E /* WeatherExpirationPolicy.h */,
-				5B141EBF1F83FEC1008B558E /* FetchWeatherDataSource.h */,
-				5B141EC01F8403D0008B558E /* StoreWeatherDataSource.h */,
 			);
 			name = domain;
 			sourceTree = "<group>";
@@ -362,6 +408,7 @@
 				5B9F84B71F75C8BF00C9BEE7 /* Assets.xcassets */,
 				5B9F84B91F75C8BF00C9BEE7 /* LaunchScreen.storyboard */,
 				5B9F84BC1F75C8BF00C9BEE7 /* Info.plist */,
+				5B3CBB221F92244300BA7EAA /*  strings.strings */,
 				5B9F84AB1F75C8BF00C9BEE7 /* Supporting Files */,
 			);
 			path = viper;
@@ -401,6 +448,12 @@
 				5BC8EBB51F8E0C8A00873FE3 /* FavoriteCity.m */,
 				5BC8EBAE1F8E0C4900873FE3 /* FavoriteCitiesService.h */,
 				5BC8EBAF1F8E0C4900873FE3 /* FavoriteCitiesService.m */,
+				5B18B24E1F8F68E500D7D8C2 /* FavoriteCities.h */,
+				5B6D3B9A1F8F6CCF007BDBEA /* AddFavoriteCityService.h */,
+				5B6D3B9B1F8F6CCF007BDBEA /* AddFavoriteCityService.m */,
+				5B6D3B9D1F8F6CE7007BDBEA /* AddFavoriteCity.h */,
+				5B3CBB1D1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.h */,
+				5B3CBB1E1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.m */,
 			);
 			name = cities;
 			sourceTree = "<group>";
@@ -556,6 +609,7 @@
 			files = (
 				5B9F84BB1F75C8BF00C9BEE7 /* LaunchScreen.storyboard in Resources */,
 				5B9F84B81F75C8BF00C9BEE7 /* Assets.xcassets in Resources */,
+				5B3CBB231F92244300BA7EAA /*  strings.strings in Resources */,
 				5B9F84B61F75C8BF00C9BEE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,23 +797,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B85D8421F816C41000B7A07 /* Provider.m in Sources */,
+				5B6D3BA41F8F705A007BDBEA /* WeatherNotFoundException.m in Sources */,
 				5BAAE99E1F8D6F83001117A5 /* WeatherViewModel.m in Sources */,
+				5B6D3B9C1F8F6CCF007BDBEA /* AddFavoriteCityService.m in Sources */,
 				5BC8EBB01F8E0C4900873FE3 /* FavoriteCitiesService.m in Sources */,
 				5BAAE9A11F8D6F8E001117A5 /* FavouriteCitiesRouter.m in Sources */,
+				5B18B2461F8F51F400D7D8C2 /* FavoriteCitiesGateway.m in Sources */,
+				5B3CBB261F9227CC00BA7EAA /* AddFavoriteCityInteractor.m in Sources */,
 				5B85D84B1F817FC7000B7A07 /* FetchWeather.m in Sources */,
+				5B6D3BAD1F8F7182007BDBEA /* WeatherRepository.m in Sources */,
+				5B6D3BA01F8F6D05007BDBEA /* AddFavoriteCityGateway.m in Sources */,
 				5B0309581F811756009A6D1A /* Database.m in Sources */,
 				5B03094E1F811669009A6D1A /* WeatherViewController.m in Sources */,
 				5B001BCE1F8A4BE300217FDD /* WeatherMO+CoreDataProperties.m in Sources */,
+				5B3CBB1F1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.m in Sources */,
 				5B17347A1F80681E009B86B1 /* GetWeatherApiClient.m in Sources */,
 				5B03094B1F811669009A6D1A /* WeatherInteractor.m in Sources */,
 				5B4FA6D51F802752009C9FAB /* weather.xcdatamodeld in Sources */,
-				5BCBCB691F76F440006EBCC9 /* Weather.m in Sources */,
 				5BA3AC9E1F8D2997005E4464 /* FavouriteCityCollectionViewCell.m in Sources */,
-				5B85D84E1F818378000B7A07 /* WeatherRepository.m in Sources */,
 				5BC8EBB91F8E0ED700873FE3 /* FavoriteCitiesInteractor.m in Sources */,
 				5B9F84B01F75C8BF00C9BEE7 /* AppDelegate.m in Sources */,
 				5BAD3D3B1F8984BE00273365 /* WeatherDescriptionCloud.m in Sources */,
 				5B17347B1F80681E009B86B1 /* WeatherCloud.m in Sources */,
+				5B6D3BAC1F8F7182007BDBEA /* Weather.m in Sources */,
 				5B85D8351F815F06000B7A07 /* Preferences.m in Sources */,
 				5B85D83F1F816C2B000B7A07 /* StoreWeather.m in Sources */,
 				5B1734791F80681E009B86B1 /* CityWeatherCloud.m in Sources */,

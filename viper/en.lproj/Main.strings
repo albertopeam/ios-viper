@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "Pressure"; ObjectID = "2aq-4h-M2n"; */
+"2aq-4h-M2n.text" = "Pressure";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "3mM-37-bE7"; */
+"3mM-37-bE7.text" = "-";
+
+/* Class = "UILabel"; text = "Feels like"; ObjectID = "71s-b0-RPF"; */
+"71s-b0-RPF.text" = "Feels like";
+
+/* Class = "UINavigationItem"; title = "Openweathermap.org"; ObjectID = "BRJ-Dk-93a"; */
+"BRJ-Dk-93a.title" = "Openweathermap.org";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Bop-AH-zzO"; */
+"Bop-AH-zzO.text" = "-";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "CyN-Or-yCa"; */
+"CyN-Or-yCa.text" = "-";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "FqN-Sq-BUJ"; */
+"FqN-Sq-BUJ.text" = "-";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Jwr-AJ-d44"; */
+"Jwr-AJ-d44.text" = "-";
+
+/* Class = "UIButton"; normalTitle = "openweathermap.org"; ObjectID = "Mza-2g-duT"; */
+"Mza-2g-duT.normalTitle" = "openweathermap.org";
+
+/* Class = "UILabel"; text = "Precip."; ObjectID = "PDm-Df-RPx"; */
+"PDm-Df-RPx.text" = "Precip.";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "PWr-DH-9NG"; */
+"PWr-DH-9NG.text" = "Details";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "S3o-qW-7P6"; */
+"S3o-qW-7P6.text" = "-";
+
+/* Class = "UILabel"; text = "Humidity"; ObjectID = "YrI-jl-wK4"; */
+"YrI-jl-wK4.text" = "Humidity";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Zrx-W4-t7C"; */
+"Zrx-W4-t7C.text" = "-";
+
+/* Class = "UILabel"; text = "Wind"; ObjectID = "kHq-fX-4r3"; */
+"kHq-fX-4r3.text" = "Wind";
+
+/* Class = "UILabel"; text = "A Coruna"; ObjectID = "kxK-XP-9EW"; */
+"kxK-XP-9EW.text" = "A Coruna";
+
+/* Class = "UILabel"; text = "-ºC"; ObjectID = "nCK-1d-nCU"; */
+"nCK-1d-nCU.text" = "-ºC";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "wiR-i1-EeA"; */
+"wiR-i1-EeA.text" = "-";

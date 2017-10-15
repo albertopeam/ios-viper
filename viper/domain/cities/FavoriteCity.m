@@ -8,8 +8,20 @@
 
 #import "FavoriteCity.h"
 
-@implementation FavoriteCity
+@implementation FavoriteCity{
+    NSString* name;
+}
+
+-(instancetype)initWithName:(NSString*)aName{
+    self = [super init];
+    if (self) {
+        name = aName;
+    }
+    return self;
+}
+
+
 -(NSString*)name{
-    return @"A Coruna";
+    return name;
 }
 @end

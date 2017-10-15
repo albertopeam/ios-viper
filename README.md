@@ -15,10 +15,8 @@ To run this project you need to create an [OpenWeather](https://openweathermap.o
 ##### TODOS:
 
 iterartion 1:
-* weather list
-* make view more beautifull
-* add icons
 * add I18n
+* exception delegate
 
 iteration 2:
 * weather list
@@ -34,3 +32,4 @@ iteration 3:
 iteration 4:
 * make views more beautifull
 * add weather forecast
+* add ART images

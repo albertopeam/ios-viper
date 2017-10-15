@@ -18,4 +18,5 @@
 -(void)onGetFavoriteCities:(NSArray<FavoriteCity*>*)cities;
 -(void)showLoading;
 -(void)hideLoading;
+-(void)showError:(NSString*)message;
 @end

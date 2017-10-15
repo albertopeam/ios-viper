@@ -11,6 +11,7 @@
 #import "Database.h"
 #import "AFHTTPSessionManager+Synchronous.h"
 #import <AFNetworking/AFNetworking.h>
+#import "WeatherRepository.h"
 
 @interface Provider : NSObject
 + (Provider*)manager;
@@ -19,6 +20,7 @@
 - (NSOperationQueue*)mainQueue;
 - (NSOperationQueue*)backgroundQueue;
 - (AFHTTPSessionManager*)networkClient;
+- (WeatherRepository*)weatherRepository;
 - (NSString*)serverUrl;
 - (NSString*)serverApiKey;
 @end

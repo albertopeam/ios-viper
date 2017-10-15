@@ -8,10 +8,21 @@
 
 #import "FavoriteCitiesService.h"
 
-@implementation FavoriteCitiesService
+@implementation FavoriteCitiesService{
+    id<FavoriteCities>favoriteCities;
+}
+
+- (instancetype)initWithFavoriteCities:(id<FavoriteCities>)aFavoriteCities{
+    self = [super init];
+    if (self) {
+        favoriteCities = aFavoriteCities;
+    }
+    return self;
+}
 
 - (NSArray<FavoriteCity *> *)getFavorites{
-    return [NSArray arrayWithObjects:[FavoriteCity new], nil];
+    return [favoriteCities fetchFavoriteCities];
 }
+
 
 @end

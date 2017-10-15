@@ -9,6 +9,7 @@
 #import "FavouriteCitiesViewController.h"
 #import "FavouriteCitiesDataSource.h"
 #import "WeatherRouter.h"
+#import "MBProgressHUD.h"
 
 @interface FavouriteCitiesViewController ()
 
@@ -46,21 +47,29 @@
 }
 
 -(void)showLoading{
-    [_refreshControl beginRefreshing];
+     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 -(void)hideLoading{
     [_refreshControl endRefreshing];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+-(void)showError:(NSString*)message{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alert animated:YES completion:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 #pragma mark - CollectionView
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     FavoriteCity* favoriteCity = [[datasource cities] objectAtIndex:indexPath.row];
     UIViewController* viewController = [WeatherRouter provide:favoriteCity];
-    //tronza a partir de aquí
     [self.navigationController pushViewController:viewController animated:YES];
-    /*logear view controller lcycle
-    eliminar animaciones*/
 
 }
 /*
@@ -88,7 +97,7 @@
 
 #pragma mark - Search
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    NSLog(@"searchBarSearchButtonClicked");
+    [_presenter addFavoriteCity:searchBar.text];
 }
 
 @end
