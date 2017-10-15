@@ -13,9 +13,9 @@ To run this project you need to create an [OpenWeather](https://openweathermap.o
 ```
 
 ##### Art
-[[https://github.com//albertopeam/ios-viper/master/art/cities.png|alt=cities]]
-[[https://github.com//albertopeam/ios-viper/master/art/weather.png|alt=weather]]
+![alt text](https://raw.githubusercontent.com/albertopeam/ios-viper/master/art/cities.png)
 
+![alt text](https://raw.githubusercontent.com/albertopeam/ios-viper/master/art/weather.png)
 
 ##### TODOS:
 
@@ -33,4 +33,3 @@ iteration 3:
 iteration 4:
 * make views more beautifull
 * add weather forecast
-* add ART images
