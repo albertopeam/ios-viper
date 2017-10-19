@@ -51,6 +51,7 @@
 		5BC8EBB91F8E0ED700873FE3 /* FavoriteCitiesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */; };
 		5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */; };
 		5BFB30721F88EFF800D882C6 /* PresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */; };
+		C3A78FD11F94EB2F0026AACF /* WeatherRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A78FD01F94EB2F0026AACF /* WeatherRepositoryTest.m */; };
 		F5D25F300F02AA71952BC53F /* Pods_viperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A52D843B9CA32F0A669450 /* Pods_viperUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		790EC85DAEF48DEFEB271A90 /* Pods-viperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viperTests/Pods-viperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79B388EC2920BBA725CA88CF /* Pods-viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viper/Pods-viper.debug.xcconfig"; sourceTree = "<group>"; };
 		B9598580A0C854A3CC71E826 /* Pods-viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper.release.xcconfig"; path = "Pods/Target Support Files/Pods-viper/Pods-viper.release.xcconfig"; sourceTree = "<group>"; };
+		C3A78FD01F94EB2F0026AACF /* WeatherRepositoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherRepositoryTest.m; path = domain/weather/WeatherRepositoryTest.m; sourceTree = "<group>"; };
 		F5FC5DF58A57A47B1CB5C0F7 /* Pods_viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD23834FFE765B763D0FB5D /* Pods-viperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-viperTests/Pods-viperTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -425,6 +427,7 @@
 		5B9F84C41F75C8C000C9BEE7 /* viperTests */ = {
 			isa = PBXGroup;
 			children = (
+				C3A78FCE1F94EAA70026AACF /* domain */,
 				5BFB306E1F88EF8200D882C6 /* gateway */,
 				5B3681ED1F77A78800456992 /* app */,
 				5B9F84C71F75C8C000C9BEE7 /* Info.plist */,
@@ -478,6 +481,22 @@
 			isa = PBXGroup;
 			children = (
 				5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */,
+			);
+			name = weather;
+			sourceTree = "<group>";
+		};
+		C3A78FCE1F94EAA70026AACF /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				C3A78FCF1F94EB080026AACF /* weather */,
+			);
+			name = domain;
+			sourceTree = "<group>";
+		};
+		C3A78FCF1F94EB080026AACF /* weather */ = {
+			isa = PBXGroup;
+			children = (
+				C3A78FD01F94EB2F0026AACF /* WeatherRepositoryTest.m */,
 			);
 			name = weather;
 			sourceTree = "<group>";
@@ -840,6 +859,7 @@
 			files = (
 				5BFB30721F88EFF800D882C6 /* PresenterTestCase.m in Sources */,
 				5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */,
+				C3A78FD11F94EB2F0026AACF /* WeatherRepositoryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
