@@ -9,26 +9,26 @@
 #import <XCTest/XCTest.h>
 #import <OCHamcrest/OCHamcrest.h>
 #import <OCMockito/OCMockito.h>
-#import "Presenter.h"
-#import "ViewController.h"
-#import "Interactor.h"
+#import "WeatherPresenter.h"
+#import "WeatherViewController.h"
+#import "WeatherInteractor.h"
 
 @interface PresenterTestCase : XCTestCase{
     @private
-    Presenter* sut;
+    WeatherPresenter* sut;
     @private
-    ViewController* mockVC;
+    WeatherViewController* mockVC;
     @private
-    Interactor* mockInteractor;
+    WeatherInteractor* mockInteractor;
 }@end
 
 @implementation PresenterTestCase
 
 - (void)setUp {
     [super setUp];
-    mockVC = mock([ViewController class]);
-    mockInteractor = mock([Interactor class]);
-    sut = [[Presenter alloc] initWithView:mockVC interactor:mockInteractor];
+    mockVC = mock([WeatherViewController class]);
+    mockInteractor = mock([WeatherInteractor class]);
+    sut = [[WeatherPresenter alloc] initWithView:mockVC interactor:mockInteractor];
     
 }
 
