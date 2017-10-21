@@ -15,16 +15,19 @@
     FavouriteCitiesViewController* view;
     FavoriteCitiesInteractor* favoriteCitiesInteractor;
     AddFavoriteCityInteractor* addFavoriteCityInteractor;
+    RemoveFavoriteCityInteractor* removeFavoriteCityInteractor;
 }
 
 -(instancetype)initWithView:(FavouriteCitiesViewController*)aView
     withFavCitiesInteractor:(FavoriteCitiesInteractor*)aFavoriteCitiesInteractor
-   withAddFavCityInteractor:(AddFavoriteCityInteractor*)anAddFavoriteCityInteractor{
+   withAddFavCityInteractor:(AddFavoriteCityInteractor*)anAddFavoriteCityInteractor
+withRemoveFavCityInteractor:(RemoveFavoriteCityInteractor *)aRemoveFavoriteCityInteractor{
     self = [super init];
     if (self) {
         view = aView;
         favoriteCitiesInteractor = aFavoriteCitiesInteractor;
         addFavoriteCityInteractor = anAddFavoriteCityInteractor;
+        removeFavoriteCityInteractor = aRemoveFavoriteCityInteractor;
     }
     return self;
 }
@@ -68,6 +71,24 @@
                 error = NSLocalizedString(@"weather_not_found", nil);
             }
             [target showError:error];
+        }
+    }];
+}
+
+-(void)removeFavoriteCity:(FavoriteCity *)city{
+    __weak FavouriteCitiesViewController* weakView = view;
+    [view showLoading];
+    [removeFavoriteCityInteractor remove:city.name withSuccess:^{
+        if (weakView) {
+            FavouriteCitiesViewController* target = weakView;
+            [target hideLoading];
+            [target onRemovedFavoriteCity:city];
+        }
+    } withError:^(NSException *exception) {
+        if (weakView) {
+            FavouriteCitiesViewController* target = weakView;
+            [target hideLoading];
+            [target showError:[exception reason]];
         }
     }];
 }

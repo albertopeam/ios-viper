@@ -51,6 +51,8 @@
 		5BC8EBB91F8E0ED700873FE3 /* FavoriteCitiesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */; };
 		5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */; };
 		5BFB30721F88EFF800D882C6 /* PresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */; };
+		C33391951F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C33391941F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m */; };
+		C33391991F9C01A8002CF585 /* RemoveFavoriteCityGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = C33391981F9C01A8002CF585 /* RemoveFavoriteCityGateway.m */; };
 		C3A78FD11F94EB2F0026AACF /* WeatherRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A78FD01F94EB2F0026AACF /* WeatherRepositoryTest.m */; };
 		F5D25F300F02AA71952BC53F /* Pods_viperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A52D843B9CA32F0A669450 /* Pods_viperUITests.framework */; };
 /* End PBXBuildFile section */
@@ -167,6 +169,11 @@
 		790EC85DAEF48DEFEB271A90 /* Pods-viperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viperTests/Pods-viperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79B388EC2920BBA725CA88CF /* Pods-viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viper/Pods-viper.debug.xcconfig"; sourceTree = "<group>"; };
 		B9598580A0C854A3CC71E826 /* Pods-viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper.release.xcconfig"; path = "Pods/Target Support Files/Pods-viper/Pods-viper.release.xcconfig"; sourceTree = "<group>"; };
+		C33391931F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFavoriteCityInteractor.h; path = app/cities/RemoveFavoriteCityInteractor.h; sourceTree = "<group>"; };
+		C33391941F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveFavoriteCityInteractor.m; path = app/cities/RemoveFavoriteCityInteractor.m; sourceTree = "<group>"; };
+		C33391961F9BFD5E002CF585 /* RemoveFavoriteCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFavoriteCity.h; path = domain/cities/RemoveFavoriteCity.h; sourceTree = "<group>"; };
+		C33391971F9C01A8002CF585 /* RemoveFavoriteCityGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFavoriteCityGateway.h; path = gateway/database/city/RemoveFavoriteCityGateway.h; sourceTree = "<group>"; };
+		C33391981F9C01A8002CF585 /* RemoveFavoriteCityGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveFavoriteCityGateway.m; path = gateway/database/city/RemoveFavoriteCityGateway.m; sourceTree = "<group>"; };
 		C3A78FD01F94EB2F0026AACF /* WeatherRepositoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherRepositoryTest.m; path = domain/weather/WeatherRepositoryTest.m; sourceTree = "<group>"; };
 		F5FC5DF58A57A47B1CB5C0F7 /* Pods_viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD23834FFE765B763D0FB5D /* Pods-viperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-viperTests/Pods-viperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +237,8 @@
 				5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */,
 				5B3CBB241F9227CC00BA7EAA /* AddFavoriteCityInteractor.h */,
 				5B3CBB251F9227CC00BA7EAA /* AddFavoriteCityInteractor.m */,
+				C33391931F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.h */,
+				C33391941F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m */,
 			);
 			name = cities;
 			sourceTree = "<group>";
@@ -284,6 +293,8 @@
 				5B18B2451F8F51F400D7D8C2 /* FavoriteCitiesGateway.m */,
 				5B6D3B9E1F8F6D05007BDBEA /* AddFavoriteCityGateway.h */,
 				5B6D3B9F1F8F6D05007BDBEA /* AddFavoriteCityGateway.m */,
+				C33391971F9C01A8002CF585 /* RemoveFavoriteCityGateway.h */,
+				C33391981F9C01A8002CF585 /* RemoveFavoriteCityGateway.m */,
 			);
 			name = city;
 			sourceTree = "<group>";
@@ -457,6 +468,7 @@
 				5B6D3B9D1F8F6CE7007BDBEA /* AddFavoriteCity.h */,
 				5B3CBB1D1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.h */,
 				5B3CBB1E1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.m */,
+				C33391961F9BFD5E002CF585 /* RemoveFavoriteCity.h */,
 			);
 			name = cities;
 			sourceTree = "<group>";
@@ -819,6 +831,7 @@
 				5B6D3BA41F8F705A007BDBEA /* WeatherNotFoundException.m in Sources */,
 				5BAAE99E1F8D6F83001117A5 /* WeatherViewModel.m in Sources */,
 				5B6D3B9C1F8F6CCF007BDBEA /* AddFavoriteCityService.m in Sources */,
+				C33391991F9C01A8002CF585 /* RemoveFavoriteCityGateway.m in Sources */,
 				5BC8EBB01F8E0C4900873FE3 /* FavoriteCitiesService.m in Sources */,
 				5BAAE9A11F8D6F8E001117A5 /* FavouriteCitiesRouter.m in Sources */,
 				5B18B2461F8F51F400D7D8C2 /* FavoriteCitiesGateway.m in Sources */,
@@ -830,6 +843,7 @@
 				5B03094E1F811669009A6D1A /* WeatherViewController.m in Sources */,
 				5B001BCE1F8A4BE300217FDD /* WeatherMO+CoreDataProperties.m in Sources */,
 				5B3CBB1F1F92122C00BA7EAA /* FavoriteCityAlreadyExistsException.m in Sources */,
+				C33391951F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m in Sources */,
 				5B17347A1F80681E009B86B1 /* GetWeatherApiClient.m in Sources */,
 				5B03094B1F811669009A6D1A /* WeatherInteractor.m in Sources */,
 				5B4FA6D51F802752009C9FAB /* weather.xcdatamodeld in Sources */,

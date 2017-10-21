@@ -35,12 +35,38 @@
     _collectionView.alwaysBounceVertical = YES;
     datasource = [FavouriteCitiesDataSource new];
     [_collectionView setDataSource:datasource];
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self
+                                                                                       action:@selector(deleteFavoriteCity:)];
+    lpgr.delegate = self;
+    lpgr.delaysTouchesBegan = YES;
+    [self.collectionView addGestureRecognizer:lpgr];
 }
 
 -(void)getFavoriteCities{
     [_presenter getFavoriteCities];
 }
 
+-(void)doYouWantToRemove:(FavoriteCity*)favCity{
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Remove!"
+                                 message:[NSString stringWithFormat:@"Are you sure to remove %@?", favCity.name]
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes"
+                                style:UIAlertActionStyleDestructive
+                                handler:^(UIAlertAction * action) {
+                                    [_presenter removeFavoriteCity:favCity];
+                                }];
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:@"Cancel"
+                               style:UIAlertActionStyleCancel
+                               handler:nil];
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark presenter interface
 -(void)onGetFavoriteCities:(NSArray<FavoriteCity*>*)cities{
     [datasource setCities:cities];
     [_collectionView reloadData];
@@ -65,6 +91,26 @@
     });
 }
 
+-(void)onRemovedFavoriteCity:(FavoriteCity *)favoriteCity{
+    NSMutableArray*tmp = [datasource.cities mutableCopy];
+    [tmp removeObject:favoriteCity];
+    [datasource setCities:[NSArray arrayWithArray:tmp]];
+    [_collectionView reloadData];
+}
+
+#pragma mark gestures
+-(void)deleteFavoriteCity:(UILongPressGestureRecognizer *)gestureRecognizer{
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
+    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
+    if (indexPath){
+        FavoriteCity*favCity = [datasource.cities objectAtIndex:indexPath.row];
+        [self doYouWantToRemove:favCity];
+    }
+}
+
 #pragma mark - CollectionView
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     FavoriteCity* favoriteCity = [[datasource cities] objectAtIndex:indexPath.row];
@@ -72,6 +118,7 @@
     [self.navigationController pushViewController:viewController animated:YES];
 
 }
+
 /*
 - (void)collectionView:(UICollectionView *)colView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
