@@ -15,6 +15,8 @@
 #import "AddFavoriteCityInteractor.h"
 #import "AddFavoriteCityGateway.h"
 #import "FavoriteCitiesGateway.h"
+#import "RemoveFavoriteCityGateway.h"
+
 
 @implementation FavouriteCitiesRouter
 + (UIViewController*)provide{
@@ -27,9 +29,12 @@
     FavoriteCitiesService*favoriteCitiesService = [[FavoriteCitiesService alloc] initWithFavoriteCities:favoriteCities];
     FavoriteCitiesInteractor* favoriteCitiesInteractor = [[FavoriteCitiesInteractor alloc] initWithFavoriteCities:favoriteCitiesService withBackgroundQueue:[provider backgroundQueue] withMainQueue:[provider mainQueue]];
     AddFavoriteCityInteractor* addFavCityInteractor = [[AddFavoriteCityInteractor alloc] initWithAddFavoriteCities:addFavoriteCityService withFavoritesService:favoriteCitiesService withBackgroundQueue:[provider backgroundQueue] withMainQueue:[provider mainQueue]];
+    id<RemoveFavoriteCity>removeFavoriteCity = [[RemoveFavoriteCityGateway alloc] initWithDatabase:[provider database]];
+    RemoveFavoriteCityInteractor* removeFavoriteCityInteractor = [[RemoveFavoriteCityInteractor alloc] initWithRemoveFavoriteCity:removeFavoriteCity withBackgroundQueue:[provider backgroundQueue] withMainQueue:[provider mainQueue]];
     FavouriteCitiesPresenter* presenter = [[FavouriteCitiesPresenter alloc] initWithView:viewController
                                            withFavCitiesInteractor:favoriteCitiesInteractor
-                                           withAddFavCityInteractor:addFavCityInteractor];
+                                           withAddFavCityInteractor:addFavCityInteractor
+                                           withRemoveFavCityInteractor:removeFavoriteCityInteractor];
     [viewController setPresenter:presenter];
     return viewController;
 }

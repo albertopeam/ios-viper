@@ -18,11 +18,10 @@ To run this project you need to create an [OpenWeather](https://openweathermap.o
 
 ### TODOS:
 
+* CRASH: repeating city
+
 iterartion 1:
 * exception delegate
-
-iteration 2:
-* remove cities(swipe)
 
 iteration 3:
 * test all

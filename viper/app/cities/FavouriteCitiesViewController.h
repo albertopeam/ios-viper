@@ -10,12 +10,13 @@
 #import "FavouriteCitiesPresenter.h"
 #import "FavoriteCity.h"
 
-@interface FavouriteCitiesViewController : UIViewController<UICollectionViewDelegate, UISearchBarDelegate>
+@interface FavouriteCitiesViewController : UIViewController<UICollectionViewDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) FavouriteCitiesPresenter* presenter;
 -(void)onGetFavoriteCities:(NSArray<FavoriteCity*>*)cities;
+-(void)onRemovedFavoriteCity:(FavoriteCity*)favoriteCity;
 -(void)showLoading;
 -(void)hideLoading;
 -(void)showError:(NSString*)message;
