@@ -15,8 +15,9 @@
 #import "StoreWeatherDataSource.h"
 
 @interface WeatherRepositoryTest : XCTestCase
-
 @end
+
+NSString *CITY = @"city";
 
 @implementation WeatherRepositoryTest{
     WeatherRepository* sut;
@@ -25,8 +26,6 @@
     id<FetchWeatherDataSource>mockDatabaseDataSource;
     id<StoreWeatherDataSource>mockStoreWeatherDataSource;
 }
-
-
 
 - (void)setUp {
     [super setUp];
@@ -42,6 +41,17 @@
     [given([mockPolicy isExpiredWeather:@"city"]) willReturnBool:NO];
     [given([mockDatabaseDataSource weatherFor:@"city"]) willReturn:mockWeather];
     Weather* weather = [sut weatherFor:@"city"];
+    assertThat(weather, equalTo(mockWeather));
+}
+
+-(void)testGivenExpiredWeatherWhenInvokeWeatherForThenReturnWeatherFromDatabase {
+    Weather*mockWeather = mock([Weather class]);
+    [given([mockPolicy isExpiredWeather:CITY]) willReturnBool:YES];
+    [given([mockServerDataSource weatherFor:CITY]) willReturn:mockWeather];
+    Weather* weather = [sut weatherFor:CITY];
+    [verify(mockServerDataSource) weatherFor:CITY];
+    [verify(mockStoreWeatherDataSource) store:mockWeather];
+    [verify(mockPolicy) updatedWeather:CITY];
     assertThat(weather, equalTo(mockWeather));
 }
 
