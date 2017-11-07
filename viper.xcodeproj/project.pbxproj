@@ -50,7 +50,7 @@
 		5BC8EBB61F8E0C8A00873FE3 /* FavoriteCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBB51F8E0C8A00873FE3 /* FavoriteCity.m */; };
 		5BC8EBB91F8E0ED700873FE3 /* FavoriteCitiesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */; };
 		5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */; };
-		5BFB30721F88EFF800D882C6 /* PresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */; };
+		5BFB30721F88EFF800D882C6 /* WeatherPresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB30711F88EFF800D882C6 /* WeatherPresenterTestCase.m */; };
 		C33391951F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C33391941F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m */; };
 		C33391991F9C01A8002CF585 /* RemoveFavoriteCityGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = C33391981F9C01A8002CF585 /* RemoveFavoriteCityGateway.m */; };
 		C3A78FD11F94EB2F0026AACF /* WeatherRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A78FD01F94EB2F0026AACF /* WeatherRepositoryTest.m */; };
@@ -164,7 +164,7 @@
 		5BC8EBB71F8E0ED700873FE3 /* FavoriteCitiesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoriteCitiesInteractor.h; path = app/cities/FavoriteCitiesInteractor.h; sourceTree = "<group>"; };
 		5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoriteCitiesInteractor.m; path = app/cities/FavoriteCitiesInteractor.m; sourceTree = "<group>"; };
 		5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesTest.m; path = gateway/preferences/PreferencesTest.m; sourceTree = "<group>"; };
-		5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresenterTestCase.m; path = app/weather/PresenterTestCase.m; sourceTree = "<group>"; };
+		5BFB30711F88EFF800D882C6 /* WeatherPresenterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherPresenterTestCase.m; path = app/weather/WeatherPresenterTestCase.m; sourceTree = "<group>"; };
 		5BFB30741F890B8200D882C6 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = app/Constants.h; sourceTree = "<group>"; };
 		790EC85DAEF48DEFEB271A90 /* Pods-viperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viperTests/Pods-viperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79B388EC2920BBA725CA88CF /* Pods-viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viper/Pods-viper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -492,7 +492,7 @@
 		5BFB30701F88EFB600D882C6 /* weather */ = {
 			isa = PBXGroup;
 			children = (
-				5BFB30711F88EFF800D882C6 /* PresenterTestCase.m */,
+				5BFB30711F88EFF800D882C6 /* WeatherPresenterTestCase.m */,
 			);
 			name = weather;
 			sourceTree = "<group>";
@@ -871,7 +871,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BFB30721F88EFF800D882C6 /* PresenterTestCase.m in Sources */,
+				5BFB30721F88EFF800D882C6 /* WeatherPresenterTestCase.m in Sources */,
 				5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */,
 				C3A78FD11F94EB2F0026AACF /* WeatherRepositoryTest.m in Sources */,
 			);
