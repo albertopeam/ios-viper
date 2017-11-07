@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setup];
+    //[self setup]; commented because it doesnt force refresh data
     [self loadWeather];
 }
 

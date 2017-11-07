@@ -15,7 +15,6 @@
 #import "StoreWeatherDataSource.h"
 
 @interface WeatherRepositoryTest : XCTestCase
-
 @end
 
 @implementation WeatherRepositoryTest{
@@ -24,12 +23,12 @@
     id<FetchWeatherDataSource>mockServerDataSource;
     id<FetchWeatherDataSource>mockDatabaseDataSource;
     id<StoreWeatherDataSource>mockStoreWeatherDataSource;
+    NSString *CITY;
 }
-
-
 
 - (void)setUp {
     [super setUp];
+    CITY = @"city";
     mockPolicy = mockProtocol(@protocol(WeatherExpirationPolicy));
     mockServerDataSource = mockProtocol(@protocol(FetchWeatherDataSource));
     mockDatabaseDataSource = mockProtocol(@protocol(FetchWeatherDataSource));
@@ -39,9 +38,20 @@
 
 - (void)testGivenNotExpiredWeatherWhenInvokeWeatherForThenReturnWeatherFromDatabase {
     Weather*mockWeather = mock([Weather class]);
-    [given([mockPolicy isExpiredWeather:@"city"]) willReturnBool:NO];
-    [given([mockDatabaseDataSource weatherFor:@"city"]) willReturn:mockWeather];
-    Weather* weather = [sut weatherFor:@"city"];
+    [given([mockPolicy isExpiredWeather:CITY]) willReturnBool:NO];
+    [given([mockDatabaseDataSource weatherFor:CITY]) willReturn:mockWeather];
+    Weather* weather = [sut weatherFor:CITY];
+    assertThat(weather, equalTo(mockWeather));
+}
+
+-(void)testGivenExpiredWeatherWhenInvokeWeatherForThenReturnWeatherFromDatabase {
+    Weather*mockWeather = mock([Weather class]);
+    [given([mockPolicy isExpiredWeather:CITY]) willReturnBool:YES];
+    [given([mockServerDataSource weatherFor:CITY]) willReturn:mockWeather];
+    Weather* weather = [sut weatherFor:CITY];
+    [verify(mockServerDataSource) weatherFor:CITY];
+    [verify(mockStoreWeatherDataSource) store:mockWeather];
+    [verify(mockPolicy) updatedWeather:CITY];
     assertThat(weather, equalTo(mockWeather));
 }
 
