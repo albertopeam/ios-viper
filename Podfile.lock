@@ -16,6 +16,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - EarlGrey (1.12.1)
   - JSONModel (1.7.0)
   - MBProgressHUD (1.0.0)
   - OCHamcrest (7.0.2)
@@ -25,6 +26,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - AFNetworking-Synchronous/3.x
+  - EarlGrey
   - JSONModel
   - MBProgressHUD (~> 1.0.0)
   - OCMockito (~> 5.0)
@@ -32,11 +34,12 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AFNetworking-Synchronous: 61b98fb931b114b0da2b243957ea533e2954c2a2
+  EarlGrey: f7774b813c888ebdb9a21e612d67874d17d5a326
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   OCHamcrest: 706bfbf69a3df55a873bad096014e80e2e8ca93c
   OCMockito: 063837a086c058e764fcd23e771089c1759e7197
 
-PODFILE CHECKSUM: 34eab47bcc46b9b07d7e40f2b3f5e394fa7bc538
+PODFILE CHECKSUM: 4fe66d839a7abf1677a75e86884c237c64805bb6
 
 COCOAPODS: 1.3.1

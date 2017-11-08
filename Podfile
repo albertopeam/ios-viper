@@ -17,6 +17,7 @@ target 'viper' do
     inherit! :search_paths
     # Pods for testing
     pod 'OCMockito', '~> 5.0'
+    pod 'EarlGrey'
   end
 
   target 'viperUITests' do

@@ -11,4 +11,5 @@
 
 @interface Database : NSObject
 -(NSManagedObjectContext*)moc;
+-(NSPersistentContainer*)container;
 @end

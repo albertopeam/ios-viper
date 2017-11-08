@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C57D060CF00AB71A41AFFA6 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C68052EAC670CBE735EA972 /* EarlGrey.framework */; };
 		3C9654D26D6CB325AB11A92F /* Pods_viperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E793FFEE3D46EB5D9E5FB3 /* Pods_viperTests.framework */; };
 		5A0D9E04D794E72B6A3C1AE2 /* Pods_viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC5DF58A57A47B1CB5C0F7 /* Pods_viper.framework */; };
 		5B001BCD1F8A4BE300217FDD /* WeatherMO+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B001BCA1F8A4BE300217FDD /* WeatherMO+CoreDataClass.m */; };
@@ -51,9 +52,13 @@
 		5BC8EBB91F8E0ED700873FE3 /* FavoriteCitiesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8EBB81F8E0ED700873FE3 /* FavoriteCitiesInteractor.m */; };
 		5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB306C1F88EF7600D882C6 /* PreferencesTest.m */; };
 		5BFB30721F88EFF800D882C6 /* WeatherPresenterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB30711F88EFF800D882C6 /* WeatherPresenterTestCase.m */; };
+		86B44B0A46A3511649940F61 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 0C68052EAC670CBE735EA972 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C330F9191FB32A4E00E6CE60 /* WeatherViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C330F9181FB32A4E00E6CE60 /* WeatherViewControllerTestCase.m */; };
+		C330F91C1FB32E3400E6CE60 /* FavoriteCitiesViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C330F91B1FB32E3400E6CE60 /* FavoriteCitiesViewControllerTestCase.m */; };
 		C33391951F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C33391941F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m */; };
 		C33391991F9C01A8002CF585 /* RemoveFavoriteCityGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = C33391981F9C01A8002CF585 /* RemoveFavoriteCityGateway.m */; };
 		C3A78FD11F94EB2F0026AACF /* WeatherRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A78FD01F94EB2F0026AACF /* WeatherRepositoryTest.m */; };
+		D14D3312B708C6B381470130 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C68052EAC670CBE735EA972 /* EarlGrey.framework */; };
 		F5D25F300F02AA71952BC53F /* Pods_viperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A52D843B9CA32F0A669450 /* Pods_viperUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +79,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5427C673F4996AE1A6D061D2 /* EarlGrey Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(TEST_HOST)/../";
+			dstSubfolderSpec = 0;
+			files = (
+				86B44B0A46A3511649940F61 /* EarlGrey.framework in EarlGrey Copy Files */,
+			);
+			name = "EarlGrey Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		04A52D843B9CA32F0A669450 /* Pods_viperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C68052EAC670CBE735EA972 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Pods/EarlGrey/EarlGrey/EarlGrey.framework; sourceTree = SOURCE_ROOT; };
 		26A307CFBAED3746EDCB2752 /* Pods-viperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viperUITests/Pods-viperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D0E40A2D3BD675847AD7F8F /* Pods-viperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-viperUITests/Pods-viperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57E793FFEE3D46EB5D9E5FB3 /* Pods_viperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +189,8 @@
 		790EC85DAEF48DEFEB271A90 /* Pods-viperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viperTests/Pods-viperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		79B388EC2920BBA725CA88CF /* Pods-viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-viper/Pods-viper.debug.xcconfig"; sourceTree = "<group>"; };
 		B9598580A0C854A3CC71E826 /* Pods-viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viper.release.xcconfig"; path = "Pods/Target Support Files/Pods-viper/Pods-viper.release.xcconfig"; sourceTree = "<group>"; };
+		C330F9181FB32A4E00E6CE60 /* WeatherViewControllerTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WeatherViewControllerTestCase.m; path = app/weather/WeatherViewControllerTestCase.m; sourceTree = "<group>"; };
+		C330F91B1FB32E3400E6CE60 /* FavoriteCitiesViewControllerTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FavoriteCitiesViewControllerTestCase.m; path = app/cities/FavoriteCitiesViewControllerTestCase.m; sourceTree = "<group>"; };
 		C33391931F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFavoriteCityInteractor.h; path = app/cities/RemoveFavoriteCityInteractor.h; sourceTree = "<group>"; };
 		C33391941F9BFCE8002CF585 /* RemoveFavoriteCityInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveFavoriteCityInteractor.m; path = app/cities/RemoveFavoriteCityInteractor.m; sourceTree = "<group>"; };
 		C33391961F9BFD5E002CF585 /* RemoveFavoriteCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFavoriteCity.h; path = domain/cities/RemoveFavoriteCity.h; sourceTree = "<group>"; };
@@ -193,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9654D26D6CB325AB11A92F /* Pods_viperTests.framework in Frameworks */,
+				2C57D060CF00AB71A41AFFA6 /* EarlGrey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D25F300F02AA71952BC53F /* Pods_viperUITests.framework in Frameworks */,
+				D14D3312B708C6B381470130 /* EarlGrey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +326,7 @@
 		5B3681ED1F77A78800456992 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				C330F91A1FB32DEF00E6CE60 /* cities */,
 				5BFB30701F88EFB600D882C6 /* weather */,
 			);
 			name = app;
@@ -493,8 +518,17 @@
 			isa = PBXGroup;
 			children = (
 				5BFB30711F88EFF800D882C6 /* WeatherPresenterTestCase.m */,
+				C330F9181FB32A4E00E6CE60 /* WeatherViewControllerTestCase.m */,
 			);
 			name = weather;
+			sourceTree = "<group>";
+		};
+		C330F91A1FB32DEF00E6CE60 /* cities */ = {
+			isa = PBXGroup;
+			children = (
+				C330F91B1FB32E3400E6CE60 /* FavoriteCitiesViewControllerTestCase.m */,
+			);
+			name = cities;
 			sourceTree = "<group>";
 		};
 		C3A78FCE1F94EAA70026AACF /* domain */ = {
@@ -519,6 +553,7 @@
 				F5FC5DF58A57A47B1CB5C0F7 /* Pods_viper.framework */,
 				57E793FFEE3D46EB5D9E5FB3 /* Pods_viperTests.framework */,
 				04A52D843B9CA32F0A669450 /* Pods_viperUITests.framework */,
+				0C68052EAC670CBE735EA972 /* EarlGrey.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -556,6 +591,7 @@
 				5B9F84BF1F75C8C000C9BEE7 /* Resources */,
 				437B29F1D7BC6021959096C7 /* [CP] Embed Pods Frameworks */,
 				CE9487AD7E8CC96E465C626D /* [CP] Copy Pods Resources */,
+				5427C673F4996AE1A6D061D2 /* EarlGrey Copy Files */,
 			);
 			buildRules = (
 			);
@@ -686,9 +722,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-viperUITests/Pods-viperUITests-frameworks.sh",
+				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -702,11 +741,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-viperTests/Pods-viperTests-frameworks.sh",
+				"${PODS_ROOT}/EarlGrey/EarlGrey/EarlGrey.framework",
 				"${BUILT_PRODUCTS_DIR}/OCHamcrest/OCHamcrest.framework",
 				"${BUILT_PRODUCTS_DIR}/OCMockito/OCMockito.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EarlGrey.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCHamcrest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMockito.framework",
 			);
@@ -872,6 +913,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BFB30721F88EFF800D882C6 /* WeatherPresenterTestCase.m in Sources */,
+				C330F9191FB32A4E00E6CE60 /* WeatherViewControllerTestCase.m in Sources */,
+				C330F91C1FB32E3400E6CE60 /* FavoriteCitiesViewControllerTestCase.m in Sources */,
 				5BFB306D1F88EF7600D882C6 /* PreferencesTest.m in Sources */,
 				C3A78FD11F94EB2F0026AACF /* WeatherRepositoryTest.m in Sources */,
 			);

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Provider.h"
 #import "FavouriteCitiesRouter.h"
+#import "Database.h"
 
 @interface AppDelegate ()
 
@@ -53,6 +54,22 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEn					terBackground:.
+}
+
+#pragma mark testing
+-(void)resetApplicationForTesting{
+    NSLog(@"********************resetApplicationForTesting********************");
+    Database* database = [[Provider manager] database];
+    NSManagedObjectContext* moc = [database moc];
+    NSPersistentContainer*container = [database container];
+    //TODO: remove all cities...
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"City"];
+    NSBatchDeleteRequest *delete = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
+    NSError *deleteError = nil;
+    [container.persistentStoreCoordinator executeRequest:delete withContext:moc error:&deleteError];
+    if (deleteError) {
+        NSLog(@"Deleting error: %@", deleteError.debugDescription);
+    }
 }
 
 @end

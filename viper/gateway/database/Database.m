@@ -42,12 +42,21 @@
 }
 
 -(NSManagedObjectContext*)moc{
+    [self checkInitialized];
+    return [persistentContainer viewContext];
+}
+
+-(NSPersistentContainer*)container{
+    [self checkInitialized];
+    return persistentContainer;
+}
+
+-(void)checkInitialized{
     if (persistentContainer == nil) {
         @throw([NSException exceptionWithName:@"NotInitializatedException"
                                        reason:@"PersistentContainer is nill, you must invoke [[Database manager] create] before make any operation to create the Core Data Stack"
                                      userInfo:nil]);
     }
-    return [persistentContainer viewContext];
 }
 
 @end

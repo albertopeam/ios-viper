@@ -68,6 +68,8 @@
 
 #pragma mark presenter interface
 -(void)onGetFavoriteCities:(NSArray<FavoriteCity*>*)cities{
+    [_searchBar setText:@""];
+    [_searchBar endEditing:YES];
     [datasource setCities:cities];
     [_collectionView reloadData];
 }
